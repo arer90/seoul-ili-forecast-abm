@@ -1,0 +1,151 @@
+{
+  "feature_axis": [
+    {
+      "feature": "temp_avg",
+      "mean_abs_shap": 9.228514,
+      "mean_shap": -2.737651,
+      "direction": "lowers"
+    },
+    {
+      "feature": "humidity",
+      "mean_abs_shap": 2.73755,
+      "mean_shap": -0.544953,
+      "direction": "lowers"
+    },
+    {
+      "feature": "rainfall",
+      "mean_abs_shap": 2.45989,
+      "mean_shap": -0.54356,
+      "direction": "lowers"
+    },
+    {
+      "feature": "temp_min",
+      "mean_abs_shap": 1.801253,
+      "mean_shap": 0.532346,
+      "direction": "raises"
+    },
+    {
+      "feature": "pressure",
+      "mean_abs_shap": 1.285741,
+      "mean_shap": -0.428638,
+      "direction": "lowers"
+    },
+    {
+      "feature": "temp_std",
+      "mean_abs_shap": 0.027105,
+      "mean_shap": -0.007313,
+      "direction": "lowers"
+    },
+    {
+      "feature": "wind_speed",
+      "mean_abs_shap": 0.006647,
+      "mean_shap": 0.00041,
+      "direction": "raises"
+    },
+    {
+      "feature": "dis_a형간염",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    },
+    {
+      "feature": "dis_디프테리아",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    },
+    {
+      "feature": "ari_코로나19_바이러스",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    },
+    {
+      "feature": "ari_사람_메타뉴모바이러스",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    },
+    {
+      "feature": "ari_호흡기세포융합바이러스(rsv)",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    }
+  ],
+  "input_axis": {
+    "highest_prediction": {
+      "row": 42,
+      "prediction": 90.1467,
+      "top_drivers": [
+        {
+          "feature": "temp_avg",
+          "shap": 12.8347
+        },
+        {
+          "feature": "humidity",
+          "shap": 3.8745
+        },
+        {
+          "feature": "rainfall",
+          "shap": 3.4846
+        }
+      ]
+    },
+    "lowest_prediction": {
+      "row": 63,
+      "prediction": 15.3598,
+      "top_drivers": [
+        {
+          "feature": "temp_avg",
+          "shap": -19.3343
+        },
+        {
+          "feature": "humidity",
+          "shap": -5.4356
+        },
+        {
+          "feature": "temp_min",
+          "shap": 3.6906
+        }
+      ]
+    },
+    "median_prediction": {
+      "row": 55,
+      "prediction": 39.0889,
+      "top_drivers": [
+        {
+          "feature": "temp_avg",
+          "shap": -6.301
+        },
+        {
+          "feature": "humidity",
+          "shap": 1.3564
+        },
+        {
+          "feature": "temp_min",
+          "shap": 1.0758
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": 50.2387,
+    "prediction_mean": 46.5093,
+    "prediction_range": [
+      15.3598,
+      90.1467
+    ],
+    "fraction_explained_by_top3": 0.8221
+  },
+  "model_axis": {
+    "family": "linear",
+    "n_features_explained": 12,
+    "n_samples": 68,
+    "dominant_feature": "temp_avg",
+    "dominant_feature_sign_consistency": 0.618,
+    "global_mean_abs_shap": 1.462225,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

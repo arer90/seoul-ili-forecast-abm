@@ -1,0 +1,246 @@
+{
+  "eval": {
+    "weeks": "269..336",
+    "n_test": 68,
+    "y_peak_thr": 50.0,
+    "scorer": "wis_from_bounds (Bracher 2021, median weight 0.5) \u2014 SAME for both",
+    "alphas_K": 11,
+    "cap": 201.4,
+    "fusedepi_point_r2_on_yf": 0.9346,
+    "tweedie_p_star": 1.5,
+    "tweedie_cqr": "expanding split-CQR seeded [165,t) (pre-269)"
+  },
+  "provenance_note": {
+    "ssot_fusedepi_wis_reported": 3.2784,
+    "ssot_reproduced_weighted_interval_score_empirical": 3.2908,
+    "why_differs_from_wis_from_bounds": "weighted_interval_score_empirical uses median dispersion weight 1.0; wis_from_bounds uses the correct Bracher-2021 weight 0.5. Same intervals, different median weighting -> FE_static drops 3.29 -> 3.12 under the shared scorer. Both FusedEpi and Tweedie are scored with wis_from_bounds here."
+  },
+  "headline_table": [
+    {
+      "model": "FusedEpi_static",
+      "wis": 3.1208,
+      "picp95": 0.75,
+      "picp95_ci": [
+        0.63,
+        0.847
+      ],
+      "k_of_n": "51/68",
+      "mean_w95": 11.307,
+      "peak_picp95": 0.4118,
+      "n_peak": 17,
+      "sharpness": 0.2958,
+      "underpen": 1.8446,
+      "overpen": 0.8105,
+      "median_term": 0.17
+    },
+    {
+      "model": "FusedEpi_adaptivePID",
+      "wis": 2.9782,
+      "picp95": 0.8971,
+      "picp95_ci": [
+        0.799,
+        0.958
+      ],
+      "k_of_n": "61/68",
+      "mean_w95": 22.005,
+      "peak_picp95": 0.7647,
+      "n_peak": 17,
+      "sharpness": 0.6291,
+      "underpen": 1.5788,
+      "overpen": 0.6003,
+      "median_term": 0.17
+    },
+    {
+      "model": "Tweedie",
+      "wis": 2.6604,
+      "picp95": 0.9265,
+      "picp95_ci": [
+        0.837,
+        0.976
+      ],
+      "k_of_n": "63/68",
+      "mean_w95": 20.288,
+      "peak_picp95": 0.8824,
+      "n_peak": 17,
+      "sharpness": 0.6948,
+      "underpen": 1.2952,
+      "overpen": 0.5009,
+      "median_term": 0.1695
+    }
+  ],
+  "dm_hln": {
+    "vs_static": {
+      "dm_p_hln": 0.0051290488789432764,
+      "mean_wis_diff_tw_minus_fe": -0.4604,
+      "tweedie_lower": true,
+      "significant_beats": true
+    },
+    "vs_adaptivePID": {
+      "dm_p_hln": 0.0038885183648051935,
+      "mean_wis_diff_tw_minus_fe": -0.3178,
+      "tweedie_lower": true,
+      "significant_beats": true
+    }
+  },
+  "decomposition_peak_vs_offseason": {
+    "peak_y>=50": {
+      "n": 17,
+      "FusedEpi_static": {
+        "wis": 7.3269,
+        "sharpness": 0.2958,
+        "underpen": 4.8361,
+        "overpen": 1.8231,
+        "picp95": 0.4118
+      },
+      "FusedEpi_adaptivePID": {
+        "wis": 6.6159,
+        "sharpness": 0.6408,
+        "underpen": 4.2157,
+        "overpen": 1.3876,
+        "picp95": 0.7647
+      },
+      "Tweedie": {
+        "wis": 5.8279,
+        "sharpness": 1.368,
+        "underpen": 3.1192,
+        "overpen": 0.9736,
+        "picp95": 0.8824
+      },
+      "tweedie_minus_static_wis": -1.4989,
+      "tweedie_minus_adaptive_wis": -0.788
+    },
+    "offseason_y<50": {
+      "n": 51,
+      "FusedEpi_static": {
+        "wis": 1.7188,
+        "sharpness": 0.2958,
+        "underpen": 0.8474,
+        "overpen": 0.473,
+        "picp95": 0.8627
+      },
+      "FusedEpi_adaptivePID": {
+        "wis": 1.7657,
+        "sharpness": 0.6252,
+        "underpen": 0.6999,
+        "overpen": 0.3378,
+        "picp95": 0.9412
+      },
+      "Tweedie": {
+        "wis": 1.6046,
+        "sharpness": 0.4704,
+        "underpen": 0.6872,
+        "overpen": 0.3434,
+        "picp95": 0.9412
+      },
+      "tweedie_minus_static_wis": -0.1142,
+      "tweedie_minus_adaptive_wis": -0.161
+    }
+  },
+  "point_vs_head_attribution": {
+    "note": "Identical static residual-quantile head on BOTH points isolates POINT quality; Tweedie-native then adds the heteroscedastic head + expanding CQR.",
+    "FusedEpi_point_static_head": {
+      "wis": 3.1208,
+      "picp95": 0.75
+    },
+    "TiRex_point_static_head": {
+      "wis": 3.0625,
+      "picp95": 0.8088,
+      "mean_w95": 12.868
+    },
+    "Tweedie_full_head": {
+      "wis": 2.6604,
+      "picp95": 0.9265
+    },
+    "point_gain_tirex_vs_fused": 0.0583,
+    "head_gain_tweedie_vs_static": 0.402
+  },
+  "robustness_subwindows": {
+    "full_68": {
+      "n": 68,
+      "wis_tweedie": 2.6604,
+      "wis_fe_static": 3.1208,
+      "wis_fe_adaptive": 2.9782,
+      "dm_p_vs_static": 0.0051290488789432764,
+      "dm_p_vs_adaptive": 0.0038885183648051935,
+      "tweedie_beats_static": true,
+      "tweedie_beats_adaptive": true
+    },
+    "off_season_y<50": {
+      "n": 51,
+      "wis_tweedie": 1.6046,
+      "wis_fe_static": 1.7188,
+      "wis_fe_adaptive": 1.7657,
+      "dm_p_vs_static": 0.05650099103784201,
+      "dm_p_vs_adaptive": 0.0005386445468626988,
+      "tweedie_beats_static": true,
+      "tweedie_beats_adaptive": true
+    },
+    "peak_y>=50": {
+      "n": 17,
+      "wis_tweedie": 5.8279,
+      "wis_fe_static": 7.3269,
+      "wis_fe_adaptive": 6.6159,
+      "dm_p_vs_static": 0.013346888650457522,
+      "dm_p_vs_adaptive": 0.05632891119765526,
+      "tweedie_beats_static": true,
+      "tweedie_beats_adaptive": true
+    },
+    "first_34": {
+      "n": 34,
+      "wis_tweedie": 2.6718,
+      "wis_fe_static": 3.1682,
+      "wis_fe_adaptive": 3.0594,
+      "dm_p_vs_static": 0.024864724725110365,
+      "dm_p_vs_adaptive": 0.006701620734959057,
+      "tweedie_beats_static": true,
+      "tweedie_beats_adaptive": true
+    },
+    "last_34": {
+      "n": 34,
+      "wis_tweedie": 2.6491,
+      "wis_fe_static": 3.0735,
+      "wis_fe_adaptive": 2.897,
+      "dm_p_vs_static": 0.08373898699482485,
+      "dm_p_vs_adaptive": 0.14050344148217397,
+      "tweedie_beats_static": true,
+      "tweedie_beats_adaptive": true
+    },
+    "last_20": {
+      "n": 20,
+      "wis_tweedie": 4.0735,
+      "wis_fe_static": 4.7904,
+      "wis_fe_adaptive": 4.4206,
+      "dm_p_vs_static": 0.08294428757481653,
+      "dm_p_vs_adaptive": 0.22397142558840688,
+      "tweedie_beats_static": true,
+      "tweedie_beats_adaptive": true
+    }
+  },
+  "robustness_sliding_L34": {
+    "window_len": 34,
+    "n_windows": 35,
+    "frac_tweedie_beats_static": 1.0,
+    "frac_tweedie_beats_adaptive": 1.0,
+    "worst_case_tweedie_minus_static": -0.0378,
+    "worst_case_tweedie_minus_adaptive": -0.1653
+  },
+  "robustness_moving_block_bootstrap": {
+    "vs_static": {
+      "mean_delta_wis_fe_minus_tw": 0.4604,
+      "ci95_lo": 0.1648,
+      "ci95_hi": 0.8229,
+      "ci_excludes_zero": true,
+      "tweedie_decisively_lower": true,
+      "boot_p_two_sided": 0.0
+    },
+    "vs_adaptivePID": {
+      "mean_delta_wis_fe_minus_tw": 0.3178,
+      "ci95_lo": 0.1526,
+      "ci95_hi": 0.5159,
+      "ci_excludes_zero": true,
+      "tweedie_decisively_lower": true,
+      "boot_p_two_sided": 0.0
+    }
+  },
+  "beats_target_tweedie_dm_beats_fusedepi": true
+}

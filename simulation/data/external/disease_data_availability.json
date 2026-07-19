@@ -1,0 +1,326 @@
+{
+ "A_full": [
+ {
+ "disease": "수두",
+ "group": "제2급",
+ "ts_weeks": 304,
+ "ts_cases": 147109,
+ "gu_count": 25,
+ "gu_cases": 22372,
+ "n_age": 11,
+ "deaths": 4
+ },
+ {
+ "disease": "C형간염",
+ "group": "제3급",
+ "ts_weeks": 313,
+ "ts_cases": 49595,
+ "gu_count": 25,
+ "gu_cases": 8798,
+ "n_age": 13,
+ "deaths": 77
+ },
+ {
+ "disease": "유행성이하선염",
+ "group": "제2급",
+ "ts_weeks": 313,
+ "ts_cases": 46904,
+ "gu_count": 25,
+ "gu_cases": 6994,
+ "n_age": 13,
+ "deaths": 0
+ },
+ {
+ "disease": "쯔쯔가무시증",
+ "group": "제3급",
+ "ts_weeks": 306,
+ "ts_cases": 28510,
+ "gu_count": 25,
+ "gu_cases": 967,
+ "n_age": 13,
+ "deaths": 76
+ },
+ {
+ "disease": "성홍열",
+ "group": "제2급",
+ "ts_weeks": 313,
+ "ts_cases": 23880,
+ "gu_count": 25,
+ "gu_cases": 2862,
+ "n_age": 15,
+ "deaths": 6
+ },
+ {
+ "disease": "A형간염",
+ "group": "제2급",
+ "ts_weeks": 313,
+ "ts_cases": 16111,
+ "gu_count": 25,
+ "gu_cases": 3429,
+ "n_age": 14,
+ "deaths": 12
+ },
+ {
+ "disease": "백일해",
+ "group": "제2급",
+ "ts_weeks": 191,
+ "ts_cases": 13751,
+ "gu_count": 25,
+ "gu_cases": 12112,
+ "n_age": 15,
+ "deaths": 4
+ },
+ {
+ "disease": "E형간염",
+ "group": "제2급",
+ "ts_weeks": 287,
+ "ts_cases": 3446,
+ "gu_count": 25,
+ "gu_cases": 685,
+ "n_age": 15,
+ "deaths": 16
+ },
+ {
+ "disease": "말라리아",
+ "group": "제3급",
+ "ts_weeks": 259,
+ "ts_cases": 3160,
+ "gu_count": 25,
+ "gu_cases": 543,
+ "n_age": 15,
+ "deaths": 3
+ },
+ {
+ "disease": "레지오넬라증",
+ "group": "제3급",
+ "ts_weeks": 313,
+ "ts_cases": 2688,
+ "gu_count": 25,
+ "gu_cases": 666,
+ "n_age": 15,
+ "deaths": 139
+ },
+ {
+ "disease": "신증후군출혈열",
+ "group": "제3급",
+ "ts_weeks": 304,
+ "ts_cases": 1935,
+ "gu_count": 20,
+ "gu_cases": 48,
+ "n_age": 14,
+ "deaths": 13
+ },
+ {
+ "disease": "장출혈성대장균감염증",
+ "group": "제2급",
+ "ts_weeks": 268,
+ "ts_cases": 1667,
+ "gu_count": 22,
+ "gu_cases": 225,
+ "n_age": 15,
+ "deaths": 11
+ },
+ {
+ "disease": "뎅기열",
+ "group": "제3급",
+ "ts_weeks": 197,
+ "ts_cases": 662,
+ "gu_count": 25,
+ "gu_cases": 273,
+ "n_age": 15,
+ "deaths": 0
+ }
+ ],
+ "B_time_only": [
+ {
+ "disease": "카바페넴내성장내세균목(CRE) 감염증",
+ "group": "제2급",
+ "ts_weeks": 288,
+ "ts_cases": 174695
+ },
+ {
+ "disease": "매독",
+ "group": "제3급",
+ "ts_weeks": 104,
+ "ts_cases": 4957
+ },
+ {
+ "disease": "폐렴구균 감염증",
+ "group": "제2급",
+ "ts_weeks": 311,
+ "ts_cases": 2273
+ },
+ {
+ "disease": "B형간염",
+ "group": "제3급",
+ "ts_weeks": 309,
+ "ts_cases": 1975
+ },
+ {
+ "disease": "중증열성혈소판감소증후군(SFTS)",
+ "group": "제3급",
+ "ts_weeks": 183,
+ "ts_cases": 1255
+ },
+ {
+ "disease": "렙토스피라증",
+ "group": "제3급",
+ "ts_weeks": 224,
+ "ts_cases": 567
+ },
+ {
+ "disease": "크로이츠펠트-야콥병(CJD) 및 변종크로이츠펠트-야콥병(vCJD)",
+ "group": "제3급",
+ "ts_weeks": 227,
+ "ts_cases": 423
+ },
+ {
+ "disease": "큐열",
+ "group": "제3급",
+ "ts_weeks": 195,
+ "ts_cases": 356
+ },
+ {
+ "disease": "비브리오패혈증",
+ "group": "제3급",
+ "ts_weeks": 117,
+ "ts_cases": 354
+ },
+ {
+ "disease": "장티푸스",
+ "group": "제2급",
+ "ts_weeks": 142,
+ "ts_cases": 225
+ },
+ {
+ "disease": "세균성이질",
+ "group": "제2급",
+ "ts_weeks": 133,
+ "ts_cases": 221
+ },
+ {
+ "disease": "파라티푸스",
+ "group": "제2급",
+ "ts_weeks": 133,
+ "ts_cases": 186
+ },
+ {
+ "disease": "라임병",
+ "group": "제3급",
+ "ts_weeks": 110,
+ "ts_cases": 165
+ },
+ {
+ "disease": "파상풍",
+ "group": "제3급",
+ "ts_weeks": 115,
+ "ts_cases": 152
+ },
+ {
+ "disease": "홍역",
+ "group": "제2급",
+ "ts_weeks": 59,
+ "ts_cases": 142
+ },
+ {
+ "disease": "발진열",
+ "group": "제3급",
+ "ts_weeks": 66,
+ "ts_cases": 110
+ }
+ ],
+ "C_space_only": [
+ {
+ "disease": "엠폭스",
+ "group": "제3급",
+ "gu_count": 23,
+ "gu_cases": 114
+ },
+ {
+ "disease": "B형간염(급성)",
+ "group": "?",
+ "gu_count": 25,
+ "gu_cases": 339
+ },
+ {
+ "disease": "결핵",
+ "group": "?",
+ "gu_count": 25,
+ "gu_cases": 9941
+ },
+ {
+ "disease": "신종감염병증후군",
+ "group": "제1급",
+ "gu_count": 25,
+ "gu_cases": 225383
+ },
+ {
+ "disease": "제1급감염병",
+ "group": "?",
+ "gu_count": 25,
+ "gu_cases": 225383
+ },
+ {
+ "disease": "제2급감염병",
+ "group": "?",
+ "gu_count": 25,
+ "gu_cases": 5561889
+ },
+ {
+ "disease": "제3급감염병",
+ "group": "?",
+ "gu_count": 25,
+ "gu_cases": 12223
+ },
+ {
+ "disease": "카바페넴내성장내세균속균종 감염증",
+ "group": "?",
+ "gu_count": 25,
+ "gu_cases": 66281
+ },
+ {
+ "disease": "코로나바이러스감염증-19",
+ "group": "?",
+ "gu_count": 25,
+ "gu_cases": 6526446
+ },
+ {
+ "disease": "크로이츠펠트-야콥병 및 변종크로이츠펠트-야콥병",
+ "group": "?",
+ "gu_count": 22,
+ "gu_cases": 113
+ },
+ {
+ "disease": "폐렴구균감염증",
+ "group": "?",
+ "gu_count": 25,
+ "gu_cases": 583
+ }
+ ],
+ "D_insufficient": [
+ "일본뇌염",
+ "수막구균 감염증",
+ "치쿤구니야열",
+ "브루셀라증",
+ "매독(선천성)",
+ "한센병",
+ "반코마이신내성황색포도알균(VRSA) 감염증",
+ "유비저",
+ "지카바이러스감염증",
+ "b형헤모필루스인플루엔자",
+ "보툴리눔독소증",
+ "풍진(후천성)",
+ "b형헤모필수스인플루엔자",
+ "반코마이신내성황색포도알균 감염증",
+ "수막구균감염증",
+ "증열성혈소판감소증후군(SFTS)"
+ ],
+ "sentinel": [
+ "인플루엔자(ILI)",
+ "급성호흡기감염증(ARI 11종)",
+ "장관감염증(20종)",
+ "수족구병",
+ "엔테로바이러스",
+ "안과감염병(3종)"
+ ]
+}

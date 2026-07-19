@@ -1,0 +1,309 @@
+{
+  "US": {
+    "data_sanity": {
+      "n_used": 1404,
+      "n_all_rows": 1404,
+      "nulls": 0,
+      "dup_year_week": 0,
+      "monotone": true,
+      "other_sources_same_country": [
+        "who_flunet",
+        "cdc_ilinet",
+        "cdc_flusurvnet"
+      ],
+      "ili_min": 0.3519,
+      "ili_max": 8.28,
+      "ili_mean": 2.062,
+      "first": [
+        1997,
+        40
+      ],
+      "last": [
+        2026,
+        24
+      ],
+      "iso_week_gaps": 5
+    },
+    "reproduce": {
+      "country": "US",
+      "source": "delphi_national",
+      "N_weeks": 1404,
+      "T0": 1104,
+      "n_test_origins": 300,
+      "cap_train_only": 15.43,
+      "p_star": 1.9,
+      "val_wis_by_p": {
+        "1.1": 0.233,
+        "1.3": 0.2276,
+        "1.5": 0.222,
+        "1.7": 0.2168,
+        "1.9": 0.212
+      },
+      "baseline_wis": 0.1171,
+      "tweedie_wis": 0.1043,
+      "delta_pct": -10.91,
+      "dm_p_HLN_h1_correct": 2.4421466970903083e-06,
+      "dm_p_code_factor": 2.266714697496397e-06,
+      "dm_meandiff": -0.0128,
+      "tweedie_picp95": 0.9733,
+      "k_of_n": "292/300",
+      "cp95ci": [
+        0.948,
+        0.988
+      ],
+      "wis_independent_vs_helper_maxabsdiff": 0.0,
+      "beats_sig": true
+    },
+    "cache_spotcheck": [
+      {
+        "t": 131,
+        "cached": 0.65433,
+        "regen": 0.65433,
+        "absdiff": 0.0
+      },
+      {
+        "t": 360,
+        "cached": 0.779181,
+        "regen": 0.779181,
+        "absdiff": 0.0
+      },
+      {
+        "t": 440,
+        "cached": 2.860028,
+        "regen": 2.860028,
+        "absdiff": 0.0
+      },
+      {
+        "t": 461,
+        "cached": 0.787876,
+        "regen": 0.787876,
+        "absdiff": 0.0
+      },
+      {
+        "t": 1403,
+        "cached": 1.150674,
+        "regen": 1.150674,
+        "absdiff": 0.0
+      }
+    ],
+    "leak_audit": {
+      "interior": {
+        "t_pert": 1254,
+        "j_pert": 150,
+        "expected_first_change": 151,
+        "baseline_first_changed_origin_all_bands": 151,
+        "tweedie_first_changed_origin_all_bands": 151,
+        "baseline_leak_at_or_before_j_pert": false,
+        "tweedie_leak_at_or_before_j_pert": false,
+        "note": "None for baseline 95%-band alone is tail-insensitivity, not leak; all-band first change is +1",
+        "PASS": true
+      },
+      "terminal": {
+        "t_term": 1403,
+        "baseline_bounds_unchanged": true,
+        "tweedie_bounds_unchanged": true,
+        "PASS": true
+      },
+      "pstar_val_only": {
+        "perturbed_test_week": 1254,
+        "val_wis_bit_identical": true,
+        "PASS": true
+      },
+      "cap_train_only": {
+        "train_max_orig": 7.7151,
+        "train_max_after_test_perturb": 7.7151,
+        "cap": 15.4302,
+        "PASS": true
+      }
+    },
+    "dm_robustness": {
+      "dm_meandiff": -0.01277,
+      "hln_h1_p": 2.4421466970903083e-06,
+      "newey_west_p": {
+        "1": 0.00010272,
+        "4": 0.00177926,
+        "8": 0.00444066,
+        "12": 0.00447539
+      },
+      "moving_block_bootstrap_p": {
+        "1": {
+          "p": 0.0,
+          "boot_se_of_mean": 0.002639
+        },
+        "4": {
+          "p": 0.0011,
+          "boot_se_of_mean": 0.003873
+        },
+        "8": {
+          "p": 0.0068,
+          "boot_se_of_mean": 0.004504
+        },
+        "12": {
+          "p": 0.0055,
+          "boot_se_of_mean": 0.004519
+        }
+      },
+      "all_p_below_0.05": true
+    },
+    "fairness": {
+      "shared_tirex_point": true,
+      "baseline_reproduced_by_identical_CQR_and_WIS": true,
+      "tweedie_reproduced_by_identical_CQR_and_WIS": true,
+      "only_difference_is_quantile_scale": true,
+      "PASS": true
+    }
+  },
+  "JP": {
+    "data_sanity": {
+      "n_used": 316,
+      "n_all_rows": 316,
+      "nulls": 0,
+      "dup_year_week": 0,
+      "monotone": true,
+      "other_sources_same_country": [
+        "who_flunet",
+        "japan_jihs_hist"
+      ],
+      "ili_min": 0.1361,
+      "ili_max": 61.1319,
+      "ili_mean": 10.2835,
+      "first": [
+        2012,
+        46
+      ],
+      "last": [
+        2026,
+        20
+      ],
+      "iso_week_gaps": 14
+    },
+    "reproduce": {
+      "country": "JP",
+      "source": "japan_jihs",
+      "N_weeks": 316,
+      "T0": 184,
+      "n_test_origins": 132,
+      "cap_train_only": 106.83,
+      "p_star": 1.5,
+      "val_wis_by_p": {
+        "1.1": 0.8538,
+        "1.3": 0.843,
+        "1.5": 0.8384,
+        "1.7": 0.8419,
+        "1.9": 0.8526
+      },
+      "baseline_wis": 1.921,
+      "tweedie_wis": 1.714,
+      "delta_pct": -10.78,
+      "dm_p_HLN_h1_correct": 2.7652002980715906e-06,
+      "dm_p_code_factor": 2.3548264755923753e-06,
+      "dm_meandiff": -0.207,
+      "tweedie_picp95": 0.947,
+      "k_of_n": "125/132",
+      "cp95ci": [
+        0.894,
+        0.978
+      ],
+      "wis_independent_vs_helper_maxabsdiff": 0.0,
+      "beats_sig": true
+    },
+    "cache_spotcheck": [
+      {
+        "t": 71,
+        "cached": 9.20689,
+        "regen": 9.20689,
+        "absdiff": 0.0
+      },
+      {
+        "t": 115,
+        "cached": 0.688086,
+        "regen": 0.688086,
+        "absdiff": 0.0
+      },
+      {
+        "t": 130,
+        "cached": 11.259189,
+        "regen": 11.259189,
+        "absdiff": 0.0
+      },
+      {
+        "t": 134,
+        "cached": 47.736351,
+        "regen": 47.736351,
+        "absdiff": 0.0
+      },
+      {
+        "t": 315,
+        "cached": 0.336787,
+        "regen": 0.336787,
+        "absdiff": 0.0
+      }
+    ],
+    "leak_audit": {
+      "interior": {
+        "t_pert": 250,
+        "j_pert": 66,
+        "expected_first_change": 67,
+        "baseline_first_changed_origin_all_bands": 67,
+        "tweedie_first_changed_origin_all_bands": 67,
+        "baseline_leak_at_or_before_j_pert": false,
+        "tweedie_leak_at_or_before_j_pert": false,
+        "note": "None for baseline 95%-band alone is tail-insensitivity, not leak; all-band first change is +1",
+        "PASS": true
+      },
+      "terminal": {
+        "t_term": 315,
+        "baseline_bounds_unchanged": true,
+        "tweedie_bounds_unchanged": true,
+        "PASS": true
+      },
+      "pstar_val_only": {
+        "perturbed_test_week": 250,
+        "val_wis_bit_identical": true,
+        "PASS": true
+      },
+      "cap_train_only": {
+        "train_max_orig": 53.4136,
+        "train_max_after_test_perturb": 53.4136,
+        "cap": 106.8272,
+        "PASS": true
+      }
+    },
+    "dm_robustness": {
+      "dm_meandiff": -0.20702,
+      "hln_h1_p": 2.7652002980715906e-06,
+      "newey_west_p": {
+        "1": 5.69e-06,
+        "4": 0.00029988,
+        "8": 0.000535,
+        "12": 0.00068144
+      },
+      "moving_block_bootstrap_p": {
+        "1": {
+          "p": 0.0001,
+          "boot_se_of_mean": 0.04188
+        },
+        "4": {
+          "p": 0.0007,
+          "boot_se_of_mean": 0.055263
+        },
+        "8": {
+          "p": 0.0023,
+          "boot_se_of_mean": 0.060044
+        },
+        "12": {
+          "p": 0.0022,
+          "boot_se_of_mean": 0.061525
+        }
+      },
+      "all_p_below_0.05": true
+    },
+    "fairness": {
+      "shared_tirex_point": true,
+      "baseline_reproduced_by_identical_CQR_and_WIS": true,
+      "tweedie_reproduced_by_identical_CQR_and_WIS": true,
+      "only_difference_is_quantile_scale": true,
+      "PASS": true
+    }
+  }
+}

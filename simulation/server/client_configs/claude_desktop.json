@@ -1,0 +1,27 @@
+{
+ "_comment": [
+ "Claude Desktop MCP config for the MPH epi-mcp server.",
+ "",
+ "Where to put this file:",
+ " • Windows : %APPDATA%\\Claude\\claude_desktop_config.json",
+ " • macOS : ~/Library/Application Support/Claude/claude_desktop_config.json",
+ " • Linux : ~/.config/Claude/claude_desktop_config.json",
+ "",
+ "If the file already exists, merge the `mcpServers` block below — do NOT",
+ "overwrite the whole file (other servers will be lost).",
+ "",
+ "Replace <REPO_PATH> with the absolute path to your checkout.",
+ "Adjust `command` + `cwd` for your machine. Forward slashes work on Windows too."
+ ],
+ "mcpServers": {
+ "mph-epi": {
+ "command": "<REPO_PATH>/.venv/Scripts/python.exe",
+ "args": ["-m", "simulation", "mcp-server"],
+ "cwd": "<REPO_PATH>",
+ "env": {
+ "PYTHONIOENCODING": "utf-8",
+ "PYTHONUNBUFFERED": "1"
+ }
+ }
+ }
+}

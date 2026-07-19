@@ -1,0 +1,3 @@
+"test","statistic","p_value","null_hypothesis","conclusion"
+"ADF",-4.08880124600933,0.01,"non-stationary","reject -> stationary"
+"KPSS-level",1.40022762033127,0.01,"stationary","reject -> non-stationary"

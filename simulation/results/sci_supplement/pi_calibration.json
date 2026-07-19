@@ -1,0 +1,196 @@
+{
+  "question": "Which FusedEpi 95% PI coverage is canonical, why two values, and does the PI under-cover?",
+  "answer_canonical_95pct_coverage": 0.7352941176470589,
+  "canonical_source": "R10 per_model_eval.py (per_model_metrics.csv, SSOT) \u2014 leak-free split-conformal + adaptive",
+  "is_under_coverage": true,
+  "reconciliation": {
+    "two_sources_both_real": true,
+    "r10_canonical_0p735": {
+      "value": 0.7352941176470589,
+      "construction": "per_model_eval.py:870-885 \u2014 K=11 split-conformal half-width (k11_pi_widths_from_residuals) over LEAK-FREE in-sample residuals; MPH_ADAPTIVE_CONFORMAL widening; coverage_with_exact_ci Wilson",
+      "why_lower": "narrow, honest, leak-free residual-quantile band on the n=68 test slab"
+    },
+    "r9_optimal_1p0": {
+      "value": 0.9852941176470589,
+      "width": 26.38270382518823,
+      "construction": "per_model_optimize.py:827 \u2014 single symmetric band at the 0.95 empirical quantile of TRAINING-POOL |residuals| (coarser, wider)",
+      "why_higher": "wider band over-covers on the test slab; diagnostic, NOT the paper number"
+    },
+    "real_slab_aci_0p9375": {
+      "value": 0.9411764705882353,
+      "construction": "per_model_optimize.py:1799-1834 \u2014 ACI adaptive conformal over n=16 real-forecast origins; the '1.0' in the prompt was the optimal-JSON test_metrics over-coverage, real-slab ACI is 0.9375 not 1.0"
+    },
+    "verdict": "0.735 is correct and is genuine UNDER-coverage on the leak-free test-slab band; reported as-is (no inflation)."
+  },
+  "rolling_origin_backtest": {
+    "n_origins": 257,
+    "min_train": 80,
+    "season": 52,
+    "n_cal_min": 28,
+    "n_cal_max": 284,
+    "n_cal_mean": 156.0,
+    "headline": {
+      "0.95": {
+        "nominal": 0.95,
+        "realized_coverage": 0.9416,
+        "wilson_ci_lo": 0.9059,
+        "wilson_ci_hi": 0.9643,
+        "n": 257,
+        "n_hit": 242,
+        "deviation": -0.0084,
+        "mean_width": 46.4931,
+        "calibrated": true
+      },
+      "0.8": {
+        "nominal": 0.8,
+        "realized_coverage": 0.6848,
+        "wilson_ci_lo": 0.6257,
+        "wilson_ci_hi": 0.7385,
+        "n": 257,
+        "n_hit": 176,
+        "deviation": -0.1152,
+        "mean_width": 14.3334,
+        "calibrated": false
+      },
+      "0.5": {
+        "nominal": 0.5,
+        "realized_coverage": 0.3891,
+        "wilson_ci_lo": 0.3315,
+        "wilson_ci_hi": 0.4499,
+        "n": 257,
+        "n_hit": 100,
+        "deviation": -0.1109,
+        "mean_width": 3.0877,
+        "calibrated": false
+      }
+    },
+    "k11_grid": {
+      "0.98": {
+        "nominal": 0.98,
+        "realized": 0.9689,
+        "ci": [
+          0.9398,
+          0.9841
+        ]
+      },
+      "0.95": {
+        "nominal": 0.95,
+        "realized": 0.9416,
+        "ci": [
+          0.9059,
+          0.9643
+        ]
+      },
+      "0.9": {
+        "nominal": 0.9,
+        "realized": 0.8677,
+        "ci": [
+          0.8208,
+          0.9038
+        ]
+      },
+      "0.8": {
+        "nominal": 0.8,
+        "realized": 0.6848,
+        "ci": [
+          0.6257,
+          0.7385
+        ]
+      },
+      "0.7": {
+        "nominal": 0.7,
+        "realized": 0.5642,
+        "ci": [
+          0.5031,
+          0.6234
+        ]
+      },
+      "0.6": {
+        "nominal": 0.6,
+        "realized": 0.463,
+        "ci": [
+          0.4031,
+          0.5241
+        ]
+      },
+      "0.5": {
+        "nominal": 0.5,
+        "realized": 0.3891,
+        "ci": [
+          0.3315,
+          0.4499
+        ]
+      },
+      "0.4": {
+        "nominal": 0.4,
+        "realized": 0.2918,
+        "ci": [
+          0.2396,
+          0.3501
+        ]
+      },
+      "0.3": {
+        "nominal": 0.3,
+        "realized": 0.2257,
+        "ci": [
+          0.1788,
+          0.2806
+        ]
+      },
+      "0.2": {
+        "nominal": 0.2,
+        "realized": 0.1518,
+        "ci": [
+          0.113,
+          0.2007
+        ]
+      },
+      "0.1": {
+        "nominal": 0.1,
+        "realized": 0.0778,
+        "ci": [
+          0.0509,
+          0.1171
+        ]
+      }
+    }
+  },
+  "backtest_interpretation": "Tests the SPLIT-CONFORMAL PI CONSTRUCTION (the method behind R10's 0.735) across 257 leak-free origins using a deterministic reference forecaster \u2014 NOT FusedEpi's specific bands (refitting FusedEpi 257\u00d7 = retraining, forbidden). Finding: at 95% the method is well-calibrated (0.942, nominal inside Wilson CI); at 80%/50% it UNDER-covers (heavy-tailed/right-skewed ILI residuals \u2192 symmetric split-conformal half-widths too narrow in the body of the distribution). This is consistent with R10 FusedEpi: 95%=0.735, 80%=0.588, 50%=0.206 all under-cover, and the under-coverage worsens toward the center \u2014 the same directional signature.",
+  "calset_diagnostic": {
+    "n_cal": 43,
+    "threshold_for_stable": 20,
+    "is_small": false,
+    "per_level": {
+      "0.95": {
+        "target_nominal": 0.95,
+        "finite_sample_guarantee": 0.9545,
+        "grid_coarseness": 0.0227,
+        "note": "closest achievable nominal differs from 0.95 by up to 0.023"
+      },
+      "0.8": {
+        "target_nominal": 0.8,
+        "finite_sample_guarantee": 0.8182,
+        "grid_coarseness": 0.0227,
+        "note": "closest achievable nominal differs from 0.8 by up to 0.023"
+      },
+      "0.5": {
+        "target_nominal": 0.5,
+        "finite_sample_guarantee": 0.5,
+        "grid_coarseness": 0.0227,
+        "note": "closest achievable nominal differs from 0.5 by up to 0.023"
+      }
+    },
+    "actual_fusedepi_r9_residual_cal_set_n": 43,
+    "prompt_assumed_n13_is_inaccurate_for_fusedepi": true,
+    "coverage_estimate_sample_n_test": 68,
+    "coverage_estimate_note": "0.735 is estimated on only n=68 test points \u2192 Wilson CI (0.50, 0.735) is wide; point estimate is under-cover but imprecise.",
+    "real_slab_aci_origins_n": 16
+  },
+  "provenance": {
+    "y_series": "reconstructed run_data(seed=42), READ_ONLY DB, in-sample n=337",
+    "backtest_forecaster": "deterministic leak-free seasonal-naive+AR reference (NO FusedEpi refit)",
+    "retraining": "NONE",
+    "live_code_modified": "NONE",
+    "leak_free": "conformal band at origin t uses only residuals on [0,t)"
+  }
+}

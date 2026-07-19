@@ -1,0 +1,20 @@
+{
+  "backbone": "FROZEN 32.3M xLSTM (12 blocks); trained only a small head on the 512-dim out_norm rep",
+  "best_head_cfg": {
+    "K_pca": 16,
+    "hidden": 16,
+    "wd": 0.01,
+    "dropout": 0.3
+  },
+  "native_wis_test": 2.2427,
+  "native_wis_val": 1.5767,
+  "head_wis_val": 1.5766,
+  "head_wis_test": 2.2427,
+  "use_head_donoharm": true,
+  "deployed_wis_test": 2.2427,
+  "deployed_picp95": 0.826,
+  "dm_hln_p_vs_native": 0.7429,
+  "dm_boot_p_vs_native": 0.5782,
+  "beats_native": false,
+  "elapsed_s": 30.0
+}

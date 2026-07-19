@@ -1,0 +1,12 @@
+{
+  "approach": "output-side LoRA fine-tune of pretrained TiRex, FAIR expanding (153..263 wk), per-block do-no-harm",
+  "native_wis_test": 2.2427,
+  "lora_ft_wis_test": 2.2427,
+  "delta_pct": 0.0,
+  "ft_used_on_origins": 0,
+  "of_total": 132,
+  "dm_hln_p": 1.0,
+  "dm_boot_p": 1.0,
+  "beats_native": false,
+  "elapsed_s": 112.0
+}

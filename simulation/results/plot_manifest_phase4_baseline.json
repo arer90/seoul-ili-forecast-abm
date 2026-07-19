@@ -1,0 +1,10 @@
+{
+  "tag": "phase4_baseline",
+  "status": "ok",
+  "output_root": "<REPO_ROOT>/simulation/results",
+  "csv_dir": "<REPO_ROOT>/simulation/results/csv",
+  "mpl_dir": "<REPO_ROOT>/simulation/results/plots_matplotlib",
+  "plotly_dir": "<REPO_ROOT>/simulation/results/plots_plotly",
+  "seaborn_dir": "<REPO_ROOT>/simulation/results/plots_seaborn",
+  "n_models": 48
+}

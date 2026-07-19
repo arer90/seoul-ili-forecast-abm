@@ -1,0 +1,16 @@
+{
+  "p_star": 1.7,
+  "tertile_cuts": [
+    1.85,
+    4.25
+  ],
+  "best_m_on_val": 5,
+  "champion_global_wis": 2.2378,
+  "mondrian_wis": 2.2381,
+  "delta_pct": 0.01,
+  "dm_p_vs_champion": 0.8519,
+  "dm_meandiff": 0.0002,
+  "mondrian_picp95": 0.924,
+  "beats_champion": false,
+  "elapsed_s": 0.0
+}

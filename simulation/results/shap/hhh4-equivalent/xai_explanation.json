@@ -1,0 +1,130 @@
+{
+  "feature_axis": [
+    {
+      "feature": "f0",
+      "mean_abs_shap": 0.244774,
+      "mean_shap": 0.154139,
+      "direction": "raises"
+    },
+    {
+      "feature": "f37",
+      "mean_abs_shap": 0.189595,
+      "mean_shap": 0.149951,
+      "direction": "raises"
+    },
+    {
+      "feature": "f19",
+      "mean_abs_shap": 0.150062,
+      "mean_shap": -0.100313,
+      "direction": "lowers"
+    },
+    {
+      "feature": "f40",
+      "mean_abs_shap": 0.13925,
+      "mean_shap": 0.13925,
+      "direction": "raises"
+    },
+    {
+      "feature": "f47",
+      "mean_abs_shap": 0.13575,
+      "mean_shap": -0.092769,
+      "direction": "lowers"
+    },
+    {
+      "feature": "f49",
+      "mean_abs_shap": 0.089854,
+      "mean_shap": 0.089854,
+      "direction": "raises"
+    },
+    {
+      "feature": "f36",
+      "mean_abs_shap": 0.087785,
+      "mean_shap": -0.072754,
+      "direction": "lowers"
+    },
+    {
+      "feature": "f42",
+      "mean_abs_shap": 0.084727,
+      "mean_shap": -0.022121,
+      "direction": "lowers"
+    },
+    {
+      "feature": "f24",
+      "mean_abs_shap": 0.063527,
+      "mean_shap": -0.004615,
+      "direction": "lowers"
+    },
+    {
+      "feature": "f41",
+      "mean_abs_shap": 0.059789,
+      "mean_shap": 0.04723,
+      "direction": "raises"
+    },
+    {
+      "feature": "f46",
+      "mean_abs_shap": 0.059037,
+      "mean_shap": 0.059037,
+      "direction": "raises"
+    },
+    {
+      "feature": "f50",
+      "mean_abs_shap": 0.051725,
+      "mean_shap": -0.038926,
+      "direction": "lowers"
+    },
+    {
+      "feature": "f9",
+      "mean_abs_shap": 0.051304,
+      "mean_shap": 0.045478,
+      "direction": "raises"
+    },
+    {
+      "feature": "f7",
+      "mean_abs_shap": 0.046642,
+      "mean_shap": 0.046642,
+      "direction": "raises"
+    },
+    {
+      "feature": "f6",
+      "mean_abs_shap": 0.046503,
+      "mean_shap": 0.028023,
+      "direction": "raises"
+    }
+  ],
+  "input_axis": {
+    "representative": {
+      "row": 0,
+      "prediction": null,
+      "top_drivers": [
+        {
+          "feature": "f4",
+          "shap": 0.426
+        },
+        {
+          "feature": "f49",
+          "shap": 0.3905
+        },
+        {
+          "feature": "f34",
+          "shap": 0.2765
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": null,
+    "prediction_mean": null,
+    "prediction_range": null,
+    "fraction_explained_by_top3": 0.2441
+  },
+  "model_axis": {
+    "family": "other",
+    "n_features_explained": 52,
+    "n_samples": 30,
+    "dominant_feature": "f0",
+    "dominant_feature_sign_consistency": 0.133,
+    "global_mean_abs_shap": 0.046044,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

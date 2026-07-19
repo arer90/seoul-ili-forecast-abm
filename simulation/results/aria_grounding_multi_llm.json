@@ -1,0 +1,341 @@
+{
+  "description": "Multi-LLM ARIA grounding comparison on REAL thesis outputs (ABM forward-validation + ABM real-wave fit). Live LLMs, single pass each, non-deterministic. claude CLI vs local Ollama models. | EXTENDED: CLI backends cli:codex:codex-default added (same test set + scoring).",
+  "backends": [
+    "cli:claude:claude-default",
+    "ollama:qwen2.5:3b",
+    "ollama:phi3.5:3.8b",
+    "ollama:mistral:7b",
+    "ollama:llama3.2:1b",
+    "ollama:gemma3:1b",
+    "cli:codex:codex-default"
+  ],
+  "contexts": [
+    {
+      "id": "P4_identifiability",
+      "source": "abm_forward_validation/result.json",
+      "facts": [
+        "alpha=0.9",
+        "kappa=0",
+        "tau=14",
+        "theta=0.2",
+        "forward_r2=0.722",
+        "anchor_corr=0.859",
+        "r2_behavior_on=0.557",
+        "r2_behavior_off=0.0408"
+      ]
+    },
+    {
+      "id": "ABM_fit",
+      "source": "abm_real_validation/result.json",
+      "facts": [
+        "r2_adaptive=0.434",
+        "r2_static=0.792",
+        "rmse=15.9",
+        "dm_p=0.00938",
+        "n_seasons=7"
+      ]
+    }
+  ],
+  "comparison_table": [
+    {
+      "backend_id": "cli:claude:claude-default",
+      "label": "Claude CLI",
+      "tier": "cli",
+      "numeric_fact_recall": 1.0,
+      "numeric_faithfulness": 0.9285,
+      "numeric_n_spurious": 2,
+      "numeric_n_errors": 0,
+      "selfask_subq_recall": 1.0,
+      "selfask_faithfulness": 0.6875,
+      "selfask_mean_n_subq": 6.5,
+      "selfask_n_errors": 0
+    },
+    {
+      "backend_id": "ollama:qwen2.5:3b",
+      "label": "Qwen2.5-3B",
+      "tier": "ollama",
+      "numeric_fact_recall": 0.1625,
+      "numeric_faithfulness": 0.2915,
+      "numeric_n_spurious": 0,
+      "numeric_n_errors": 0,
+      "selfask_subq_recall": 1.0,
+      "selfask_faithfulness": 0.576,
+      "selfask_mean_n_subq": 6.5,
+      "selfask_n_errors": 0
+    },
+    {
+      "backend_id": "ollama:phi3.5:3.8b",
+      "label": "Phi3.5-3.8B",
+      "tier": "ollama",
+      "numeric_fact_recall": 0.35,
+      "numeric_faithfulness": 0.55,
+      "numeric_n_spurious": 1,
+      "numeric_n_errors": 0,
+      "selfask_subq_recall": 1.0,
+      "selfask_faithfulness": 0.7415,
+      "selfask_mean_n_subq": 6.5,
+      "selfask_n_errors": 0
+    },
+    {
+      "backend_id": "ollama:mistral:7b",
+      "label": "Mistral-7B",
+      "tier": "ollama",
+      "numeric_fact_recall": 0.8,
+      "numeric_faithfulness": 0.757,
+      "numeric_n_spurious": 1,
+      "numeric_n_errors": 0,
+      "selfask_subq_recall": 1.0,
+      "selfask_faithfulness": 0.646,
+      "selfask_mean_n_subq": 6.5,
+      "selfask_n_errors": 0
+    },
+    {
+      "backend_id": "ollama:llama3.2:1b",
+      "label": "Llama3.2-1B",
+      "tier": "ollama",
+      "numeric_fact_recall": 0.425,
+      "numeric_faithfulness": 0.7525,
+      "numeric_n_spurious": 3,
+      "numeric_n_errors": 0,
+      "selfask_subq_recall": 1.0,
+      "selfask_faithfulness": 0.728,
+      "selfask_mean_n_subq": 6.5,
+      "selfask_n_errors": 0
+    },
+    {
+      "backend_id": "ollama:gemma3:1b",
+      "label": "Gemma3-1B",
+      "tier": "ollama",
+      "numeric_fact_recall": 0.35,
+      "numeric_faithfulness": 0.5625,
+      "numeric_n_spurious": 0,
+      "numeric_n_errors": 0,
+      "selfask_subq_recall": 0.9375,
+      "selfask_faithfulness": 0.6945,
+      "selfask_mean_n_subq": 6.5,
+      "selfask_n_errors": 0
+    },
+    {
+      "backend_id": "cli:codex:codex-default",
+      "label": "Codex (OpenAI GPT)",
+      "tier": "cli",
+      "numeric_fact_recall": 0.65,
+      "numeric_faithfulness": 0.8165,
+      "numeric_n_spurious": 2,
+      "numeric_n_errors": 0,
+      "selfask_subq_recall": 1.0,
+      "selfask_faithfulness": 0.771,
+      "selfask_mean_n_subq": 6.5,
+      "selfask_n_errors": 0
+    }
+  ],
+  "numeric_grounding": {
+    "per_backend": {
+      "cli:claude:claude-default": {
+        "fact_recall": 1.0,
+        "faithfulness": 0.9285,
+        "n_spurious_total": 2,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:qwen2.5:3b": {
+        "fact_recall": 0.1625,
+        "faithfulness": 0.2915,
+        "n_spurious_total": 0,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:phi3.5:3.8b": {
+        "fact_recall": 0.35,
+        "faithfulness": 0.55,
+        "n_spurious_total": 1,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:mistral:7b": {
+        "fact_recall": 0.8,
+        "faithfulness": 0.757,
+        "n_spurious_total": 1,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:llama3.2:1b": {
+        "fact_recall": 0.425,
+        "faithfulness": 0.7525,
+        "n_spurious_total": 3,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:gemma3:1b": {
+        "fact_recall": 0.35,
+        "faithfulness": 0.5625,
+        "n_spurious_total": 0,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "cli:codex:codex-default": {
+        "fact_recall": 0.65,
+        "faithfulness": 0.8165,
+        "n_spurious_total": 2,
+        "n_contexts": 2,
+        "n_errors": 0
+      }
+    },
+    "contexts": [
+      {
+        "id": "P4_identifiability",
+        "source": "abm_forward_validation/result.json"
+      },
+      {
+        "id": "ABM_fit",
+        "source": "abm_real_validation/result.json"
+      }
+    ]
+  },
+  "self_ask": {
+    "per_backend": {
+      "cli:claude:claude-default": {
+        "subq_fact_recall": 1.0,
+        "faithfulness": 0.6875,
+        "n_spurious_total": 4,
+        "mean_n_subq": 6.5,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:qwen2.5:3b": {
+        "subq_fact_recall": 1.0,
+        "faithfulness": 0.576,
+        "n_spurious_total": 0,
+        "mean_n_subq": 6.5,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:phi3.5:3.8b": {
+        "subq_fact_recall": 1.0,
+        "faithfulness": 0.7415,
+        "n_spurious_total": 2,
+        "mean_n_subq": 6.5,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:mistral:7b": {
+        "subq_fact_recall": 1.0,
+        "faithfulness": 0.646,
+        "n_spurious_total": 0,
+        "mean_n_subq": 6.5,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:llama3.2:1b": {
+        "subq_fact_recall": 1.0,
+        "faithfulness": 0.728,
+        "n_spurious_total": 21,
+        "mean_n_subq": 6.5,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "ollama:gemma3:1b": {
+        "subq_fact_recall": 0.9375,
+        "faithfulness": 0.6945,
+        "n_spurious_total": 0,
+        "mean_n_subq": 6.5,
+        "n_contexts": 2,
+        "n_errors": 0
+      },
+      "cli:codex:codex-default": {
+        "subq_fact_recall": 1.0,
+        "faithfulness": 0.771,
+        "n_spurious_total": 2,
+        "mean_n_subq": 6.5,
+        "n_contexts": 2,
+        "n_errors": 0
+      }
+    },
+    "reference": [
+      {
+        "id": "P4_identifiability",
+        "source": "abm_forward_validation/result.json",
+        "sub_questions": [
+          {
+            "sub_q": "행동 반응 강도(alpha)는 얼마인가?",
+            "gold": "alpha = 0.9"
+          },
+          {
+            "sub_q": "기억 감쇠(kappa)는 얼마인가?",
+            "gold": "kappa = 0"
+          },
+          {
+            "sub_q": "행동 지연(tau, 일)은 얼마인가?",
+            "gold": "tau = 14"
+          },
+          {
+            "sub_q": "발현 임계(theta)는 얼마인가?",
+            "gold": "theta = 0.2"
+          },
+          {
+            "sub_q": "전향(forward) R²는 얼마인가?",
+            "gold": "forward_r2 = 0.722"
+          },
+          {
+            "sub_q": "anchor 상관계수는 얼마인가?",
+            "gold": "anchor_corr = 0.859"
+          },
+          {
+            "sub_q": "행동 ON 전향 R²는 얼마인가?",
+            "gold": "r2_behavior_on = 0.557"
+          },
+          {
+            "sub_q": "행동 OFF 전향 R²는 얼마인가?",
+            "gold": "r2_behavior_off = 0.0408"
+          }
+        ],
+        "final_answer": "제공된 수치 종합(P4_identifiability): alpha = 0.9, kappa = 0, tau = 14, theta = 0.2, forward_r2 = 0.722, anchor_corr = 0.859, r2_behavior_on = 0.557, r2_behavior_off = 0.0408. 모든 해석은 위 실제 산출 수치에만 근거합니다."
+      },
+      {
+        "id": "ABM_fit",
+        "source": "abm_real_validation/result.json",
+        "sub_questions": [
+          {
+            "sub_q": "적응(행동 ON) R²는 얼마인가?",
+            "gold": "r2_adaptive = 0.434"
+          },
+          {
+            "sub_q": "정적(행동 OFF) R²는 얼마인가?",
+            "gold": "r2_static = 0.792"
+          },
+          {
+            "sub_q": "RMSE는 얼마인가?",
+            "gold": "rmse = 15.9"
+          },
+          {
+            "sub_q": "Diebold-Mariano p-value는 얼마인가?",
+            "gold": "dm_p = 0.00938"
+          },
+          {
+            "sub_q": "검증 시즌 수는 몇 개인가?",
+            "gold": "n_seasons = 7"
+          }
+        ],
+        "final_answer": "제공된 수치 종합(ABM_fit): r2_adaptive = 0.434, r2_static = 0.792, rmse = 15.9, dm_p = 0.00938, n_seasons = 7. 모든 해석은 위 실제 산출 수치에만 근거합니다."
+      }
+    ]
+  },
+  "elapsed_s": 119.8,
+  "added_backends": [
+    {
+      "backend_id": "cli:codex:codex-default",
+      "label": "Codex (OpenAI GPT)",
+      "added_on": "2026-06-29",
+      "method": "grounding_eval + self_ask_grounding (same SSOT scoring); live CLI single pass, codex reasoning_effort=low",
+      "n_calls": 4
+    }
+  ],
+  "added_backends_skipped": [
+    {
+      "backend_id": "cli:gemini:gemini-default",
+      "label": "Gemini CLI",
+      "reason": "gemini quota unavailable (TerminalQuotaError: daily quota exhausted) — skipped (future work)"
+    }
+  ],
+  "added_elapsed_s": 97.3
+}

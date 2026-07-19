@@ -1,0 +1,8 @@
+regime_type,regime,n,cov95_static,cov95_adaptive
+incidence,high,23,0.522,0.783
+incidence,low,23,0.957,0.957
+incidence,medium,22,0.773,0.955
+phase,peak,11,0.455,0.727
+phase,pre-peak,3,1.0,1.0
+phase,tail,54,0.796,0.926
+overall,all,68,0.75,0.897

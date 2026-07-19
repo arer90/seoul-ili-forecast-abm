@@ -1,0 +1,25 @@
+{
+ "_comment": [
+ "Cursor IDE MCP config for the MPH epi-mcp server.",
+ "",
+ "Where to put this file (choose ONE scope):",
+ " • Global : ~/.cursor/mcp.json (all projects, all workspaces)",
+ " • Project : <repo>/.cursor/mcp.json (checked into the project)",
+ "",
+ "Cursor uses the same `mcpServers` schema as Claude Desktop. Enable the",
+ "server in Cursor Settings → MCP after the file is in place.",
+ "",
+ "If the file already exists, merge the `mcpServers` block below."
+ ],
+ "mcpServers": {
+ "mph-epi": {
+ "command": "<REPO_PATH>/.venv/Scripts/python.exe",
+ "args": ["-m", "simulation", "mcp-server"],
+ "cwd": "<REPO_PATH>",
+ "env": {
+ "PYTHONIOENCODING": "utf-8",
+ "PYTHONUNBUFFERED": "1"
+ }
+ }
+ }
+}

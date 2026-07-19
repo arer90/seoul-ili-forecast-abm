@@ -1,0 +1,23 @@
+{
+  "n_forward_weeks": 17,
+  "leak_free_downstream_evidence": {
+    "anchor_corr_abm_vs_forecast": 0.8823,
+    "note": "ABM trajectory is fit to track the champion forecast (no forward truth) — high correlation ⇒ the ABM re-expresses the champion."
+  },
+  "forward_window_residual_diagnostic_descriptive": {
+    "champion_forward_r2": 0.9085,
+    "abm_hybrid_forward_r2": 0.7946,
+    "resid_corr_champion_vs_abm": 0.43,
+    "abm_explains_champion_resid_r2": 0.1849,
+    "caveat": "computed on the 17-week forward window (descriptive only); NOT used to select any weight — a leak-free weight needs in-sample."
+  },
+  "leaky_bestcase_upper_bound": {
+    "best_convex_weight_on_champion": 0.86,
+    "blend_r2_weight_fit_on_forward_truth": 0.9115,
+    "champion_alone_r2": 0.9085,
+    "leaky_gain_over_champion": 0.003,
+    "with_enkf_blend_r2": 0.9085,
+    "interpretation": "even fitting the weight ON the forward truth (leaky, the most optimistic case) gains this little — a legitimate leak-free weight cannot do better."
+  },
+  "verdict": "REDUNDANT — point fusion not justified; the leaky best-case blend barely beats the champion, so a leak-free in-sample weight cannot. Keep 0.909 as the headline (do-no-harm); ABM value is mechanism / person-like / counterfactual, not point accuracy."
+}

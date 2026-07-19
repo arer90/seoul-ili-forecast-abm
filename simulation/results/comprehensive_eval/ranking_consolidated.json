@@ -1,0 +1,67 @@
+{
+  "sources": {
+    "phase11_wis": [
+      "FusedEpi",
+      "GAM-Spline",
+      "TiRex",
+      "SVR-RBF",
+      "NegBinGLM",
+      "PoissonAutoreg",
+      "ElasticNet",
+      "KRR",
+      "CQR-QuantReg",
+      "ARIMA"
+    ]
+  },
+  "diagnostics": {
+    "composite_order": [
+      "ElasticNet",
+      "SVR-Linear",
+      "RandomForest",
+      "XGBoost",
+      "KRR"
+    ]
+  },
+  "consolidated": [
+    {
+      "model": "FusedEpi",
+      "borda_score": 1.0
+    },
+    {
+      "model": "GAM-Spline",
+      "borda_score": 2.0
+    },
+    {
+      "model": "TiRex",
+      "borda_score": 3.0
+    },
+    {
+      "model": "SVR-RBF",
+      "borda_score": 4.0
+    },
+    {
+      "model": "NegBinGLM",
+      "borda_score": 5.0
+    },
+    {
+      "model": "PoissonAutoreg",
+      "borda_score": 6.0
+    },
+    {
+      "model": "ElasticNet",
+      "borda_score": 7.0
+    },
+    {
+      "model": "KRR",
+      "borda_score": 8.0
+    },
+    {
+      "model": "CQR-QuantReg",
+      "borda_score": 9.0
+    },
+    {
+      "model": "ARIMA",
+      "borda_score": 10.0
+    }
+  ]
+}

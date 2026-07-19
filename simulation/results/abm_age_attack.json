@@ -1,0 +1,21 @@
+{
+  "age_band_attack_rate": {
+    "0": 0.0918,
+    "1": 0.1551,
+    "2": 0.0963,
+    "3": 0.095,
+    "4": 0.0897,
+    "5": 0.0827,
+    "6": 0.0759
+  },
+  "age_band_counts": [
+    1398,
+    1756,
+    2955,
+    3297,
+    3448,
+    3046,
+    4100
+  ],
+  "note": "ever-infected share per age_band, 5-seed hybrid ABM, leak-free"
+}

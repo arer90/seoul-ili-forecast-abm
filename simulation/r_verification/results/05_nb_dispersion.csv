@@ -1,0 +1,3 @@
+"test","statistic","p_value","alpha_hat","conclusion"
+"Cameron-Trivedi (NB2)",8.3906578271518,2.41714730336789e-17,93.7785306841893,"reject Poisson -> overdispersed (use NB)"
+"NB glm.nb theta -> alpha",NA,NA,0.673686142442207,"NB alpha >> 0 confirms overdispersion"

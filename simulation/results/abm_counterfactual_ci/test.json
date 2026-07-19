@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "behaviour": {
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "tau": 1000000000.0,
+      "theta": 0.0
+    },
+    "budget": 1250,
+    "budget_frac": 0.1,
+    "design": "paired-by-seed (same population per seed across arms)",
+    "disease": {
+      "beta": 0.18,
+      "beta_amp": 0.65,
+      "beta_phase": 120.0,
+      "delta": 0.002,
+      "gamma": 0.18,
+      "import_rate": 0.0003,
+      "nu": 0.0002,
+      "sigma": 0.45
+    },
+    "is_headline": true,
+    "n_agents": 12500,
+    "n_seeds": 30,
+    "note": "read-only ABM; no model retrain; no sqlite write",
+    "populations": [
+      "heterogeneous",
+      "homogeneous"
+    ],
+    "year": 2025
+  },
+  "tests": {
+    "heterogeneous": {
+      "cohen_dz": 3.350685905819321,
+      "comparison": "target_high_contact vs uniform (infections averted/dose)",
+      "high_contact_ci95": [
+        1.7744626941863528,
+        1.89263063914698
+      ],
+      "high_contact_mean": 1.8335466666666664,
+      "n_seed": 30,
+      "paired_diff_ci95": [
+        0.40096489429863585,
+        0.5015417723680309
+      ],
+      "paired_diff_mean": 0.4512533333333334,
+      "paired_ttest_p": 1.6643705890675758e-17,
+      "paired_ttest_t": 18.352462537318726,
+      "significant_at_0.05": true,
+      "strategy_ci_overlap": false,
+      "uniform_ci95": [
+        1.3250783099389778,
+        1.439508356727689
+      ],
+      "uniform_mean": 1.3822933333333334,
+      "wilcoxon_p": 1.862645149230957e-09,
+      "wilcoxon_stat": 0.0
+    },
+    "homogeneous": {
+      "cohen_dz": 0.07460133807462456,
+      "comparison": "target_high_contact vs uniform (infections averted/dose)",
+      "high_contact_ci95": [
+        1.021143566700163,
+        1.1628564332998368
+      ],
+      "high_contact_mean": 1.0919999999999999,
+      "n_seed": 30,
+      "paired_diff_ci95": [
+        -0.038344592915143576,
+        0.05749125958181029
+      ],
+      "paired_diff_mean": 0.009573333333333359,
+      "paired_ttest_p": 0.6858288007991205,
+      "paired_ttest_t": 0.40860835683540886,
+      "significant_at_0.05": false,
+      "strategy_ci_overlap": true,
+      "uniform_ci95": [
+        1.0261003096462,
+        1.1387530236871333
+      ],
+      "uniform_mean": 1.0824266666666666,
+      "wilcoxon_p": 0.5577322711848649,
+      "wilcoxon_stat": 204.0
+    }
+  }
+}

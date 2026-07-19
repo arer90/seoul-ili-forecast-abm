@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- ABS · 적응행동 시뮬레이터 — 사용자 reference 3 (blue rounded square + white cube outline) -->
+  <!-- 가장 깔끔한 native app icon style. 큐브만, 추가 요소 없음. -->
+  <!-- 사용자 critique: 큐브 visual center 가 canvas 보다 24px 아래쪽 → 24px 위로 이동. -->
+
+  <defs>
+    <!-- Blue gradient background (top → bottom) -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background: blue gradient rounded square (iOS / Android native app style) -->
+  <rect width="512" height="512" fill="url(#bg)" rx="100" ry="100"/>
+
+  <!-- Isometric cube — white outline only (fill: transparent) -->
+  <!-- Cube vertices (24px 위로, visual center 256 일치): -->
+  <!--   top:           (256, 116) -->
+  <!--   right:         (380, 186) -->
+  <!--   bottom-front:  (256, 256) -->
+  <!--   left:          (132, 186) -->
+  <!--   bottom-back:   (256, 396) -->
+  <!--   right-bottom:  (380, 326) -->
+  <!--   left-bottom:   (132, 326) -->
+
+  <g fill="none" stroke="#ffffff" stroke-width="14"
+     stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- Top diamond face outline -->
+    <polygon points="256,116 380,186 256,256 132,186"/>
+
+    <!-- Right face outline -->
+    <polygon points="380,186 380,326 256,396 256,256"/>
+
+    <!-- Left face outline -->
+    <polygon points="132,186 256,256 256,396 132,326"/>
+  </g>
+</svg>

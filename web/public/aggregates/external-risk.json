@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-06-10T07:54:52Z",
+  "kdca_alert_level": 0,
+  "kdca_alert": {
+    "level": 0,
+    "label": "평시(미설정)",
+    "stale": false,
+    "source": "default",
+    "note": "KDCA 위기경보는 공개 API 없음 → kdca-alert.json 수동 갱신. 미존재=초기 평시."
+  },
+  "don": {
+    "respiratory_count": 4,
+    "novel_count": 1,
+    "respiratory_novel_confirmed": false,
+    "top": [],
+    "n_items": 20,
+    "error": null
+  },
+  "gdelt": {
+    "latest": 0.0,
+    "mean": 0.0,
+    "std": 0.0,
+    "z": 0.0,
+    "spike": false,
+    "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  "arrivals": {
+    "z": 1.641,
+    "latest": {
+      "yyyymm": 202604,
+      "persons": 2027860
+    },
+    "pressure_high": false,
+    "n_months": 136,
+    "error": null
+  },
+  "summary": {
+    "respiratory_novel_confirmed": false,
+    "news_spike": false,
+    "kdca_stale": false,
+    "arrivals_pressure_high": false,
+    "any_source_error": true
+  },
+  "note": "mode 게이트(resolve_mode) 입력 전용. KDCA 경계(3)↑=hard PANDEMIC, DON novel·GDELT spike=WATCH 보조. 입국 유입압(arrivals)=팬데믹 seeding context(독립 트리거 아님 — 정상시 계절 ILI 와 COVID 통제 후 r≈0). forecast feature 아님(누수 없음). 상세 docs/PANDEMIC_MODE_DESIGN."
+}

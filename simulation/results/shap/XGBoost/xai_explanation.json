@@ -1,0 +1,169 @@
+{
+  "feature_axis": [
+    {
+      "feature": "rt_fcst_ppltn_max_avg",
+      "mean_abs_shap": 10.79343,
+      "mean_shap": 10.79343,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1",
+      "mean_abs_shap": 8.845185,
+      "mean_shap": 8.845185,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag4",
+      "mean_abs_shap": 2.08262,
+      "mean_shap": 2.08262,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_sin_h1",
+      "mean_abs_shap": 1.157586,
+      "mean_shap": -1.157586,
+      "direction": "lowers"
+    },
+    {
+      "feature": "flu_AH3_share_lag1",
+      "mean_abs_shap": 1.062839,
+      "mean_shap": 1.062839,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_sin_h2",
+      "mean_abs_shap": 0.915532,
+      "mean_shap": -0.915532,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_cos_h2",
+      "mean_abs_shap": 0.822232,
+      "mean_shap": -0.822232,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag3",
+      "mean_abs_shap": 0.818988,
+      "mean_shap": 0.737844,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_cos_h1",
+      "mean_abs_shap": 0.779172,
+      "mean_shap": -0.779172,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag2",
+      "mean_abs_shap": 0.427361,
+      "mean_shap": -0.427361,
+      "direction": "lowers"
+    },
+    {
+      "feature": "sch_closure_lag1",
+      "mean_abs_shap": 0.270302,
+      "mean_shap": 0.270302,
+      "direction": "raises"
+    },
+    {
+      "feature": "mr_yoy_ratio",
+      "mean_abs_shap": 0.24483,
+      "mean_shap": 0.24483,
+      "direction": "raises"
+    },
+    {
+      "feature": "school_평생학교초-3년6학기",
+      "mean_abs_shap": 0.236729,
+      "mean_shap": 0.236729,
+      "direction": "raises"
+    },
+    {
+      "feature": "gt_bodyache_lag1",
+      "mean_abs_shap": 0.027691,
+      "mean_shap": -0.015888,
+      "direction": "lowers"
+    },
+    {
+      "feature": "school_고등학교",
+      "mean_abs_shap": 0.010425,
+      "mean_shap": -0.010425,
+      "direction": "lowers"
+    }
+  ],
+  "input_axis": {
+    "highest_prediction": {
+      "row": 17,
+      "prediction": 32.1345,
+      "top_drivers": [
+        {
+          "feature": "rt_fcst_ppltn_max_avg",
+          "shap": 11.0184
+        },
+        {
+          "feature": "ili_rate_lag1",
+          "shap": 8.8601
+        },
+        {
+          "feature": "ili_rate_lag4",
+          "shap": 2.0821
+        }
+      ]
+    },
+    "lowest_prediction": {
+      "row": 3,
+      "prediction": 30.3027,
+      "top_drivers": [
+        {
+          "feature": "rt_fcst_ppltn_max_avg",
+          "shap": 11.0017
+        },
+        {
+          "feature": "ili_rate_lag1",
+          "shap": 8.8064
+        },
+        {
+          "feature": "ili_rate_lag4",
+          "shap": 2.0842
+        }
+      ]
+    },
+    "median_prediction": {
+      "row": 19,
+      "prediction": 31.3674,
+      "top_drivers": [
+        {
+          "feature": "rt_fcst_ppltn_max_avg",
+          "shap": 10.7128
+        },
+        {
+          "feature": "ili_rate_lag1",
+          "shap": 8.8601
+        },
+        {
+          "feature": "ili_rate_lag4",
+          "shap": 2.0821
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": 11.0576,
+    "prediction_mean": 31.1974,
+    "prediction_range": [
+      30.3027,
+      32.1345
+    ],
+    "fraction_explained_by_top3": 0.7619
+  },
+  "model_axis": {
+    "family": "tree",
+    "n_features_explained": 20,
+    "n_samples": 68,
+    "dominant_feature": "rt_fcst_ppltn_max_avg",
+    "dominant_feature_sign_consistency": 1.0,
+    "global_mean_abs_shap": 1.425415,
+    "behavior": "monotone-ish in dominant feature"
+  }
+}

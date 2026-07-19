@@ -1,0 +1,1681 @@
+{
+  "built_at": "2026-06-10T07:54:31Z",
+  "source": "KDCA 표본감시 sentinel (epi_real_seoul.db)",
+  "note": "전국/도시레벨 감시(관측, 예측 아님). 자치구 분리 불가. 주간 연평균 계절성 곡선.",
+  "diseases": [
+    {
+      "id": "influenza",
+      "name": "Influenza (ILI)",
+      "name_ko": "인플루엔자 (ILI)",
+      "unit": "rate",
+      "unit_label": "ILI / 1,000명 (전 연령 평균)",
+      "color": "#3b82f6",
+      "year_range": "2019–2025",
+      "n_years": 7,
+      "peak_week": 53,
+      "source": "sentinel_influenza (KDCA 인플루엔자 표본감시)",
+      "weekly": [
+        {
+          "week": 1,
+          "value": 45.4163,
+          "value_norm": 0.6786
+        },
+        {
+          "week": 2,
+          "value": 41.9531,
+          "value_norm": 0.6268
+        },
+        {
+          "week": 3,
+          "value": 33.9816,
+          "value_norm": 0.5077
+        },
+        {
+          "week": 4,
+          "value": 29.0204,
+          "value_norm": 0.4336
+        },
+        {
+          "week": 5,
+          "value": 24.1918,
+          "value_norm": 0.3615
+        },
+        {
+          "week": 6,
+          "value": 20.7102,
+          "value_norm": 0.3094
+        },
+        {
+          "week": 7,
+          "value": 18.6531,
+          "value_norm": 0.2787
+        },
+        {
+          "week": 8,
+          "value": 15.3735,
+          "value_norm": 0.2297
+        },
+        {
+          "week": 9,
+          "value": 11.0224,
+          "value_norm": 0.1647
+        },
+        {
+          "week": 10,
+          "value": 9.8122,
+          "value_norm": 0.1466
+        },
+        {
+          "week": 11,
+          "value": 10.2735,
+          "value_norm": 0.1535
+        },
+        {
+          "week": 12,
+          "value": 10.6776,
+          "value_norm": 0.1595
+        },
+        {
+          "week": 13,
+          "value": 11.2755,
+          "value_norm": 0.1685
+        },
+        {
+          "week": 14,
+          "value": 11.3408,
+          "value_norm": 0.1694
+        },
+        {
+          "week": 15,
+          "value": 11.7,
+          "value_norm": 0.1748
+        },
+        {
+          "week": 16,
+          "value": 11.0776,
+          "value_norm": 0.1655
+        },
+        {
+          "week": 17,
+          "value": 10.0367,
+          "value_norm": 0.15
+        },
+        {
+          "week": 18,
+          "value": 9.4122,
+          "value_norm": 0.1406
+        },
+        {
+          "week": 19,
+          "value": 8.9776,
+          "value_norm": 0.1341
+        },
+        {
+          "week": 20,
+          "value": 8.5755,
+          "value_norm": 0.1281
+        },
+        {
+          "week": 21,
+          "value": 7.9082,
+          "value_norm": 0.1182
+        },
+        {
+          "week": 22,
+          "value": 7.2776,
+          "value_norm": 0.1087
+        },
+        {
+          "week": 23,
+          "value": 6.7,
+          "value_norm": 0.1001
+        },
+        {
+          "week": 24,
+          "value": 5.9929,
+          "value_norm": 0.0895
+        },
+        {
+          "week": 25,
+          "value": 5.6333,
+          "value_norm": 0.0842
+        },
+        {
+          "week": 26,
+          "value": 5.5857,
+          "value_norm": 0.0835
+        },
+        {
+          "week": 27,
+          "value": 5.7595,
+          "value_norm": 0.0861
+        },
+        {
+          "week": 28,
+          "value": 6.031,
+          "value_norm": 0.0901
+        },
+        {
+          "week": 29,
+          "value": 6.1786,
+          "value_norm": 0.0923
+        },
+        {
+          "week": 30,
+          "value": 6.2381,
+          "value_norm": 0.0932
+        },
+        {
+          "week": 31,
+          "value": 6.1429,
+          "value_norm": 0.0918
+        },
+        {
+          "week": 32,
+          "value": 5.7238,
+          "value_norm": 0.0855
+        },
+        {
+          "week": 33,
+          "value": 5.781,
+          "value_norm": 0.0864
+        },
+        {
+          "week": 34,
+          "value": 5.7976,
+          "value_norm": 0.0866
+        },
+        {
+          "week": 35,
+          "value": 5.3952,
+          "value_norm": 0.0806
+        },
+        {
+          "week": 36,
+          "value": 5.2,
+          "value_norm": 0.0777
+        },
+        {
+          "week": 37,
+          "value": 5.2898,
+          "value_norm": 0.079
+        },
+        {
+          "week": 38,
+          "value": 6.2735,
+          "value_norm": 0.0937
+        },
+        {
+          "week": 39,
+          "value": 6.4041,
+          "value_norm": 0.0957
+        },
+        {
+          "week": 40,
+          "value": 6.4082,
+          "value_norm": 0.0957
+        },
+        {
+          "week": 41,
+          "value": 6.9551,
+          "value_norm": 0.1039
+        },
+        {
+          "week": 42,
+          "value": 6.7041,
+          "value_norm": 0.1002
+        },
+        {
+          "week": 43,
+          "value": 9.9776,
+          "value_norm": 0.1491
+        },
+        {
+          "week": 44,
+          "value": 12.9041,
+          "value_norm": 0.1928
+        },
+        {
+          "week": 45,
+          "value": 16.9653,
+          "value_norm": 0.2535
+        },
+        {
+          "week": 46,
+          "value": 20.9245,
+          "value_norm": 0.3126
+        },
+        {
+          "week": 47,
+          "value": 24.1408,
+          "value_norm": 0.3607
+        },
+        {
+          "week": 48,
+          "value": 25.2163,
+          "value_norm": 0.3768
+        },
+        {
+          "week": 49,
+          "value": 26.6061,
+          "value_norm": 0.3975
+        },
+        {
+          "week": 50,
+          "value": 29.1184,
+          "value_norm": 0.4351
+        },
+        {
+          "week": 51,
+          "value": 31.9163,
+          "value_norm": 0.4769
+        },
+        {
+          "week": 52,
+          "value": 42.1265,
+          "value_norm": 0.6294
+        },
+        {
+          "week": 53,
+          "value": 66.9286,
+          "value_norm": 1.0
+        }
+      ]
+    },
+    {
+      "id": "hfmd",
+      "name": "Hand-Foot-Mouth (HFMD)",
+      "name_ko": "수족구병 (HFMD)",
+      "unit": "rate",
+      "unit_label": "환자수 / 외래환자 1,000명",
+      "color": "#f59e0b",
+      "year_range": "2017–2026",
+      "n_years": 10,
+      "peak_week": 29,
+      "source": "sentinel_hfmd (KDCA 수족구병 표본감시)",
+      "weekly": [
+        {
+          "week": 1,
+          "value": 0.8,
+          "value_norm": 0.031
+        },
+        {
+          "week": 2,
+          "value": 0.85,
+          "value_norm": 0.033
+        },
+        {
+          "week": 3,
+          "value": 0.85,
+          "value_norm": 0.033
+        },
+        {
+          "week": 4,
+          "value": 0.75,
+          "value_norm": 0.0291
+        },
+        {
+          "week": 5,
+          "value": 0.76,
+          "value_norm": 0.0295
+        },
+        {
+          "week": 6,
+          "value": 0.71,
+          "value_norm": 0.0276
+        },
+        {
+          "week": 7,
+          "value": 0.6,
+          "value_norm": 0.0233
+        },
+        {
+          "week": 8,
+          "value": 0.59,
+          "value_norm": 0.0229
+        },
+        {
+          "week": 9,
+          "value": 0.64,
+          "value_norm": 0.0248
+        },
+        {
+          "week": 10,
+          "value": 0.65,
+          "value_norm": 0.0252
+        },
+        {
+          "week": 11,
+          "value": 0.59,
+          "value_norm": 0.0229
+        },
+        {
+          "week": 12,
+          "value": 0.68,
+          "value_norm": 0.0264
+        },
+        {
+          "week": 13,
+          "value": 0.73,
+          "value_norm": 0.0283
+        },
+        {
+          "week": 14,
+          "value": 0.95,
+          "value_norm": 0.0369
+        },
+        {
+          "week": 15,
+          "value": 1.23,
+          "value_norm": 0.0477
+        },
+        {
+          "week": 16,
+          "value": 1.36,
+          "value_norm": 0.0528
+        },
+        {
+          "week": 17,
+          "value": 2.02,
+          "value_norm": 0.0784
+        },
+        {
+          "week": 18,
+          "value": 2.5,
+          "value_norm": 0.097
+        },
+        {
+          "week": 19,
+          "value": 2.95,
+          "value_norm": 0.1145
+        },
+        {
+          "week": 20,
+          "value": 4.58,
+          "value_norm": 0.1777
+        },
+        {
+          "week": 21,
+          "value": 6.05,
+          "value_norm": 0.2348
+        },
+        {
+          "week": 22,
+          "value": 8.12,
+          "value_norm": 0.3151
+        },
+        {
+          "week": 23,
+          "value": 9.9333,
+          "value_norm": 0.3855
+        },
+        {
+          "week": 24,
+          "value": 12.0667,
+          "value_norm": 0.4683
+        },
+        {
+          "week": 25,
+          "value": 15.1111,
+          "value_norm": 0.5865
+        },
+        {
+          "week": 26,
+          "value": 17.1,
+          "value_norm": 0.6636
+        },
+        {
+          "week": 27,
+          "value": 21.4111,
+          "value_norm": 0.831
+        },
+        {
+          "week": 28,
+          "value": 22.9222,
+          "value_norm": 0.8896
+        },
+        {
+          "week": 29,
+          "value": 25.7667,
+          "value_norm": 1.0
+        },
+        {
+          "week": 30,
+          "value": 25.4889,
+          "value_norm": 0.9892
+        },
+        {
+          "week": 31,
+          "value": 22.0333,
+          "value_norm": 0.8551
+        },
+        {
+          "week": 32,
+          "value": 19.1556,
+          "value_norm": 0.7434
+        },
+        {
+          "week": 33,
+          "value": 19.6222,
+          "value_norm": 0.7615
+        },
+        {
+          "week": 34,
+          "value": 17.3222,
+          "value_norm": 0.6723
+        },
+        {
+          "week": 35,
+          "value": 14.9444,
+          "value_norm": 0.58
+        },
+        {
+          "week": 36,
+          "value": 14.5111,
+          "value_norm": 0.5632
+        },
+        {
+          "week": 37,
+          "value": 12.7778,
+          "value_norm": 0.4959
+        },
+        {
+          "week": 38,
+          "value": 11.7222,
+          "value_norm": 0.4549
+        },
+        {
+          "week": 39,
+          "value": 9.1667,
+          "value_norm": 0.3558
+        },
+        {
+          "week": 40,
+          "value": 7.6556,
+          "value_norm": 0.2971
+        },
+        {
+          "week": 41,
+          "value": 6.4333,
+          "value_norm": 0.2497
+        },
+        {
+          "week": 42,
+          "value": 4.4778,
+          "value_norm": 0.1738
+        },
+        {
+          "week": 43,
+          "value": 4.0,
+          "value_norm": 0.1552
+        },
+        {
+          "week": 44,
+          "value": 3.1556,
+          "value_norm": 0.1225
+        },
+        {
+          "week": 45,
+          "value": 2.7111,
+          "value_norm": 0.1052
+        },
+        {
+          "week": 46,
+          "value": 2.0111,
+          "value_norm": 0.0781
+        },
+        {
+          "week": 47,
+          "value": 2.2667,
+          "value_norm": 0.088
+        },
+        {
+          "week": 48,
+          "value": 2.1667,
+          "value_norm": 0.0841
+        },
+        {
+          "week": 49,
+          "value": 1.8556,
+          "value_norm": 0.072
+        },
+        {
+          "week": 50,
+          "value": 1.7111,
+          "value_norm": 0.0664
+        },
+        {
+          "week": 51,
+          "value": 1.6111,
+          "value_norm": 0.0625
+        },
+        {
+          "week": 52,
+          "value": 1.2333,
+          "value_norm": 0.0479
+        },
+        {
+          "week": 53,
+          "value": 0.5,
+          "value_norm": 0.0194
+        }
+      ]
+    },
+    {
+      "id": "enterovirus",
+      "name": "Enterovirus",
+      "name_ko": "엔테로바이러스",
+      "unit": "count",
+      "unit_label": "검출 건수 (주간)",
+      "color": "#10b981",
+      "year_range": "2017–2026",
+      "n_years": 10,
+      "peak_week": 31,
+      "source": "sentinel_enterovirus (KDCA 엔테로바이러스 실험실 감시)",
+      "weekly": [
+        {
+          "week": 1,
+          "value": 4.5,
+          "value_norm": 0.038
+        },
+        {
+          "week": 2,
+          "value": 2.8,
+          "value_norm": 0.0237
+        },
+        {
+          "week": 3,
+          "value": 3.1,
+          "value_norm": 0.0262
+        },
+        {
+          "week": 4,
+          "value": 2.4,
+          "value_norm": 0.0203
+        },
+        {
+          "week": 5,
+          "value": 1.9,
+          "value_norm": 0.0161
+        },
+        {
+          "week": 6,
+          "value": 1.3,
+          "value_norm": 0.011
+        },
+        {
+          "week": 7,
+          "value": 2.4,
+          "value_norm": 0.0203
+        },
+        {
+          "week": 8,
+          "value": 1.6,
+          "value_norm": 0.0135
+        },
+        {
+          "week": 9,
+          "value": 1.0,
+          "value_norm": 0.0085
+        },
+        {
+          "week": 10,
+          "value": 2.5,
+          "value_norm": 0.0211
+        },
+        {
+          "week": 11,
+          "value": 1.7,
+          "value_norm": 0.0144
+        },
+        {
+          "week": 12,
+          "value": 2.4,
+          "value_norm": 0.0203
+        },
+        {
+          "week": 13,
+          "value": 3.4,
+          "value_norm": 0.0287
+        },
+        {
+          "week": 14,
+          "value": 4.4,
+          "value_norm": 0.0372
+        },
+        {
+          "week": 15,
+          "value": 4.0,
+          "value_norm": 0.0338
+        },
+        {
+          "week": 16,
+          "value": 5.8,
+          "value_norm": 0.049
+        },
+        {
+          "week": 17,
+          "value": 8.6,
+          "value_norm": 0.0727
+        },
+        {
+          "week": 18,
+          "value": 8.8,
+          "value_norm": 0.0744
+        },
+        {
+          "week": 19,
+          "value": 13.4,
+          "value_norm": 0.1132
+        },
+        {
+          "week": 20,
+          "value": 15.9,
+          "value_norm": 0.1344
+        },
+        {
+          "week": 21,
+          "value": 21.6,
+          "value_norm": 0.1825
+        },
+        {
+          "week": 22,
+          "value": 22.5,
+          "value_norm": 0.1901
+        },
+        {
+          "week": 23,
+          "value": 31.2222,
+          "value_norm": 0.2638
+        },
+        {
+          "week": 24,
+          "value": 37.3333,
+          "value_norm": 0.3155
+        },
+        {
+          "week": 25,
+          "value": 46.7778,
+          "value_norm": 0.3953
+        },
+        {
+          "week": 26,
+          "value": 61.5556,
+          "value_norm": 0.5202
+        },
+        {
+          "week": 27,
+          "value": 86.8889,
+          "value_norm": 0.7343
+        },
+        {
+          "week": 28,
+          "value": 95.8889,
+          "value_norm": 0.8103
+        },
+        {
+          "week": 29,
+          "value": 106.1111,
+          "value_norm": 0.8967
+        },
+        {
+          "week": 30,
+          "value": 116.1111,
+          "value_norm": 0.9812
+        },
+        {
+          "week": 31,
+          "value": 118.3333,
+          "value_norm": 1.0
+        },
+        {
+          "week": 32,
+          "value": 102.3333,
+          "value_norm": 0.8648
+        },
+        {
+          "week": 33,
+          "value": 87.3333,
+          "value_norm": 0.738
+        },
+        {
+          "week": 34,
+          "value": 86.0,
+          "value_norm": 0.7268
+        },
+        {
+          "week": 35,
+          "value": 83.7778,
+          "value_norm": 0.708
+        },
+        {
+          "week": 36,
+          "value": 77.1111,
+          "value_norm": 0.6516
+        },
+        {
+          "week": 37,
+          "value": 73.7778,
+          "value_norm": 0.6235
+        },
+        {
+          "week": 38,
+          "value": 69.8889,
+          "value_norm": 0.5906
+        },
+        {
+          "week": 39,
+          "value": 55.5556,
+          "value_norm": 0.4695
+        },
+        {
+          "week": 40,
+          "value": 45.6667,
+          "value_norm": 0.3859
+        },
+        {
+          "week": 41,
+          "value": 38.1111,
+          "value_norm": 0.3221
+        },
+        {
+          "week": 42,
+          "value": 26.7778,
+          "value_norm": 0.2263
+        },
+        {
+          "week": 43,
+          "value": 25.2222,
+          "value_norm": 0.2131
+        },
+        {
+          "week": 44,
+          "value": 20.1111,
+          "value_norm": 0.17
+        },
+        {
+          "week": 45,
+          "value": 18.8889,
+          "value_norm": 0.1596
+        },
+        {
+          "week": 46,
+          "value": 16.0,
+          "value_norm": 0.1352
+        },
+        {
+          "week": 47,
+          "value": 14.2222,
+          "value_norm": 0.1202
+        },
+        {
+          "week": 48,
+          "value": 11.7778,
+          "value_norm": 0.0995
+        },
+        {
+          "week": 49,
+          "value": 12.8889,
+          "value_norm": 0.1089
+        },
+        {
+          "week": 50,
+          "value": 7.1111,
+          "value_norm": 0.0601
+        },
+        {
+          "week": 51,
+          "value": 5.5556,
+          "value_norm": 0.0469
+        },
+        {
+          "week": 52,
+          "value": 5.4444,
+          "value_norm": 0.046
+        },
+        {
+          "week": 53,
+          "value": 2.0,
+          "value_norm": 0.0169
+        }
+      ]
+    },
+    {
+      "id": "ari",
+      "name": "Acute Respiratory Infection (ARI)",
+      "name_ko": "급성호흡기감염증 (ARI)",
+      "unit": "count",
+      "unit_label": "병원체 검출 건수 (주간, 전체)",
+      "color": "#a855f7",
+      "year_range": "2017–2026",
+      "n_years": 10,
+      "peak_week": 1,
+      "source": "sentinel_ari (KDCA 급성호흡기감염증 표본감시)",
+      "weekly": [
+        {
+          "week": 1,
+          "value": 2440.8,
+          "value_norm": 1.0
+        },
+        {
+          "week": 2,
+          "value": 2206.0,
+          "value_norm": 0.9038
+        },
+        {
+          "week": 3,
+          "value": 1892.3,
+          "value_norm": 0.7753
+        },
+        {
+          "week": 4,
+          "value": 1574.1,
+          "value_norm": 0.6449
+        },
+        {
+          "week": 5,
+          "value": 1454.7,
+          "value_norm": 0.596
+        },
+        {
+          "week": 6,
+          "value": 1297.8,
+          "value_norm": 0.5317
+        },
+        {
+          "week": 7,
+          "value": 1144.8,
+          "value_norm": 0.469
+        },
+        {
+          "week": 8,
+          "value": 1032.3,
+          "value_norm": 0.4229
+        },
+        {
+          "week": 9,
+          "value": 892.2,
+          "value_norm": 0.3655
+        },
+        {
+          "week": 10,
+          "value": 875.3,
+          "value_norm": 0.3586
+        },
+        {
+          "week": 11,
+          "value": 966.0,
+          "value_norm": 0.3958
+        },
+        {
+          "week": 12,
+          "value": 1121.6,
+          "value_norm": 0.4595
+        },
+        {
+          "week": 13,
+          "value": 1273.4,
+          "value_norm": 0.5217
+        },
+        {
+          "week": 14,
+          "value": 1405.4,
+          "value_norm": 0.5758
+        },
+        {
+          "week": 15,
+          "value": 1436.0,
+          "value_norm": 0.5883
+        },
+        {
+          "week": 16,
+          "value": 1569.6,
+          "value_norm": 0.6431
+        },
+        {
+          "week": 17,
+          "value": 1609.1,
+          "value_norm": 0.6593
+        },
+        {
+          "week": 18,
+          "value": 1403.5,
+          "value_norm": 0.575
+        },
+        {
+          "week": 19,
+          "value": 1447.4,
+          "value_norm": 0.593
+        },
+        {
+          "week": 20,
+          "value": 1478.7,
+          "value_norm": 0.6058
+        },
+        {
+          "week": 21,
+          "value": 1461.6,
+          "value_norm": 0.5988
+        },
+        {
+          "week": 22,
+          "value": 1362.8,
+          "value_norm": 0.5583
+        },
+        {
+          "week": 23,
+          "value": 1211.7778,
+          "value_norm": 0.4965
+        },
+        {
+          "week": 24,
+          "value": 1150.2222,
+          "value_norm": 0.4712
+        },
+        {
+          "week": 25,
+          "value": 1060.8889,
+          "value_norm": 0.4346
+        },
+        {
+          "week": 26,
+          "value": 1060.1111,
+          "value_norm": 0.4343
+        },
+        {
+          "week": 27,
+          "value": 1020.0,
+          "value_norm": 0.4179
+        },
+        {
+          "week": 28,
+          "value": 1055.1111,
+          "value_norm": 0.4323
+        },
+        {
+          "week": 29,
+          "value": 1078.8889,
+          "value_norm": 0.442
+        },
+        {
+          "week": 30,
+          "value": 1113.0,
+          "value_norm": 0.456
+        },
+        {
+          "week": 31,
+          "value": 1131.2222,
+          "value_norm": 0.4635
+        },
+        {
+          "week": 32,
+          "value": 1114.1111,
+          "value_norm": 0.4565
+        },
+        {
+          "week": 33,
+          "value": 1057.5556,
+          "value_norm": 0.4333
+        },
+        {
+          "week": 34,
+          "value": 1093.6667,
+          "value_norm": 0.4481
+        },
+        {
+          "week": 35,
+          "value": 1104.8889,
+          "value_norm": 0.4527
+        },
+        {
+          "week": 36,
+          "value": 1109.8889,
+          "value_norm": 0.4547
+        },
+        {
+          "week": 37,
+          "value": 1094.6667,
+          "value_norm": 0.4485
+        },
+        {
+          "week": 38,
+          "value": 1160.6667,
+          "value_norm": 0.4755
+        },
+        {
+          "week": 39,
+          "value": 1134.1111,
+          "value_norm": 0.4646
+        },
+        {
+          "week": 40,
+          "value": 1074.3333,
+          "value_norm": 0.4402
+        },
+        {
+          "week": 41,
+          "value": 1090.7778,
+          "value_norm": 0.4469
+        },
+        {
+          "week": 42,
+          "value": 1166.3333,
+          "value_norm": 0.4778
+        },
+        {
+          "week": 43,
+          "value": 1352.5556,
+          "value_norm": 0.5541
+        },
+        {
+          "week": 44,
+          "value": 1496.3333,
+          "value_norm": 0.6131
+        },
+        {
+          "week": 45,
+          "value": 1633.1111,
+          "value_norm": 0.6691
+        },
+        {
+          "week": 46,
+          "value": 1742.7778,
+          "value_norm": 0.714
+        },
+        {
+          "week": 47,
+          "value": 1836.8889,
+          "value_norm": 0.7526
+        },
+        {
+          "week": 48,
+          "value": 1938.7778,
+          "value_norm": 0.7943
+        },
+        {
+          "week": 49,
+          "value": 2038.3333,
+          "value_norm": 0.8351
+        },
+        {
+          "week": 50,
+          "value": 2128.7778,
+          "value_norm": 0.8722
+        },
+        {
+          "week": 51,
+          "value": 2228.8889,
+          "value_norm": 0.9132
+        },
+        {
+          "week": 52,
+          "value": 2359.3333,
+          "value_norm": 0.9666
+        },
+        {
+          "week": 53,
+          "value": 1395.0,
+          "value_norm": 0.5715
+        }
+      ]
+    },
+    {
+      "id": "intestinal",
+      "name": "Intestinal Infection",
+      "name_ko": "장관감염증",
+      "unit": "count",
+      "unit_label": "병원체 검출 건수 (주간, 전체)",
+      "color": "#ef4444",
+      "year_range": "2017–2026",
+      "n_years": 10,
+      "peak_week": 30,
+      "source": "sentinel_intestinal (KDCA 장관감염증 표본감시)",
+      "weekly": [
+        {
+          "week": 1,
+          "value": 442.8,
+          "value_norm": 0.7982
+        },
+        {
+          "week": 2,
+          "value": 493.2,
+          "value_norm": 0.889
+        },
+        {
+          "week": 3,
+          "value": 507.5,
+          "value_norm": 0.9148
+        },
+        {
+          "week": 4,
+          "value": 504.6,
+          "value_norm": 0.9096
+        },
+        {
+          "week": 5,
+          "value": 516.3,
+          "value_norm": 0.9306
+        },
+        {
+          "week": 6,
+          "value": 489.9,
+          "value_norm": 0.8831
+        },
+        {
+          "week": 7,
+          "value": 467.8,
+          "value_norm": 0.8432
+        },
+        {
+          "week": 8,
+          "value": 456.4,
+          "value_norm": 0.8227
+        },
+        {
+          "week": 9,
+          "value": 395.1,
+          "value_norm": 0.7122
+        },
+        {
+          "week": 10,
+          "value": 385.9,
+          "value_norm": 0.6956
+        },
+        {
+          "week": 11,
+          "value": 357.2,
+          "value_norm": 0.6439
+        },
+        {
+          "week": 12,
+          "value": 381.3,
+          "value_norm": 0.6873
+        },
+        {
+          "week": 13,
+          "value": 384.1,
+          "value_norm": 0.6923
+        },
+        {
+          "week": 14,
+          "value": 370.1,
+          "value_norm": 0.6671
+        },
+        {
+          "week": 15,
+          "value": 366.4,
+          "value_norm": 0.6604
+        },
+        {
+          "week": 16,
+          "value": 357.7,
+          "value_norm": 0.6448
+        },
+        {
+          "week": 17,
+          "value": 361.9,
+          "value_norm": 0.6523
+        },
+        {
+          "week": 18,
+          "value": 310.7,
+          "value_norm": 0.56
+        },
+        {
+          "week": 19,
+          "value": 356.5,
+          "value_norm": 0.6426
+        },
+        {
+          "week": 20,
+          "value": 378.3,
+          "value_norm": 0.6819
+        },
+        {
+          "week": 21,
+          "value": 386.1,
+          "value_norm": 0.696
+        },
+        {
+          "week": 22,
+          "value": 387.0,
+          "value_norm": 0.6976
+        },
+        {
+          "week": 23,
+          "value": 344.1111,
+          "value_norm": 0.6203
+        },
+        {
+          "week": 24,
+          "value": 402.3333,
+          "value_norm": 0.7252
+        },
+        {
+          "week": 25,
+          "value": 408.5556,
+          "value_norm": 0.7364
+        },
+        {
+          "week": 26,
+          "value": 413.6667,
+          "value_norm": 0.7456
+        },
+        {
+          "week": 27,
+          "value": 441.3333,
+          "value_norm": 0.7955
+        },
+        {
+          "week": 28,
+          "value": 453.0,
+          "value_norm": 0.8165
+        },
+        {
+          "week": 29,
+          "value": 508.5556,
+          "value_norm": 0.9167
+        },
+        {
+          "week": 30,
+          "value": 554.7778,
+          "value_norm": 1.0
+        },
+        {
+          "week": 31,
+          "value": 515.6667,
+          "value_norm": 0.9295
+        },
+        {
+          "week": 32,
+          "value": 504.1111,
+          "value_norm": 0.9087
+        },
+        {
+          "week": 33,
+          "value": 463.0,
+          "value_norm": 0.8346
+        },
+        {
+          "week": 34,
+          "value": 492.4444,
+          "value_norm": 0.8876
+        },
+        {
+          "week": 35,
+          "value": 438.3333,
+          "value_norm": 0.7901
+        },
+        {
+          "week": 36,
+          "value": 423.8889,
+          "value_norm": 0.7641
+        },
+        {
+          "week": 37,
+          "value": 384.2222,
+          "value_norm": 0.6926
+        },
+        {
+          "week": 38,
+          "value": 374.2222,
+          "value_norm": 0.6745
+        },
+        {
+          "week": 39,
+          "value": 349.0,
+          "value_norm": 0.6291
+        },
+        {
+          "week": 40,
+          "value": 319.3333,
+          "value_norm": 0.5756
+        },
+        {
+          "week": 41,
+          "value": 301.7778,
+          "value_norm": 0.544
+        },
+        {
+          "week": 42,
+          "value": 313.7778,
+          "value_norm": 0.5656
+        },
+        {
+          "week": 43,
+          "value": 295.2222,
+          "value_norm": 0.5321
+        },
+        {
+          "week": 44,
+          "value": 302.3333,
+          "value_norm": 0.545
+        },
+        {
+          "week": 45,
+          "value": 290.8889,
+          "value_norm": 0.5243
+        },
+        {
+          "week": 46,
+          "value": 286.4444,
+          "value_norm": 0.5163
+        },
+        {
+          "week": 47,
+          "value": 313.1111,
+          "value_norm": 0.5644
+        },
+        {
+          "week": 48,
+          "value": 330.2222,
+          "value_norm": 0.5952
+        },
+        {
+          "week": 49,
+          "value": 359.4444,
+          "value_norm": 0.6479
+        },
+        {
+          "week": 50,
+          "value": 384.0,
+          "value_norm": 0.6922
+        },
+        {
+          "week": 51,
+          "value": 431.2222,
+          "value_norm": 0.7773
+        },
+        {
+          "week": 52,
+          "value": 417.1111,
+          "value_norm": 0.7519
+        },
+        {
+          "week": 53,
+          "value": 370.0,
+          "value_norm": 0.6669
+        }
+      ]
+    },
+    {
+      "id": "ophlgc",
+      "name": "Eye Infection (Ophthalmic)",
+      "name_ko": "눈병 (안과감염)",
+      "unit": "rate",
+      "unit_label": "환자수 / 외래환자 1,000명 (전체)",
+      "color": "#06b6d4",
+      "year_range": "2017–2026",
+      "n_years": 10,
+      "peak_week": 40,
+      "source": "sentinel_ophlgc (KDCA 안과감염증 표본감시)",
+      "weekly": [
+        {
+          "week": 1,
+          "value": 9.67,
+          "value_norm": 0.59
+        },
+        {
+          "week": 2,
+          "value": 8.82,
+          "value_norm": 0.5382
+        },
+        {
+          "week": 3,
+          "value": 8.14,
+          "value_norm": 0.4967
+        },
+        {
+          "week": 4,
+          "value": 8.85,
+          "value_norm": 0.54
+        },
+        {
+          "week": 5,
+          "value": 8.37,
+          "value_norm": 0.5107
+        },
+        {
+          "week": 6,
+          "value": 8.66,
+          "value_norm": 0.5284
+        },
+        {
+          "week": 7,
+          "value": 8.17,
+          "value_norm": 0.4985
+        },
+        {
+          "week": 8,
+          "value": 7.93,
+          "value_norm": 0.4839
+        },
+        {
+          "week": 9,
+          "value": 7.46,
+          "value_norm": 0.4552
+        },
+        {
+          "week": 10,
+          "value": 7.45,
+          "value_norm": 0.4546
+        },
+        {
+          "week": 11,
+          "value": 7.58,
+          "value_norm": 0.4625
+        },
+        {
+          "week": 12,
+          "value": 7.81,
+          "value_norm": 0.4765
+        },
+        {
+          "week": 13,
+          "value": 8.14,
+          "value_norm": 0.4967
+        },
+        {
+          "week": 14,
+          "value": 8.34,
+          "value_norm": 0.5089
+        },
+        {
+          "week": 15,
+          "value": 8.93,
+          "value_norm": 0.5449
+        },
+        {
+          "week": 16,
+          "value": 9.28,
+          "value_norm": 0.5662
+        },
+        {
+          "week": 17,
+          "value": 9.5,
+          "value_norm": 0.5797
+        },
+        {
+          "week": 18,
+          "value": 9.97,
+          "value_norm": 0.6083
+        },
+        {
+          "week": 19,
+          "value": 10.98,
+          "value_norm": 0.67
+        },
+        {
+          "week": 20,
+          "value": 10.6,
+          "value_norm": 0.6468
+        },
+        {
+          "week": 21,
+          "value": 10.43,
+          "value_norm": 0.6364
+        },
+        {
+          "week": 22,
+          "value": 10.82,
+          "value_norm": 0.6602
+        },
+        {
+          "week": 23,
+          "value": 11.9889,
+          "value_norm": 0.7315
+        },
+        {
+          "week": 24,
+          "value": 11.3778,
+          "value_norm": 0.6942
+        },
+        {
+          "week": 25,
+          "value": 10.9,
+          "value_norm": 0.6651
+        },
+        {
+          "week": 26,
+          "value": 10.6333,
+          "value_norm": 0.6488
+        },
+        {
+          "week": 27,
+          "value": 10.8556,
+          "value_norm": 0.6624
+        },
+        {
+          "week": 28,
+          "value": 11.6556,
+          "value_norm": 0.7112
+        },
+        {
+          "week": 29,
+          "value": 12.3444,
+          "value_norm": 0.7532
+        },
+        {
+          "week": 30,
+          "value": 12.4,
+          "value_norm": 0.7566
+        },
+        {
+          "week": 31,
+          "value": 12.8667,
+          "value_norm": 0.7851
+        },
+        {
+          "week": 32,
+          "value": 14.3,
+          "value_norm": 0.8725
+        },
+        {
+          "week": 33,
+          "value": 15.5444,
+          "value_norm": 0.9485
+        },
+        {
+          "week": 34,
+          "value": 15.7222,
+          "value_norm": 0.9593
+        },
+        {
+          "week": 35,
+          "value": 16.0889,
+          "value_norm": 0.9817
+        },
+        {
+          "week": 36,
+          "value": 15.7,
+          "value_norm": 0.958
+        },
+        {
+          "week": 37,
+          "value": 16.1,
+          "value_norm": 0.9824
+        },
+        {
+          "week": 38,
+          "value": 15.5111,
+          "value_norm": 0.9464
+        },
+        {
+          "week": 39,
+          "value": 14.2444,
+          "value_norm": 0.8692
+        },
+        {
+          "week": 40,
+          "value": 16.3889,
+          "value_norm": 1.0
+        },
+        {
+          "week": 41,
+          "value": 14.6,
+          "value_norm": 0.8908
+        },
+        {
+          "week": 42,
+          "value": 11.4,
+          "value_norm": 0.6956
+        },
+        {
+          "week": 43,
+          "value": 12.0444,
+          "value_norm": 0.7349
+        },
+        {
+          "week": 44,
+          "value": 10.0111,
+          "value_norm": 0.6108
+        },
+        {
+          "week": 45,
+          "value": 9.5778,
+          "value_norm": 0.5844
+        },
+        {
+          "week": 46,
+          "value": 9.7556,
+          "value_norm": 0.5953
+        },
+        {
+          "week": 47,
+          "value": 9.3444,
+          "value_norm": 0.5702
+        },
+        {
+          "week": 48,
+          "value": 9.8333,
+          "value_norm": 0.6
+        },
+        {
+          "week": 49,
+          "value": 9.4667,
+          "value_norm": 0.5776
+        },
+        {
+          "week": 50,
+          "value": 9.2333,
+          "value_norm": 0.5634
+        },
+        {
+          "week": 51,
+          "value": 8.4889,
+          "value_norm": 0.518
+        },
+        {
+          "week": 52,
+          "value": 8.8111,
+          "value_norm": 0.5376
+        },
+        {
+          "week": 53,
+          "value": 3.9,
+          "value_norm": 0.238
+        }
+      ]
+    }
+  ]
+}

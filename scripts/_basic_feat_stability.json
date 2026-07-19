@@ -1,0 +1,14 @@
+{
+  "model": "BASIC-13-feature HistGBM-quantile + STABILITY selection, expanding per-block",
+  "avg_features_selected": 9.8,
+  "of_13": 13,
+  "tirex_native_wis": 2.2427,
+  "basic_stability_raw_wis": 4.4188,
+  "basic_stability_cqr_wis": 4.2954,
+  "best_basic_wis": 4.2954,
+  "delta_pct_vs_tirex": 91.53,
+  "dm_hln_p": 0.0,
+  "dm_boot_p": 1.0,
+  "beats_tirex": false,
+  "elapsed_s": 12.0
+}

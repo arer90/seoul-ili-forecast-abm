@@ -1,0 +1,130 @@
+{
+  "feature_axis": [
+    {
+      "feature": "ili_rate_lag1_wavelet16",
+      "mean_abs_shap": 0.084642,
+      "mean_shap": 0.027218,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1",
+      "mean_abs_shap": 0.080969,
+      "mean_shap": 0.038151,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_bit7",
+      "mean_abs_shap": 0.044545,
+      "mean_shap": 0.026075,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_bit6",
+      "mean_abs_shap": 0.040159,
+      "mean_shap": 0.007114,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag12",
+      "mean_abs_shap": 0.036216,
+      "mean_shap": 0.002202,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag6",
+      "mean_abs_shap": 0.031615,
+      "mean_shap": -0.00467,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag1_wavelet4",
+      "mean_abs_shap": 0.019378,
+      "mean_shap": 0.006905,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_bit4",
+      "mean_abs_shap": 0.011641,
+      "mean_shap": -0.00334,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag52",
+      "mean_abs_shap": 0.009565,
+      "mean_shap": -0.003354,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag1_wavelet8",
+      "mean_abs_shap": 0.008777,
+      "mean_shap": 0.006923,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_bit3",
+      "mean_abs_shap": 0.008733,
+      "mean_shap": -0.006547,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag1_bit0",
+      "mean_abs_shap": 0.006747,
+      "mean_shap": -0.001024,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag1_bit2",
+      "mean_abs_shap": 0.003991,
+      "mean_shap": 0.002221,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_qbin",
+      "mean_abs_shap": 0.003601,
+      "mean_shap": 0.000777,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_bit8",
+      "mean_abs_shap": 0.002747,
+      "mean_shap": -0.002747,
+      "direction": "lowers"
+    }
+  ],
+  "input_axis": {
+    "representative": {
+      "row": 0,
+      "prediction": null,
+      "top_drivers": [
+        {
+          "feature": "ili_rate_lag1",
+          "shap": -0.0998
+        },
+        {
+          "feature": "ili_rate_lag1_wavelet16",
+          "shap": 0.0482
+        },
+        {
+          "feature": "ili_rate_lag1_bit6",
+          "shap": -0.0406
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": null,
+    "prediction_mean": null,
+    "prediction_range": null,
+    "fraction_explained_by_top3": 0.5015
+  },
+  "model_axis": {
+    "family": "other",
+    "n_features_explained": 32,
+    "n_samples": 30,
+    "dominant_feature": "ili_rate_lag1_wavelet16",
+    "dominant_feature_sign_consistency": 0.533,
+    "global_mean_abs_shap": 0.013097,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

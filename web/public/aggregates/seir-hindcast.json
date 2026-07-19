@@ -1,0 +1,556 @@
+{
+  "generated_at": "2026-06-10T07:54:35.533417Z",
+  "source": "seir-hindcast",
+  "model": "SEIR-seasonal-Euler",
+  "origin_date": "2019-09-02",
+  "horizon_days": 360,
+  "parameters": {
+    "R0_mean": 1.4,
+    "R0_amplitude": 0.286,
+    "incubation_days": 2.0,
+    "infectious_days": 3.5,
+    "vaccine_coverage": 0.45,
+    "detection_factor": 7.5,
+    "waning_days": 365,
+    "N": 9720000
+  },
+  "initial_state": {
+    "anchor_ili_per1k": 3.1571,
+    "I0": 4091.7,
+    "E0": 4091.7,
+    "S0": 5337816.7,
+    "start_doy": 245
+  },
+  "forecast": [
+    {
+      "day": 0,
+      "date": "2019-09-02",
+      "predicted_ili": 3.1571,
+      "I_count": 4092
+    },
+    {
+      "day": 7,
+      "date": "2019-09-09",
+      "predicted_ili": 2.758,
+      "I_count": 3574
+    },
+    {
+      "day": 14,
+      "date": "2019-09-16",
+      "predicted_ili": 1.7313,
+      "I_count": 2244
+    },
+    {
+      "day": 21,
+      "date": "2019-09-23",
+      "predicted_ili": 1.1038,
+      "I_count": 1431
+    },
+    {
+      "day": 28,
+      "date": "2019-09-30",
+      "predicted_ili": 0.764,
+      "I_count": 990
+    },
+    {
+      "day": 35,
+      "date": "2019-10-07",
+      "predicted_ili": 0.5446,
+      "I_count": 706
+    },
+    {
+      "day": 42,
+      "date": "2019-10-14",
+      "predicted_ili": 0.419,
+      "I_count": 543
+    },
+    {
+      "day": 49,
+      "date": "2019-10-21",
+      "predicted_ili": 0.3349,
+      "I_count": 434
+    },
+    {
+      "day": 56,
+      "date": "2019-10-28",
+      "predicted_ili": 0.2866,
+      "I_count": 371
+    },
+    {
+      "day": 63,
+      "date": "2019-11-04",
+      "predicted_ili": 0.2563,
+      "I_count": 332
+    },
+    {
+      "day": 70,
+      "date": "2019-11-11",
+      "predicted_ili": 0.2429,
+      "I_count": 315
+    },
+    {
+      "day": 77,
+      "date": "2019-11-18",
+      "predicted_ili": 0.2414,
+      "I_count": 313
+    },
+    {
+      "day": 84,
+      "date": "2019-11-25",
+      "predicted_ili": 0.2513,
+      "I_count": 326
+    },
+    {
+      "day": 91,
+      "date": "2019-12-02",
+      "predicted_ili": 0.2746,
+      "I_count": 356
+    },
+    {
+      "day": 98,
+      "date": "2019-12-09",
+      "predicted_ili": 0.3102,
+      "I_count": 402
+    },
+    {
+      "day": 105,
+      "date": "2019-12-16",
+      "predicted_ili": 0.3674,
+      "I_count": 476
+    },
+    {
+      "day": 112,
+      "date": "2019-12-23",
+      "predicted_ili": 0.4441,
+      "I_count": 576
+    },
+    {
+      "day": 119,
+      "date": "2019-12-30",
+      "predicted_ili": 0.5606,
+      "I_count": 726
+    },
+    {
+      "day": 126,
+      "date": "2020-01-06",
+      "predicted_ili": 0.7127,
+      "I_count": 924
+    },
+    {
+      "day": 133,
+      "date": "2020-01-13",
+      "predicted_ili": 0.9408,
+      "I_count": 1219
+    },
+    {
+      "day": 140,
+      "date": "2020-01-20",
+      "predicted_ili": 1.2353,
+      "I_count": 1601
+    },
+    {
+      "day": 147,
+      "date": "2020-01-27",
+      "predicted_ili": 1.6711,
+      "I_count": 2166
+    },
+    {
+      "day": 154,
+      "date": "2020-02-03",
+      "predicted_ili": 2.2229,
+      "I_count": 2881
+    },
+    {
+      "day": 161,
+      "date": "2020-02-10",
+      "predicted_ili": 3.0167,
+      "I_count": 3910
+    },
+    {
+      "day": 168,
+      "date": "2020-02-17",
+      "predicted_ili": 3.9847,
+      "I_count": 5164
+    },
+    {
+      "day": 175,
+      "date": "2020-02-24",
+      "predicted_ili": 5.3097,
+      "I_count": 6881
+    },
+    {
+      "day": 182,
+      "date": "2020-03-02",
+      "predicted_ili": 6.8267,
+      "I_count": 8847
+    },
+    {
+      "day": 189,
+      "date": "2020-03-09",
+      "predicted_ili": 8.744,
+      "I_count": 11332
+    },
+    {
+      "day": 196,
+      "date": "2020-03-16",
+      "predicted_ili": 10.7334,
+      "I_count": 13910
+    },
+    {
+      "day": 203,
+      "date": "2020-03-23",
+      "predicted_ili": 12.9547,
+      "I_count": 16789
+    },
+    {
+      "day": 210,
+      "date": "2020-03-30",
+      "predicted_ili": 14.9223,
+      "I_count": 19339
+    },
+    {
+      "day": 217,
+      "date": "2020-04-06",
+      "predicted_ili": 16.6913,
+      "I_count": 21632
+    },
+    {
+      "day": 224,
+      "date": "2020-04-13",
+      "predicted_ili": 17.8063,
+      "I_count": 23077
+    },
+    {
+      "day": 231,
+      "date": "2020-04-20",
+      "predicted_ili": 18.2569,
+      "I_count": 23661
+    },
+    {
+      "day": 238,
+      "date": "2020-04-27",
+      "predicted_ili": 17.9147,
+      "I_count": 23217
+    },
+    {
+      "day": 245,
+      "date": "2020-05-04",
+      "predicted_ili": 16.779,
+      "I_count": 21746
+    },
+    {
+      "day": 252,
+      "date": "2020-05-11",
+      "predicted_ili": 15.1516,
+      "I_count": 19637
+    },
+    {
+      "day": 259,
+      "date": "2020-05-18",
+      "predicted_ili": 13.0195,
+      "I_count": 16873
+    },
+    {
+      "day": 266,
+      "date": "2020-05-25",
+      "predicted_ili": 10.8982,
+      "I_count": 14124
+    },
+    {
+      "day": 273,
+      "date": "2020-06-01",
+      "predicted_ili": 8.6858,
+      "I_count": 11257
+    },
+    {
+      "day": 280,
+      "date": "2020-06-08",
+      "predicted_ili": 6.826,
+      "I_count": 8846
+    },
+    {
+      "day": 287,
+      "date": "2020-06-15",
+      "predicted_ili": 5.1279,
+      "I_count": 6646
+    },
+    {
+      "day": 294,
+      "date": "2020-06-22",
+      "predicted_ili": 3.8487,
+      "I_count": 4988
+    },
+    {
+      "day": 301,
+      "date": "2020-06-29",
+      "predicted_ili": 2.7816,
+      "I_count": 3605
+    },
+    {
+      "day": 308,
+      "date": "2020-07-06",
+      "predicted_ili": 2.0356,
+      "I_count": 2638
+    },
+    {
+      "day": 315,
+      "date": "2020-07-13",
+      "predicted_ili": 1.4496,
+      "I_count": 1879
+    },
+    {
+      "day": 322,
+      "date": "2020-07-20",
+      "predicted_ili": 1.059,
+      "I_count": 1372
+    },
+    {
+      "day": 329,
+      "date": "2020-07-27",
+      "predicted_ili": 0.7627,
+      "I_count": 988
+    },
+    {
+      "day": 336,
+      "date": "2020-08-03",
+      "predicted_ili": 0.5701,
+      "I_count": 739
+    },
+    {
+      "day": 343,
+      "date": "2020-08-10",
+      "predicted_ili": 0.4263,
+      "I_count": 552
+    },
+    {
+      "day": 350,
+      "date": "2020-08-17",
+      "predicted_ili": 0.3339,
+      "I_count": 433
+    },
+    {
+      "day": 357,
+      "date": "2020-08-24",
+      "predicted_ili": 0.2657,
+      "I_count": 344
+    }
+  ],
+  "actual": [
+    {
+      "date": "2019-09-02",
+      "observed_ili": 3.1571
+    },
+    {
+      "date": "2019-09-09",
+      "observed_ili": 3.0571
+    },
+    {
+      "date": "2019-09-16",
+      "observed_ili": 3.5
+    },
+    {
+      "date": "2019-09-23",
+      "observed_ili": 3.5
+    },
+    {
+      "date": "2019-09-30",
+      "observed_ili": 3.4
+    },
+    {
+      "date": "2019-10-07",
+      "observed_ili": 3.8857
+    },
+    {
+      "date": "2019-10-14",
+      "observed_ili": 4.4
+    },
+    {
+      "date": "2019-10-21",
+      "observed_ili": 4.2286
+    },
+    {
+      "date": "2019-10-28",
+      "observed_ili": 5.5143
+    },
+    {
+      "date": "2019-11-04",
+      "observed_ili": 6.8143
+    },
+    {
+      "date": "2019-11-11",
+      "observed_ili": 8.0143
+    },
+    {
+      "date": "2019-11-18",
+      "observed_ili": 10.2
+    },
+    {
+      "date": "2019-11-25",
+      "observed_ili": 13.8714
+    },
+    {
+      "date": "2019-12-02",
+      "observed_ili": 20.1286
+    },
+    {
+      "date": "2019-12-09",
+      "observed_ili": 30.4
+    },
+    {
+      "date": "2019-12-16",
+      "observed_ili": 40.2429
+    },
+    {
+      "date": "2019-12-23",
+      "observed_ili": 54.0
+    },
+    {
+      "date": "2019-12-30",
+      "observed_ili": 54.0429
+    },
+    {
+      "date": "2020-01-06",
+      "observed_ili": 53.3429
+    },
+    {
+      "date": "2020-01-13",
+      "observed_ili": 45.7143
+    },
+    {
+      "date": "2020-01-20",
+      "observed_ili": 40.3857
+    },
+    {
+      "date": "2020-01-27",
+      "observed_ili": 29.6286
+    },
+    {
+      "date": "2020-02-03",
+      "observed_ili": 17.2286
+    },
+    {
+      "date": "2020-02-10",
+      "observed_ili": 12.1429
+    },
+    {
+      "date": "2020-02-17",
+      "observed_ili": 9.0
+    },
+    {
+      "date": "2020-02-24",
+      "observed_ili": 6.1714
+    },
+    {
+      "date": "2020-03-02",
+      "observed_ili": 3.6571
+    },
+    {
+      "date": "2020-03-09",
+      "observed_ili": 2.9429
+    },
+    {
+      "date": "2020-03-16",
+      "observed_ili": 3.0429
+    },
+    {
+      "date": "2020-03-23",
+      "observed_ili": 3.0286
+    },
+    {
+      "date": "2020-03-30",
+      "observed_ili": 2.6
+    },
+    {
+      "date": "2020-04-06",
+      "observed_ili": 2.9429
+    },
+    {
+      "date": "2020-04-13",
+      "observed_ili": 2.0571
+    },
+    {
+      "date": "2020-04-20",
+      "observed_ili": 2.3714
+    },
+    {
+      "date": "2020-04-27",
+      "observed_ili": 1.5571
+    },
+    {
+      "date": "2020-05-04",
+      "observed_ili": 2.0857
+    },
+    {
+      "date": "2020-05-11",
+      "observed_ili": 2.0571
+    },
+    {
+      "date": "2020-05-18",
+      "observed_ili": 2.2143
+    },
+    {
+      "date": "2020-05-25",
+      "observed_ili": 2.4
+    },
+    {
+      "date": "2020-06-01",
+      "observed_ili": 2.2286
+    },
+    {
+      "date": "2020-06-08",
+      "observed_ili": 1.7143
+    },
+    {
+      "date": "2020-06-15",
+      "observed_ili": 1.6429
+    },
+    {
+      "date": "2020-06-22",
+      "observed_ili": 1.4571
+    },
+    {
+      "date": "2020-06-29",
+      "observed_ili": 1.5
+    },
+    {
+      "date": "2020-07-06",
+      "observed_ili": 1.5143
+    },
+    {
+      "date": "2020-07-13",
+      "observed_ili": 1.4857
+    },
+    {
+      "date": "2020-07-20",
+      "observed_ili": 2.2286
+    },
+    {
+      "date": "2020-07-27",
+      "observed_ili": 1.6857
+    },
+    {
+      "date": "2020-08-03",
+      "observed_ili": 1.9571
+    },
+    {
+      "date": "2020-08-10",
+      "observed_ili": 1.8429
+    },
+    {
+      "date": "2020-08-17",
+      "observed_ili": 2.3143
+    },
+    {
+      "date": "2020-08-24",
+      "observed_ili": 1.8714
+    }
+  ],
+  "error": {
+    "n_overlap_weeks": 52,
+    "rmse": 18.8628,
+    "mae": 12.0834,
+    "r2": -0.5664,
+    "note": "Overlap computed weekly (nearest-day snap from daily trajectory). SEIR is calibrated to 2024-25 Seoul ILI — hindcasting 2019 is out-of-distribution (pre-COVID, lower baseline). Large RMSE expected: model not re-fitted to 2019 start."
+  },
+  "note": "SEIR 360일 hindcast: 2019-09-02(최초 sentinel ILI)에서 출발, 360일 예측 → 실제 ILI(2019–2020 시즌)와 비교. COVID-19 개입(2020-03~) 이전 flu 억제 구간 포함. SEIR 파라미터 = 최신 2024-25 보정값 (재피팅 없음). 단기 RMSE는 모델 과거 역추적 적합성 지표, 장기 예측 불확실성 ±40%."
+}

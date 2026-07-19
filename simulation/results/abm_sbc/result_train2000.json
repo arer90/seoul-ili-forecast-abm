@@ -1,0 +1,64 @@
+{
+  "method": "Simulation-Based Calibration (Talts et al. 2018, arXiv:1804.06788)",
+  "library": "sbi.diagnostics.run_sbc + check_sbc (sbi 0.26.1)",
+  "seed": 42,
+  "rank_uniform_test": "Kolmogorov-Smirnov (per-parameter marginal), alpha=0.05",
+  "toy": {
+    "params": [
+      "theta0",
+      "theta1"
+    ],
+    "rank_uniform_pvalue": {
+      "theta0": 0.1081,
+      "theta1": 0.0558
+    },
+    "n_sims": 300,
+    "n_train": 600,
+    "n_posterior_samples": 400,
+    "verdict": "posterior 보정됨"
+  },
+  "abm": {
+    "params": [
+      "alpha",
+      "kappa",
+      "tau",
+      "theta"
+    ],
+    "priors": {
+      "alpha": [
+        0.5,
+        3.5
+      ],
+      "kappa": [
+        0.05,
+        0.4
+      ],
+      "tau": [
+        40.0,
+        140.0
+      ],
+      "theta": [
+        0.03,
+        0.3
+      ]
+    },
+    "rank_uniform_pvalue": {
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "tau": 0.007,
+      "theta": 0.0
+    },
+    "per_param_verdict": {
+      "alpha": "미보정",
+      "kappa": "미보정",
+      "tau": "미보정",
+      "theta": "미보정"
+    },
+    "n_sims": 1000,
+    "n_train": 2000,
+    "n_posterior_samples": 1000,
+    "verdict": "posterior 미보정"
+  },
+  "toy_passed": true,
+  "verdict": "posterior 미보정"
+}

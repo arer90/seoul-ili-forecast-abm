@@ -1,0 +1,76 @@
+# Local E2E stack for Frame D.
+#
+# Three services:
+#   - `ollama`  : local model server (pull qwen2.5:14b once; see README)
+#   - `bridge`  : MCP JSON-RPC bridge on :8787
+#   - `web`     : Next.js dev server on :3000
+#
+# In production the `ollama` service is omitted (NEXT_PUBLIC_HIDE_OLLAMA=1)
+# and `web` + `bridge` run on Vercel / Fly respectively.
+
+version: "3.9"
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  bridge:
+    build:
+      context: ..
+      dockerfile: web/Dockerfile
+    working_dir: /app/web
+    command: ["npx", "tsx", "scripts/mcp-bridge.ts"]
+    ports:
+      - "8787:8787"
+    environment:
+      MCP_PYTHON: /app/.venv/bin/python
+      MCP_BRIDGE_HOST: 0.0.0.0
+      MCP_BRIDGE_PORT: 8787
+    volumes:
+      - ../simulation:/app/simulation
+      - ../web:/app/web
+      - /app/web/node_modules
+
+  web:
+    build:
+      context: ..
+      dockerfile: web/Dockerfile
+    working_dir: /app/web
+    command: ["npm", "run", "dev"]
+    ports:
+      - "3000:3000"
+    environment:
+      MCP_BRIDGE_URL: http://bridge:8787
+      OLLAMA_BASE_URL: http://ollama:11434
+      NEXT_PUBLIC_HIDE_OLLAMA: "0"
+      # Supply these from a local `.env` or shell env; docker compose
+      # will pick them up via env_file if present.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      TURSO_URL: ${TURSO_URL:-}
+      TURSO_AUTH_TOKEN: ${TURSO_AUTH_TOKEN:-}
+      UPSTASH_REDIS_REST_URL: ${UPSTASH_REDIS_REST_URL:-}
+      UPSTASH_REDIS_REST_TOKEN: ${UPSTASH_REDIS_REST_TOKEN:-}
+      DEMO_TOKEN: ${DEMO_TOKEN:-}
+    depends_on:
+      bridge:
+        condition: service_started
+      ollama:
+        condition: service_healthy
+    volumes:
+      - ../web:/app/web
+      - /app/web/node_modules
+
+volumes:
+  ollama_models:

@@ -1,0 +1,63 @@
+{
+  "decomposition": [
+    {
+      "window": "A_thesis_68wk",
+      "test_span": [
+        269,
+        337
+      ],
+      "n": 68,
+      "V1_tirex_campaignTweedie": {
+        "wis": 2.7689,
+        "picp95": 0.9412,
+        "k_n": "64/68",
+        "peak95": 0.8947,
+        "n_peak": 19,
+        "last34": 2.7117
+      },
+      "V2_fused_campaignTweedie": {
+        "wis": 2.7515,
+        "picp95": 0.9265,
+        "k_n": "63/68",
+        "peak95": 0.8947,
+        "n_peak": 19,
+        "last34": 2.6803
+      },
+      "dm_p_fused_vs_tirex": 0.29415,
+      "mean_wis_diff_fused_minus_tirex": -0.0173,
+      "point_effect_verdict": "fusion helps/ties"
+    },
+    {
+      "window": "B_robust_132origin",
+      "test_span": [
+        205,
+        337
+      ],
+      "n": 132,
+      "V1_tirex_campaignTweedie": {
+        "wis": 2.2877,
+        "picp95": 0.9394,
+        "k_n": "124/132",
+        "peak95": 0.9231,
+        "n_peak": 26,
+        "last34": 2.7002
+      },
+      "V2_fused_campaignTweedie": {
+        "wis": 2.2859,
+        "picp95": 0.9318,
+        "k_n": "123/132",
+        "peak95": 0.8846,
+        "n_peak": 26,
+        "last34": 2.6969
+      },
+      "dm_p_fused_vs_tirex": 0.53908,
+      "mean_wis_diff_fused_minus_tirex": -0.0018,
+      "point_effect_verdict": "fusion helps/ties"
+    }
+  ],
+  "leak_free_V2": true,
+  "first_change_idx": 128,
+  "tamper_idx": 127,
+  "p_fixed": 1.5,
+  "note": "V3(fused+fused_epi.py live)=2.800/68wk, 2.282/132 from _fused_negbin_vs_tweedie.json"
+}

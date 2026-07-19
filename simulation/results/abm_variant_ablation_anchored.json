@@ -1,0 +1,60 @@
+{
+  "n_cmp": 17,
+  "n_agents": 20000,
+  "n_seeds": 5,
+  "anchor_target": "champion FusedEpi forecast (leak-free)",
+  "scored_against": "real sentinel_influenza forward window",
+  "variants": {
+    "A": {
+      "forward_r2": 0.7491,
+      "forward_rmse": 6.0172,
+      "anchor_corr_sim_vs_forecast": 0.8566,
+      "fitted_forcing": {
+        "beta": 0.15,
+        "beta_amp": 0.55,
+        "beta_phase": 90.0,
+        "import_rate": 0.0003
+      },
+      "degenerate": false
+    },
+    "B": {
+      "forward_r2": 0.6812,
+      "forward_rmse": 6.7819,
+      "anchor_corr_sim_vs_forecast": 0.8021,
+      "fitted_forcing": {
+        "beta": 0.15,
+        "beta_amp": 0.45,
+        "beta_phase": 90.0,
+        "import_rate": 0.0003
+      },
+      "degenerate": false
+    },
+    "H": {
+      "forward_r2": 0.7946,
+      "forward_rmse": 5.4442,
+      "anchor_corr_sim_vs_forecast": 0.8823,
+      "fitted_forcing": {
+        "beta": 0.18,
+        "beta_amp": 0.55,
+        "beta_phase": 105.0,
+        "import_rate": 0.0003
+      },
+      "degenerate": false
+    }
+  },
+  "ensemble_AB": {
+    "weight_A": 0.516,
+    "weight_B": 0.484,
+    "weight_source": "anchor corr-share vs FORECAST (leak-free; forward untouched)",
+    "forward_r2": 0.7529,
+    "forward_rmse": 5.971,
+    "forward_r2_equal_weight": 0.7518
+  },
+  "network_provenance": {
+    "community_mean_degree": "DB daily_population_district day/night mobility (leak-free: stdr_de<20260216); per-gu, base=8.0 from Mossong et al. 2008 (POLYMOD) + KR contact surveys, casual/other ~5–10/day",
+    "hh_size": "Statistics Korea Population & Housing Census (KOSIS 101), Seoul ~2.1/hh",
+    "work_size": "KOSIS 전국사업체조사 firm-size (Korea dominant-small ~5-6 employees)",
+    "class_size": "KEDI 교육통계 학급당 학생수 (Seoul 초~22 중~26 고~24)",
+    "leak_free": "all inputs structural, forward window (>= 20260216) excluded; no forward-ILI column read; no param selected on forward-R²"
+  }
+}

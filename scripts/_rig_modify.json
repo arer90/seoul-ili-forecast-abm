@@ -1,0 +1,185 @@
+{
+  "champion": {
+    "wis": 2.2378,
+    "p_star": 1.7,
+    "picp95": 0.9242,
+    "k_of_n": "122/132"
+  },
+  "native_median_vs_champ_point_mae": 0.0,
+  "approach_i": {
+    "i_0_native_raw_noCQR": {
+      "wis": 2.2078,
+      "dm_p_vs_champ": 0.4547,
+      "dm_meandiff": -0.0301,
+      "beats": false,
+      "picp95": 0.9015,
+      "k_of_n": "119/132",
+      "cp95ci": [
+        0.837,
+        0.947
+      ],
+      "peak_picp95": 0.87,
+      "n_peak": 23,
+      "last34_wis": 2.7398,
+      "mean_w95": 16.369
+    },
+    "i_a_native_shape": {
+      "wis": 2.2149,
+      "dm_p_vs_champ": 0.5749,
+      "dm_meandiff": -0.0229,
+      "beats": false,
+      "picp95": 0.947,
+      "k_of_n": "125/132",
+      "cp95ci": [
+        0.894,
+        0.978
+      ],
+      "peak_picp95": 0.913,
+      "n_peak": 23,
+      "last34_wis": 2.7283,
+      "mean_w95": 20.227
+    },
+    "i_a_block_boot_dm_p": 0.4346,
+    "i_b_full_native": {
+      "wis": 2.2149,
+      "dm_p_vs_champ": 0.5749,
+      "dm_meandiff": -0.0229,
+      "beats": false,
+      "picp95": 0.947,
+      "k_of_n": "125/132",
+      "cp95ci": [
+        0.894,
+        0.978
+      ],
+      "peak_picp95": 0.913,
+      "n_peak": 23,
+      "last34_wis": 2.7283,
+      "mean_w95": 20.227
+    }
+  },
+  "approach_ii": {
+    "val_scores": {
+      "ctx512_level": 1.6868,
+      "all4_level_mean": 1.7756,
+      "all8_mean": 1.8342,
+      "long_level {208,512}": 1.6868,
+      "ctx512_level+log": 1.6961,
+      "single_ctx52_lvl": 1.9693,
+      "single_ctx52_log": 2.2575,
+      "single_ctx104_lvl": 1.8767,
+      "single_ctx104_log": 2.326,
+      "single_ctx208_lvl": 1.6868,
+      "single_ctx208_log": 1.9215,
+      "single_ctx512_lvl": 1.6868,
+      "single_ctx512_log": 1.9215
+    },
+    "picked_member_set": "ctx512_level",
+    "point_mae_by_ensemble": {
+      "champion(=ctx512)": 3.2603560030718386,
+      "all4_level_mean": 3.3361,
+      "all8_mean": 3.3801,
+      "long_level {208,512}": 3.293
+    },
+    "ens_point_mae": 3.2604,
+    "champ_point_mae": 3.2604,
+    "full_ensemble": {
+      "wis": 2.2149,
+      "dm_p_vs_champ": 0.5749,
+      "dm_meandiff": -0.0229,
+      "beats": false,
+      "picp95": 0.947,
+      "k_of_n": "125/132",
+      "cp95ci": [
+        0.894,
+        0.978
+      ],
+      "peak_picp95": 0.913,
+      "n_peak": 23,
+      "last34_wis": 2.7283,
+      "mean_w95": 20.227
+    },
+    "ens_shape_on_champ_point": {
+      "wis": 2.2149,
+      "dm_p_vs_champ": 0.5749,
+      "dm_meandiff": -0.0229,
+      "beats": false,
+      "picp95": 0.947,
+      "k_of_n": "125/132",
+      "cp95ci": [
+        0.894,
+        0.978
+      ],
+      "peak_picp95": 0.913,
+      "n_peak": 23,
+      "last34_wis": 2.7283,
+      "mean_w95": 20.227
+    }
+  },
+  "approach_iii": {
+    "val_wis": {
+      "gamma": 1.7213,
+      "negbin_x5": 1.6122,
+      "negbin_x10": 1.6519
+    },
+    "picked_head": "negbin_x5",
+    "metrics": {
+      "gamma": {
+        "wis": 2.4608,
+        "dm_p_vs_champ": 0.0,
+        "dm_meandiff": 0.2229,
+        "beats": false,
+        "picp95": 0.947,
+        "k_of_n": "125/132",
+        "cp95ci": [
+          0.894,
+          0.978
+        ],
+        "peak_picp95": 0.826,
+        "n_peak": 23,
+        "last34_wis": 2.8172,
+        "mean_w95": 25.314
+      },
+      "negbin_x5": {
+        "wis": 2.448,
+        "dm_p_vs_champ": 0.0,
+        "dm_meandiff": 0.2102,
+        "beats": false,
+        "picp95": 0.9545,
+        "k_of_n": "126/132",
+        "cp95ci": [
+          0.904,
+          0.983
+        ],
+        "peak_picp95": 0.87,
+        "n_peak": 23,
+        "last34_wis": 2.8177,
+        "mean_w95": 24.833
+      },
+      "negbin_x10": {
+        "wis": 2.4598,
+        "dm_p_vs_champ": 0.0,
+        "dm_meandiff": 0.222,
+        "beats": false,
+        "picp95": 0.947,
+        "k_of_n": "125/132",
+        "cp95ci": [
+          0.894,
+          0.978
+        ],
+        "peak_picp95": 0.826,
+        "n_peak": 23,
+        "last34_wis": 2.8154,
+        "mean_w95": 25.36
+      }
+    }
+  },
+  "verdict": {
+    "champion_wis": 2.2378,
+    "best_config": "i-a native-shape",
+    "best_wis": 2.2149,
+    "best_dm_p": 0.5749,
+    "best_beats": false,
+    "any_beater": [],
+    "elapsed_sec": 0.6
+  }
+}

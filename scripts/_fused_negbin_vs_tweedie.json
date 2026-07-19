@@ -1,0 +1,58 @@
+[
+  {
+    "window": "A_thesis_68wk",
+    "test_span": [
+      269,
+      337
+    ],
+    "n": 68,
+    "n_peak": 17,
+    "negbin": {
+      "wis": 2.7439,
+      "picp95": 0.9265,
+      "picp80": 0.8088,
+      "picp50": 0.6618,
+      "peak_picp95": 0.8824,
+      "last34_wis": 2.7667
+    },
+    "tweedie": {
+      "wis": 2.8001,
+      "picp95": 0.9118,
+      "picp80": 0.8235,
+      "picp50": 0.5441,
+      "peak_picp95": 0.8824,
+      "last34_wis": 2.7596
+    },
+    "dm_hln_p_negbin_vs_tweedie": 0.31513,
+    "mean_wis_diff_negbin_minus_tweedie": -0.0562,
+    "verdict": "statistical TIE (DM p>=0.05)"
+  },
+  {
+    "window": "B_robust_132origin",
+    "test_span": [
+      205,
+      337
+    ],
+    "n": 132,
+    "n_peak": 23,
+    "negbin": {
+      "wis": 2.3287,
+      "picp95": 0.9394,
+      "picp80": 0.8258,
+      "picp50": 0.6818,
+      "peak_picp95": 0.8696,
+      "last34_wis": 2.7928
+    },
+    "tweedie": {
+      "wis": 2.2824,
+      "picp95": 0.9394,
+      "picp80": 0.8182,
+      "picp50": 0.553,
+      "peak_picp95": 0.913,
+      "last34_wis": 2.6906
+    },
+    "dm_hln_p_negbin_vs_tweedie": 0.23241,
+    "mean_wis_diff_negbin_minus_tweedie": 0.0464,
+    "verdict": "statistical TIE (DM p>=0.05)"
+  }
+]

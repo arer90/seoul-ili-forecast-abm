@@ -1,0 +1,14 @@
+{
+  "training": "EXPANDING [52,block_start) \u2014 153..284 weeks (fixed run was 113)",
+  "refit_blocks": 132,
+  "head_used_on_origins": 110,
+  "of_total": 132,
+  "native_wis_test": 2.2427,
+  "headprobe_wis_test": 2.2386,
+  "delta_pct": -0.18,
+  "headprobe_picp95": 0.833,
+  "dm_hln_p": 0.033,
+  "dm_boot_p": 0.0065,
+  "beats_native": true,
+  "elapsed_s": 25.0
+}

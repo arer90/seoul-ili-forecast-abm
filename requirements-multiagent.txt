@@ -1,0 +1,30 @@
+# ARIA multi-agent (3-Agent LLM Architecture) — AutoGen / ag2 framework deps.
+#
+# SEPARATE from requirements.lock by design. The main lock is the SSOT and must
+# NOT be modified (uv sync is BANNED — it removed mlx-lm/seir-core and broke ARIA
+# before; see memory uv-sync-unsafe-incident). These packages were added to the
+# .venv with:
+#
+#   .venv/bin/python -m pip install "ag2[ollama]"
+#
+# pip-only install. ZERO version changes to any existing package (verified via
+# --dry-run): pydantic stays 2.13.0, no chromadb/lancedb churn, no langchain
+# disruption. The local Ollama daemon is the LLM transport (no API key).
+#
+# Why AutoGen and not CrewAI: CrewAI 1.15.1's dependency closure DOWNGRADES
+# pydantic 2.13→2.12 across chromadb / langchain / langgraph / tabpfn / ollama /
+# fastapi — that would disrupt requirements.lock and the LangChain RAG track.
+# AutoGen adds only 5 small pure-Python deps with no version changes.
+#
+# Used by: simulation/llm_compare/aria_multiagent.py
+# Framework: AutoGen / ag2 (role-orchestration) — DISTINCT from LangChain (RAG).
+# LLM backend: local Ollama (qwen2.5:3b retriever/analyst, mistral:7b verifier).
+
+ag2[ollama]==0.14.0
+
+# transitive (pulled by ag2[ollama]; pinned for the record):
+fast-depends==3.0.8
+fix-busted-json==0.0.19
+termcolor==3.3.0
+tiktoken==0.13.0
+# note: the `ollama` python client is already present in requirements.lock.

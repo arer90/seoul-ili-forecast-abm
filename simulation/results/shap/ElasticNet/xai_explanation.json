@@ -1,0 +1,169 @@
+{
+  "feature_axis": [
+    {
+      "feature": "ili_rate_lag1",
+      "mean_abs_shap": 1.9795,
+      "mean_shap": 0.948041,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_age_0_lag1",
+      "mean_abs_shap": 1.608427,
+      "mean_shap": 0.846204,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag2",
+      "mean_abs_shap": 1.1465,
+      "mean_shap": -0.526356,
+      "direction": "lowers"
+    },
+    {
+      "feature": "gt_bodyache_lag1",
+      "mean_abs_shap": 0.93128,
+      "mean_shap": -0.233777,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_age_0_lag2",
+      "mean_abs_shap": 0.587923,
+      "mean_shap": 0.303823,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag3",
+      "mean_abs_shap": 0.576019,
+      "mean_shap": 0.251165,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag4",
+      "mean_abs_shap": 0.565409,
+      "mean_shap": 0.231205,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_sin_h1",
+      "mean_abs_shap": 0.097887,
+      "mean_shap": 0.030197,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_cos_h2",
+      "mean_abs_shap": 0.091197,
+      "mean_shap": -0.010036,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_sin_h2",
+      "mean_abs_shap": 0.089407,
+      "mean_shap": -0.009441,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_sin_h3",
+      "mean_abs_shap": 0.089078,
+      "mean_shap": 0.00049,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_cos_h3",
+      "mean_abs_shap": 0.08728,
+      "mean_shap": -0.002743,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_cos_h1",
+      "mean_abs_shap": 0.084185,
+      "mean_shap": -0.011477,
+      "direction": "lowers"
+    },
+    {
+      "feature": "mr_yoy_ratio",
+      "mean_abs_shap": 0.027343,
+      "mean_shap": -0.017726,
+      "direction": "lowers"
+    },
+    {
+      "feature": "sch_closure_lag1",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    }
+  ],
+  "input_axis": {
+    "highest_prediction": {
+      "row": 67,
+      "prediction": 133.8571,
+      "top_drivers": [
+        {
+          "feature": "ili_age_0_lag1",
+          "shap": 4.8137
+        },
+        {
+          "feature": "ili_rate_lag1",
+          "shap": 4.3071
+        },
+        {
+          "feature": "ili_rate_lag2",
+          "shap": -2.7842
+        }
+      ]
+    },
+    "lowest_prediction": {
+      "row": 0,
+      "prediction": 133.8571,
+      "top_drivers": [
+        {
+          "feature": "ili_rate_lag1",
+          "shap": -1.407
+        },
+        {
+          "feature": "ili_age_0_lag1",
+          "shap": -1.0721
+        },
+        {
+          "feature": "ili_rate_lag2",
+          "shap": 0.808
+        }
+      ]
+    },
+    "median_prediction": {
+      "row": 32,
+      "prediction": 133.8571,
+      "top_drivers": [
+        {
+          "feature": "gt_bodyache_lag1",
+          "shap": 1.6288
+        },
+        {
+          "feature": "ili_rate_lag1",
+          "shap": -1.15
+        },
+        {
+          "feature": "ili_age_0_lag1",
+          "shap": -0.7342
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": 132.0576,
+    "prediction_mean": 133.8571,
+    "prediction_range": [
+      133.8571,
+      133.8571
+    ],
+    "fraction_explained_by_top3": 0.5947
+  },
+  "model_axis": {
+    "family": "linear",
+    "n_features_explained": 20,
+    "n_samples": 68,
+    "dominant_feature": "ili_rate_lag1",
+    "dominant_feature_sign_consistency": 0.412,
+    "global_mean_abs_shap": 0.398072,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

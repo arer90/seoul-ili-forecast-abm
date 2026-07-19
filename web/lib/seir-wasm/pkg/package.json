@@ -1,0 +1,17 @@
+{
+  "name": "seir-wasm",
+  "type": "module",
+  "description": "High-performance SEIR-V-D metapopulation ODE solver for Seoul infection simulation",
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "seir_wasm_bg.wasm",
+    "seir_wasm.js",
+    "seir_wasm.d.ts"
+  ],
+  "main": "seir_wasm.js",
+  "types": "seir_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "n_origins": 132,
+  "weeks": "205..336",
+  "p_star": 1.7,
+  "cap_train_only": 133.86,
+  "fit_weeks": [
+    76,
+    165
+  ],
+  "n_fit": 89,
+  "n_features": 11,
+  "n_seeds": 8,
+  "init_matches_champion_maxdq": 0.00339,
+  "champion_wis": 2.2378,
+  "champion_picp95": 0.9242,
+  "champion_val_wis": 1.59,
+  "best_cfg": "h24_d0.1_wd0.001_l0.1",
+  "best_cfg_params": {
+    "hidden": 24,
+    "dropout": 0.1,
+    "wd": 0.001,
+    "lam": 0.1
+  },
+  "fusenet_val_wis": 1.5039,
+  "fusenet_wis": 2.2689,
+  "fusenet_picp95": 0.9242,
+  "fusenet_cp95ci": [
+    0.865,
+    0.963
+  ],
+  "delta_wis": 0.0311,
+  "delta_pct": 1.39,
+  "dm_p_vs_champion": 0.1515,
+  "dm_meandiff": 0.0311,
+  "fusenet_peak_picp95": 0.913,
+  "fusenet_last34_wis": 2.669,
+  "champion_last34_wis": 2.6732,
+  "champion_val_wis_seeded": 1.513,
+  "fusenet_beats_champion_on_val": true,
+  "do_no_harm_gate_deploy": "champion (gate rejects trained head)",
+  "deployed_wis": 2.2378,
+  "beats_champion": false,
+  "do_no_harm": false,
+  "verdict": "FuseNet beats champion on the 40-wk VAL but this DOES NOT TRANSFER to TEST (+1.4%, DM p=0.15 n.s.); VAL is anti-correlated with TEST on the added flexibility. Gate retains champion. WIS ~2.24 is the data floor.",
+  "val_grid": [
+    {
+      "tag": "h16_d0.1_wd0.001_l0.1",
+      "val_wis": 1.5078
+    },
+    {
+      "tag": "h16_d0.1_wd0.001_l0.3",
+      "val_wis": 1.5131
+    },
+    {
+      "tag": "h16_d0.1_wd0.01_l0.1",
+      "val_wis": 1.5131
+    },
+    {
+      "tag": "h16_d0.1_wd0.01_l0.3",
+      "val_wis": 1.5131
+    },
+    {
+      "tag": "h16_d0.3_wd0.001_l0.1",
+      "val_wis": 1.5131
+    },
+    {
+      "tag": "h16_d0.3_wd0.001_l0.3",
+      "val_wis": 1.5131
+    },
+    {
+      "tag": "h16_d0.3_wd0.01_l0.1",
+      "val_wis": 1.5131
+    },
+    {
+      "tag": "h16_d0.3_wd0.01_l0.3",
+      "val_wis": 1.5131
+    },
+    {
+      "tag": "h24_d0.1_wd0.001_l0.1",
+      "val_wis": 1.5039
+    },
+    {
+      "tag": "h24_d0.1_wd0.001_l0.3",
+      "val_wis": 1.5123
+    },
+    {
+      "tag": "h24_d0.1_wd0.01_l0.1",
+      "val_wis": 1.5127
+    },
+    {
+      "tag": "h24_d0.1_wd0.01_l0.3",
+      "val_wis": 1.5127
+    },
+    {
+      "tag": "h24_d0.3_wd0.001_l0.1",
+      "val_wis": 1.5056
+    },
+    {
+      "tag": "h24_d0.3_wd0.001_l0.3",
+      "val_wis": 1.5129
+    },
+    {
+      "tag": "h24_d0.3_wd0.01_l0.1",
+      "val_wis": 1.5129
+    },
+    {
+      "tag": "h24_d0.3_wd0.01_l0.3",
+      "val_wis": 1.5129
+    }
+  ],
+  "static_ablation": {
+    "val_selected": {
+      "gamma": 0.0,
+      "wscale": 0.9,
+      "val_wis": 1.5049,
+      "test_wis": 2.247,
+      "picp95": 0.9242,
+      "dm_p": 0.1038,
+      "diff": 0.0092
+    },
+    "test_oracle": {
+      "gamma": 0.5,
+      "wscale": 1.1,
+      "val_wis": 1.5566,
+      "test_wis": 2.2071,
+      "picp95": 0.9394,
+      "dm_p": 0.2538,
+      "diff": -0.0307
+    },
+    "grid": [
+      {
+        "gamma": 0.0,
+        "wscale": 0.9,
+        "val_wis": 1.5049,
+        "test_wis": 2.247,
+        "picp95": 0.9242,
+        "dm_p": 0.1038,
+        "diff": 0.0092
+      },
+      {
+        "gamma": 0.0,
+        "wscale": 1.0,
+        "val_wis": 1.513,
+        "test_wis": 2.2378,
+        "picp95": 0.9242,
+        "dm_p": 1.0,
+        "diff": 0.0
+      },
+      {
+        "gamma": 0.0,
+        "wscale": 1.1,
+        "val_wis": 1.525,
+        "test_wis": 2.2309,
+        "picp95": 0.9318,
+        "dm_p": 0.2227,
+        "diff": -0.007
+      },
+      {
+        "gamma": 0.0,
+        "wscale": 1.2,
+        "val_wis": 1.539,
+        "test_wis": 2.2266,
+        "picp95": 0.9318,
+        "dm_p": 0.3219,
+        "diff": -0.0113
+      },
+      {
+        "gamma": 0.25,
+        "wscale": 0.9,
+        "val_wis": 1.5171,
+        "test_wis": 2.2294,
+        "picp95": 0.9318,
+        "dm_p": 0.3166,
+        "diff": -0.0084
+      },
+      {
+        "gamma": 0.25,
+        "wscale": 1.0,
+        "val_wis": 1.5257,
+        "test_wis": 2.2197,
+        "picp95": 0.9394,
+        "dm_p": 0.1149,
+        "diff": -0.0181
+      },
+      {
+        "gamma": 0.25,
+        "wscale": 1.1,
+        "val_wis": 1.5373,
+        "test_wis": 2.2143,
+        "picp95": 0.9318,
+        "dm_p": 0.1489,
+        "diff": -0.0236
+      },
+      {
+        "gamma": 0.25,
+        "wscale": 1.2,
+        "val_wis": 1.5538,
+        "test_wis": 2.2112,
+        "picp95": 0.9318,
+        "dm_p": 0.2285,
+        "diff": -0.0266
+      },
+      {
+        "gamma": 0.5,
+        "wscale": 0.9,
+        "val_wis": 1.5334,
+        "test_wis": 2.2177,
+        "picp95": 0.9394,
+        "dm_p": 0.2346,
+        "diff": -0.0201
+      },
+      {
+        "gamma": 0.5,
+        "wscale": 1.0,
+        "val_wis": 1.5432,
+        "test_wis": 2.21,
+        "picp95": 0.9394,
+        "dm_p": 0.1984,
+        "diff": -0.0278
+      },
+      {
+        "gamma": 0.5,
+        "wscale": 1.1,
+        "val_wis": 1.5566,
+        "test_wis": 2.2071,
+        "picp95": 0.9394,
+        "dm_p": 0.2538,
+        "diff": -0.0307
+      },
+      {
+        "gamma": 0.5,
+        "wscale": 1.2,
+        "val_wis": 1.5748,
+        "test_wis": 2.209,
+        "picp95": 0.9318,
+        "dm_p": 0.3774,
+        "diff": -0.0289
+      },
+      {
+        "gamma": 0.75,
+        "wscale": 0.9,
+        "val_wis": 1.5545,
+        "test_wis": 2.2118,
+        "picp95": 0.947,
+        "dm_p": 0.3038,
+        "diff": -0.0261
+      },
+      {
+        "gamma": 0.75,
+        "wscale": 1.0,
+        "val_wis": 1.5665,
+        "test_wis": 2.2083,
+        "picp95": 0.947,
+        "dm_p": 0.3413,
+        "diff": -0.0295
+      },
+      {
+        "gamma": 0.75,
+        "wscale": 1.1,
+        "val_wis": 1.5822,
+        "test_wis": 2.2099,
+        "picp95": 0.947,
+        "dm_p": 0.4542,
+        "diff": -0.0279
+      },
+      {
+        "gamma": 0.75,
+        "wscale": 1.2,
+        "val_wis": 1.602,
+        "test_wis": 2.2156,
+        "picp95": 0.9318,
+        "dm_p": 0.6134,
+        "diff": -0.0222
+      },
+      {
+        "gamma": 1.0,
+        "wscale": 0.9,
+        "val_wis": 1.5781,
+        "test_wis": 2.2145,
+        "picp95": 0.947,
+        "dm_p": 0.4915,
+        "diff": -0.0234
+      },
+      {
+        "gamma": 1.0,
+        "wscale": 1.0,
+        "val_wis": 1.5941,
+        "test_wis": 2.2145,
+        "picp95": 0.947,
+        "dm_p": 0.5686,
+        "diff": -0.0234
+      },
+      {
+        "gamma": 1.0,
+        "wscale": 1.1,
+        "val_wis": 1.6128,
+        "test_wis": 2.22,
+        "picp95": 0.947,
+        "dm_p": 0.7094,
+        "diff": -0.0178
+      },
+      {
+        "gamma": 1.0,
+        "wscale": 1.2,
+        "val_wis": 1.6335,
+        "test_wis": 2.2287,
+        "picp95": 0.9318,
+        "dm_p": 0.8683,
+        "diff": -0.0091
+      }
+    ]
+  },
+  "elapsed_sec": 121.3
+}

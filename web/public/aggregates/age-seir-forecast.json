@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-06-10T07:54:45Z",
+  "engine": "age-structured WAIFW metapop SEIR-V-D (simulation/sim/age_metapop.py)",
+  "vintage_population": "2026",
+  "R0": 1.3,
+  "bands": [
+    "0-9",
+    "10-19",
+    "20-29",
+    "30-39",
+    "40-49",
+    "50-59",
+    "60+"
+  ],
+  "band_population": [
+    700093,
+    912628,
+    1594206,
+    1730620,
+    1787604,
+    1512937,
+    2030553
+  ],
+  "attack_rate_pct": [
+    58.7,
+    68.5,
+    63.3,
+    61.7,
+    57.2,
+    45.2,
+    34.4
+  ],
+  "peak_day": [
+    132,
+    131,
+    132,
+    132,
+    133,
+    135,
+    136
+  ],
+  "validation": {
+    "vs_real_sentinel_age_ili_spearman": 0.68,
+    "note": "모델 age-attack vs 실 sentinel age-ILI: peak 10-19·trough 60+ 재현(ρ≈0.68); working-age 는 실제가 더 평탄(접촉행렬만으론 불완전)."
+  },
+  "note": "계절독감 보정 WAIFW age-구조화 baseline. 신종 병원체는 규모 다름. mechanistic 권위(팬데믹). 기존 scalar seir-forecast-360 별도(opt-in). full age_i×age_j 혼합 = 기존 scalar/agent 미보유."
+}

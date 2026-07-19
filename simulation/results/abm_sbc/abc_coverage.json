@@ -1,0 +1,81 @@
+{
+  "params": [
+    "alpha",
+    "kappa",
+    "tau",
+    "theta"
+  ],
+  "priors": {
+    "alpha": [
+      0.5,
+      3.5
+    ],
+    "kappa": [
+      0.05,
+      0.4
+    ],
+    "tau": [
+      40.0,
+      140.0
+    ],
+    "theta": [
+      0.03,
+      0.3
+    ]
+  },
+  "n_reps_requested": 100,
+  "n_reps_effective": 100,
+  "n_particles": 150,
+  "tolerance_schedule": [
+    3.0,
+    1.5,
+    0.8
+  ],
+  "max_tries_per_particle": 400,
+  "seed": 42,
+  "coverage_90": {
+    "alpha": 0.91,
+    "kappa": 0.91,
+    "tau": 0.93,
+    "theta": 0.89
+  },
+  "mean_ci_width_90": {
+    "alpha": 2.6555,
+    "kappa": 0.3034,
+    "tau": 88.8582,
+    "theta": 0.2374
+  },
+  "ci_width_frac_of_prior_90": {
+    "alpha": 0.885,
+    "kappa": 0.867,
+    "tau": 0.889,
+    "theta": 0.879
+  },
+  "coverage_50": {
+    "alpha": 0.42,
+    "kappa": 0.56,
+    "tau": 0.48,
+    "theta": 0.46
+  },
+  "mean_ci_width_50": {
+    "alpha": 1.4504,
+    "kappa": 0.1667,
+    "tau": 48.7729,
+    "theta": 0.1278
+  },
+  "ci_width_frac_of_prior_50": {
+    "alpha": 0.483,
+    "kappa": 0.476,
+    "tau": 0.488,
+    "theta": 0.473
+  },
+  "nominal_coverage": {
+    "90": 0.9,
+    "50": 0.5
+  },
+  "leak_free": true,
+  "method": "ABC-SMC simulation-based credible-interval coverage (Toni et al. 2009 SMC-ABC; coverage diagnostic)",
+  "library": "simulation.abm.abc_smc.abc_smc",
+  "verdict": "calibrated (all |coverage90 - 0.90| <= 0.10)",
+  "identifiability_note": "mean 90% CI width = 87%-89% of prior range -> behavioral params calibrated but WEAKLY IDENTIFIED (esp. alpha/kappa)"
+}

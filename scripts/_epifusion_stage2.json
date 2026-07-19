@@ -1,0 +1,13 @@
+{
+  "fair_baseline_wis": 2.4157,
+  "baseline_picp95": 0.955,
+  "tweedie_wis": 2.2378,
+  "tweedie_p": 1.7,
+  "tweedie_picp95": 0.924,
+  "tabpfn_head_wis": 2.2041,
+  "tabpfn_picp95": 0.947,
+  "tabpfn_dm_p_vs_tweedie": 0.6537,
+  "tabpfn_dm_p_vs_baseline": 0.0088,
+  "tabpfn_beats_tweedie": false,
+  "elapsed_s": 85.0
+}

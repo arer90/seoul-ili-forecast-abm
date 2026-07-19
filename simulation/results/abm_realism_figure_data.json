@@ -1,0 +1,229 @@
+{
+  "config": {
+    "n_agents": 20000,
+    "n_seeds": 5
+  },
+  "ablation": {
+    "n_cmp": 17,
+    "n_agents": 20000,
+    "n_seeds": 5,
+    "anchor_target": "champion FusedEpi forecast (leak-free)",
+    "scored_against": "real sentinel_influenza forward window",
+    "variants": {
+      "A": {
+        "forward_r2": 0.7491,
+        "forward_rmse": 6.0172,
+        "anchor_corr_sim_vs_forecast": 0.8566,
+        "fitted_forcing": {
+          "beta": 0.15,
+          "beta_amp": 0.55,
+          "beta_phase": 90.0,
+          "import_rate": 0.0003
+        },
+        "degenerate": false
+      },
+      "B": {
+        "forward_r2": 0.6812,
+        "forward_rmse": 6.7819,
+        "anchor_corr_sim_vs_forecast": 0.8021,
+        "fitted_forcing": {
+          "beta": 0.15,
+          "beta_amp": 0.45,
+          "beta_phase": 90.0,
+          "import_rate": 0.0003
+        },
+        "degenerate": false
+      },
+      "H": {
+        "forward_r2": 0.7946,
+        "forward_rmse": 5.4442,
+        "anchor_corr_sim_vs_forecast": 0.8823,
+        "fitted_forcing": {
+          "beta": 0.18,
+          "beta_amp": 0.55,
+          "beta_phase": 105.0,
+          "import_rate": 0.0003
+        },
+        "degenerate": false
+      }
+    },
+    "ensemble_AB": {
+      "weight_A": 0.516,
+      "weight_B": 0.484,
+      "weight_source": "anchor corr-share vs FORECAST (leak-free; forward untouched)",
+      "forward_r2": 0.7529,
+      "forward_rmse": 5.971,
+      "forward_r2_equal_weight": 0.7518
+    },
+    "network_provenance": {
+      "community_mean_degree": "DB daily_population_district day/night mobility (leak-free: stdr_de<20260216); per-gu, base=8.0 from Mossong et al. 2008 (POLYMOD) + KR contact surveys, casual/other ~5–10/day",
+      "hh_size": "Statistics Korea Population & Housing Census (KOSIS 101), Seoul ~2.1/hh",
+      "work_size": "KOSIS 전국사업체조사 firm-size (Korea dominant-small ~5-6 employees)",
+      "class_size": "KEDI 교육통계 학급당 학생수 (Seoul 초~22 중~26 고~24)",
+      "leak_free": "all inputs structural, forward window (>= 20260216) excluded; no forward-ILI column read; no param selected on forward-R²"
+    }
+  },
+  "enkf": {
+    "variant": "H",
+    "n_cmp": 17,
+    "obs_var": 15.9487,
+    "variant_alone_forward_r2": 0.7946,
+    "variant_plus_enkf_forward_r2": 0.8169,
+    "variant_plus_enkf_forward_rmse": 5.1392,
+    "champion_alone_forward_r2": 0.9085,
+    "trajectories": {
+      "forward_dates": [
+        "2026-02-16",
+        "2026-02-23",
+        "2026-03-02",
+        "2026-03-09",
+        "2026-03-16",
+        "2026-03-23",
+        "2026-03-30",
+        "2026-04-06",
+        "2026-04-13",
+        "2026-04-20",
+        "2026-04-27",
+        "2026-05-04",
+        "2026-05-11",
+        "2026-05-18",
+        "2026-05-25",
+        "2026-06-01",
+        "2026-06-08"
+      ],
+      "real": [
+        52.55714285714286,
+        28.87142857142857,
+        23.957142857142856,
+        21.37142857142857,
+        22.057142857142857,
+        21.02857142857143,
+        17.95714285714286,
+        13.457142857142857,
+        11.4,
+        8.057142857142859,
+        9.285714285714286,
+        8.2,
+        6.542857142857143,
+        4.8999999999999995,
+        5.142857142857143,
+        4.728571428571429,
+        4.057142857142857
+      ],
+      "champion_forecast": [
+        45.075122474578684,
+        17.016769071481725,
+        21.271158523421807,
+        19.92205886372509,
+        22.96173937926074,
+        20.279019877872805,
+        15.3900132523295,
+        10.90160340719909,
+        10.125916680749029,
+        6.579551248672147,
+        9.548729395952787,
+        7.926541974687533,
+        6.410845844536449,
+        4.449110905864894,
+        5.134707909951234,
+        4.69174974729787,
+        4.000865539898031
+      ],
+      "variant_alone": [
+        32.245442714124124,
+        26.800036278428486,
+        25.188195973462573,
+        20.96256057936275,
+        19.04577751399789,
+        18.130949232801022,
+        18.740834753598932,
+        13.20830181493216,
+        10.376690468370423,
+        9.592551941630251,
+        7.022320103981906,
+        4.622886626353457,
+        2.573686483570711,
+        5.408752476054812,
+        4.887720781189216,
+        7.632205624779819,
+        8.677723660433383
+      ],
+      "variant_plus_enkf": [
+        33.470900475239496,
+        21.49636902828572,
+        22.72298805196298,
+        20.487708415327326,
+        21.620482740552326,
+        19.32432181339646,
+        17.184634792441553,
+        11.636626286496455,
+        10.235190157593983,
+        8.726967423342026,
+        8.744382467772034,
+        6.4561164581102615,
+        4.3637240486177244,
+        4.316504769276166,
+        4.951610849119761,
+        7.000381211643749,
+        6.4201137253520715
+      ]
+    },
+    "leak_free": "EnKF assimilates the champion FORECAST (forecast-time nowcast), never the real forward truth; obs_var=median ensemble variance (untuned)"
+  },
+  "person": {
+    "n_edges": 8355,
+    "n_agent_to_agent": 4200,
+    "n_imported": 4155,
+    "n_seeds_used": 5,
+    "offspring_k_mean": 1.467,
+    "offspring_k_dispersion": 0.498,
+    "superspreaders_k_ge5": 39,
+    "mean_superspreaders_per_run_k_ge5": 7.8,
+    "superspreader_share_k_ge5": 0.0136,
+    "layer_share": {
+      "community": 0.431,
+      "household": 0.071,
+      "school": 0.185,
+      "workplace": 0.312
+    },
+    "occupation_attack_rate": {
+      "0": 0.0756,
+      "1": 0.0751,
+      "2": 0.0937,
+      "3": 0.1143,
+      "4": 0.0912,
+      "5": 0.0951
+    },
+    "cross_district_transmission_share": 0.039
+  },
+  "entity": {
+    "household": {
+      "n_entities": 6664,
+      "mean_attack_rate": 0.102,
+      "share_entities_with_within_spread": 0.022,
+      "share_entities_majority_infected": 0.113,
+      "max_attack_rate": 1.0
+    },
+    "workplace": {
+      "n_entities": 2452,
+      "mean_attack_rate": 0.093,
+      "share_entities_with_within_spread": 0.168,
+      "share_entities_majority_infected": 0.015,
+      "max_attack_rate": 0.75
+    },
+    "school": {
+      "n_entities": 64,
+      "mean_attack_rate": 0.159,
+      "share_entities_with_within_spread": 0.812,
+      "share_entities_majority_infected": 0.0,
+      "max_attack_rate": 0.429
+    }
+  },
+  "network_provenance": {
+    "community_mean_degree": "DB daily_population_district day/night mobility (leak-free: stdr_de<20260216); per-gu, base=8.0 from Mossong et al. 2008 (POLYMOD) + KR contact surveys, casual/other ~5–10/day",
+    "hh_size": "Statistics Korea Population & Housing Census (KOSIS 101), Seoul ~2.1/hh",
+    "work_size": "KOSIS 전국사업체조사 firm-size (Korea dominant-small ~5-6 employees)",
+    "class_size": "KEDI 교육통계 학급당 학생수 (Seoul 초~22 중~26 고~24)",
+    "leak_free": "all inputs structural, forward window (>= 20260216) excluded; no forward-ILI column read; no param selected on forward-R²"
+  }
+}

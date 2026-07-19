@@ -1,0 +1,19 @@
+{
+  "use_lora": false,
+  "n_adapter_params": 320256,
+  "n_train_steps": 1950,
+  "seoul_val_mae_lora": 2.4032,
+  "seoul_val_mae_zeroshot": 2.2051,
+  "test_point_mae_lora": 3.2604,
+  "test_point_mae_zeroshot": 3.2604,
+  "tweedie_wis_zeroshot": 2.2378,
+  "p_zeroshot": 1.7,
+  "picp95_zs": 0.924,
+  "tweedie_wis_lora": 2.2378,
+  "p_lora": 1.7,
+  "picp95_lora": 0.924,
+  "dm_p_lora_vs_zeroshot": 1.0,
+  "dm_meandiff": 0.0,
+  "lora_beats_champion": false,
+  "elapsed_s": 578.0
+}

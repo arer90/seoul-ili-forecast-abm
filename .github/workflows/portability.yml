@@ -1,0 +1,75 @@
+name: portability
+
+# Cross-platform checks that need no dependency install.
+#
+# Why not a full install: pyproject pins torch to the pytorch-cu128 index for
+# linux/win32 (see [tool.uv.sources]), so `uv sync` on a GPU-less runner would
+# download multi-gigabyte CUDA wheels plus the nvidia-* stack. That is neither
+# fast nor useful without a GPU, so this workflow deliberately stops at checks
+# the standard library can perform.
+#
+# What it does catch, on all three platforms:
+#   - syntax errors (compileall)
+#   - hard-coded home-directory paths that break on any other machine
+#   - hard-coded /tmp that resolves to <drive>:\tmp on Windows
+#   - open()/read_text() without encoding= (Windows ko-KR defaults to cp949,
+#     and this repository is full of Korean text)
+#   - pgrep/ps calls that do not exist on Windows
+#
+# The two path checks read every text file type, not just .py. They used to scan
+# .py alone, which meant the shell layer — where hard-coded paths actually
+# cluster — was never examined: run_pipeline.sh wrote the master training log to
+# a literal /tmp and reported clean. Both are now at zero and gated at zero.
+#
+# encoding and posix-proc remain baselined: the gate fails on NEW findings, not
+# on the pre-existing backlog. Lower the numbers as the backlog is worked off.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  portability:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile every tracked module
+        run: python -m compileall -q simulation scripts tests
+
+      # A non-ASCII or space-bearing path makes `git ls-files` output depend on
+      # the local core.quotepath setting, so tooling sees a different file set on
+      # a runner than on the machine a baseline was measured on.
+      - name: Tracked paths are ASCII and space-free
+        run: python scripts/check_portability.py --only filename --list --max 0
+
+      - name: No hard-coded home paths
+        run: python scripts/check_portability.py --only abs-path --list --max 0
+
+      # One step per check. A multi-line `run:` block does NOT fail the step on
+      # Windows when an early command exits non-zero — PowerShell only surfaces
+      # the last command's exit code, so the gate silently passed there while
+      # failing on Linux and macOS. Separate steps make each check binding on
+      # all three platforms.
+      - name: No hard-coded /tmp
+        run: python scripts/check_portability.py --only posix-tmp --list --max 0
+
+      - name: Backlog — POSIX-only process tools
+        run: python scripts/check_portability.py --only posix-proc --list --max 4
+
+      - name: Backlog — missing encoding=
+        run: python scripts/check_portability.py --only encoding --max 256
+
+      - name: Summary
+        if: always()
+        run: python scripts/check_portability.py --max 999

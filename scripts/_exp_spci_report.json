@@ -1,0 +1,192 @@
+{
+  "reference": {
+    "wis": 2.4012,
+    "picp95": 0.9545,
+    "k_of_n": "126/132",
+    "last34_wis": 2.7629
+  },
+  "target": "WIS<2.4012 & DM p<0.05 & PICP95 in [0.93,0.96] & last34<2.72",
+  "headline": {
+    "config": "bagged-QRF[12, 16, 20, 24] beta_expanding seed0=125",
+    "wis": 2.3449,
+    "picp95": 0.9545,
+    "k_of_n": "126/132",
+    "cp95ci": [
+      0.9037,
+      0.9831
+    ],
+    "w95": 21.53,
+    "last34_wis": 2.6772,
+    "dm_p": 0.0104,
+    "dm_mean_diff": -0.0563,
+    "peak_n": 23,
+    "peak_picp95": 0.7826,
+    "peak_wis": 6.1787,
+    "meets_all": true
+  },
+  "best_single": {
+    "config": "QRF leaf=12 beta_expanding seed0=125",
+    "wis": 2.3251,
+    "picp95": 0.9545,
+    "k_of_n": "126/132",
+    "cp95ci": [
+      0.9037,
+      0.9831
+    ],
+    "w95": 21.72,
+    "last34_wis": 2.6308,
+    "dm_p": 0.0052,
+    "dm_mean_diff": -0.076,
+    "peak_n": 23,
+    "peak_picp95": 0.8261,
+    "peak_wis": 6.1106,
+    "meets_all": true
+  },
+  "seed0_sensitivity": [
+    {
+      "seed0": 110,
+      "wis": 2.348,
+      "picp95": 0.9545,
+      "k_of_n": "126/132",
+      "cp95ci": [
+        0.9037,
+        0.9831
+      ],
+      "w95": 20.92,
+      "last34_wis": 2.6767,
+      "dm_p": 0.0204,
+      "dm_mean_diff": -0.0532,
+      "peak_n": 23,
+      "peak_picp95": 0.7826,
+      "peak_wis": 6.2181
+    },
+    {
+      "seed0": 125,
+      "wis": 2.3449,
+      "picp95": 0.9545,
+      "k_of_n": "126/132",
+      "cp95ci": [
+        0.9037,
+        0.9831
+      ],
+      "w95": 21.53,
+      "last34_wis": 2.6772,
+      "dm_p": 0.0104,
+      "dm_mean_diff": -0.0563,
+      "peak_n": 23,
+      "peak_picp95": 0.7826,
+      "peak_wis": 6.1787
+    },
+    {
+      "seed0": 140,
+      "wis": 2.3431,
+      "picp95": 0.9621,
+      "k_of_n": "127/132",
+      "cp95ci": [
+        0.9138,
+        0.9876
+      ],
+      "w95": 22.24,
+      "last34_wis": 2.6789,
+      "dm_p": 0.0075,
+      "dm_mean_diff": -0.058,
+      "peak_n": 23,
+      "peak_picp95": 0.8261,
+      "peak_wis": 6.1405
+    },
+    {
+      "seed0": 155,
+      "wis": 2.3457,
+      "picp95": 0.9697,
+      "k_of_n": "128/132",
+      "cp95ci": [
+        0.9242,
+        0.9917
+      ],
+      "w95": 23.05,
+      "last34_wis": 2.681,
+      "dm_p": 0.0141,
+      "dm_mean_diff": -0.0555,
+      "peak_n": 23,
+      "peak_picp95": 0.8261,
+      "peak_wis": 6.0934
+    }
+  ],
+  "leaf_sensitivity": [
+    {
+      "leaf": 12,
+      "wis": 2.3251,
+      "picp95": 0.9545,
+      "k_of_n": "126/132",
+      "cp95ci": [
+        0.9037,
+        0.9831
+      ],
+      "w95": 21.72,
+      "last34_wis": 2.6308,
+      "dm_p": 0.0052,
+      "dm_mean_diff": -0.076,
+      "peak_n": 23,
+      "peak_picp95": 0.8261,
+      "peak_wis": 6.1106
+    },
+    {
+      "leaf": 16,
+      "wis": 2.3486,
+      "picp95": 0.947,
+      "k_of_n": "125/132",
+      "cp95ci": [
+        0.8938,
+        0.9784
+      ],
+      "w95": 22.54,
+      "last34_wis": 2.6688,
+      "dm_p": 0.0269,
+      "dm_mean_diff": -0.0526,
+      "peak_n": 23,
+      "peak_picp95": 0.7826,
+      "peak_wis": 6.1618
+    },
+    {
+      "leaf": 20,
+      "wis": 2.3491,
+      "picp95": 0.947,
+      "k_of_n": "125/132",
+      "cp95ci": [
+        0.8938,
+        0.9784
+      ],
+      "w95": 22.06,
+      "last34_wis": 2.6735,
+      "dm_p": 0.0155,
+      "dm_mean_diff": -0.0521,
+      "peak_n": 23,
+      "peak_picp95": 0.7826,
+      "peak_wis": 6.1752
+    },
+    {
+      "leaf": 24,
+      "wis": 2.3596,
+      "picp95": 0.947,
+      "k_of_n": "125/132",
+      "cp95ci": [
+        0.8938,
+        0.9784
+      ],
+      "w95": 22.38,
+      "last34_wis": 2.6906,
+      "dm_p": 0.0494,
+      "dm_mean_diff": -0.0416,
+      "peak_n": 23,
+      "peak_picp95": 0.7826,
+      "peak_wis": 6.1994
+    }
+  ],
+  "leak_free_notes": [
+    "conditional QRF per refit block: train_end = bstart - K_CAL (>= origin-K_CAL for all origins in block)",
+    "expanding conformal offset(t) uses interval conformity of origins s<t only (past-only)",
+    "cap = 2*max(y_train), train-only; reference keeps its own 2*max(y_full) cap",
+    "deterministic random_state=42; DM = HLN h=1 paired per-origin WIS vs exact 2.4012 reference"
+  ],
+  "elapsed_sec": 37.5
+}

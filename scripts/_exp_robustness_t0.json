@@ -1,0 +1,149 @@
+{
+  "recipe": {
+    "p_fixed": 1.5,
+    "point": "TiRex 1-step (median col)",
+    "interval": "q = mu + Qz*mu^(p/2), pearson span, expanding split-CQR",
+    "baseline": "TiRex point + empirical past-residual FLUSIGHT quantiles + static CQR seed",
+    "leak_free": "y<t per origin; CQR seed strictly before T0'; cap=2*max(y[:T0']) train-only",
+    "tuned_on_test": false
+  },
+  "ntot": 337,
+  "T0_grid": [
+    175,
+    190,
+    205,
+    220,
+    235
+  ],
+  "windows": [
+    {
+      "T0": 175,
+      "n_origins": 162,
+      "weeks": "175..336",
+      "cap": 133.857,
+      "n_bounds_clipped_at_cap": 1,
+      "cap_affects_coverage": false,
+      "baseline_wis": 2.2057,
+      "tweedie_wis": 2.0272,
+      "delta_pct": -8.1,
+      "dm_p": 6.319941951993258e-07,
+      "dm_meandiff": -0.1786,
+      "tweedie_picp95": 0.9259,
+      "k_of_n": "150/162",
+      "cp95ci": [
+        0.874,
+        0.961
+      ],
+      "peak_picp95": 0.8261,
+      "n_peak": 23,
+      "last34_wis": 2.6473,
+      "tweedie_beats_baseline": true,
+      "dm_significant_better": true,
+      "small_n_unstable_dm": false
+    },
+    {
+      "T0": 190,
+      "n_origins": 147,
+      "weeks": "190..336",
+      "cap": 133.857,
+      "n_bounds_clipped_at_cap": 1,
+      "cap_affects_coverage": false,
+      "baseline_wis": 2.2725,
+      "tweedie_wis": 2.1131,
+      "delta_pct": -7.01,
+      "dm_p": 1.1753705850825469e-06,
+      "dm_meandiff": -0.1594,
+      "tweedie_picp95": 0.9252,
+      "k_of_n": "136/147",
+      "cp95ci": [
+        0.87,
+        0.962
+      ],
+      "peak_picp95": 0.8696,
+      "n_peak": 23,
+      "last34_wis": 2.6489,
+      "tweedie_beats_baseline": true,
+      "dm_significant_better": true,
+      "small_n_unstable_dm": false
+    },
+    {
+      "T0": 205,
+      "n_origins": 132,
+      "weeks": "205..336",
+      "cap": 133.857,
+      "n_bounds_clipped_at_cap": 1,
+      "cap_affects_coverage": false,
+      "baseline_wis": 2.4012,
+      "tweedie_wis": 2.2425,
+      "delta_pct": -6.61,
+      "dm_p": 3.3112820652103636e-06,
+      "dm_meandiff": -0.1587,
+      "tweedie_picp95": 0.9318,
+      "k_of_n": "123/132",
+      "cp95ci": [
+        0.875,
+        0.968
+      ],
+      "peak_picp95": 0.8696,
+      "n_peak": 23,
+      "last34_wis": 2.6491,
+      "tweedie_beats_baseline": true,
+      "dm_significant_better": true,
+      "small_n_unstable_dm": false
+    },
+    {
+      "T0": 220,
+      "n_origins": 117,
+      "weeks": "220..336",
+      "cap": 133.857,
+      "n_bounds_clipped_at_cap": 1,
+      "cap_affects_coverage": false,
+      "baseline_wis": 2.3217,
+      "tweedie_wis": 2.1518,
+      "delta_pct": -7.32,
+      "dm_p": 7.684911790262205e-06,
+      "dm_meandiff": -0.1699,
+      "tweedie_picp95": 0.9487,
+      "k_of_n": "111/117",
+      "cp95ci": [
+        0.892,
+        0.981
+      ],
+      "peak_picp95": 0.8636,
+      "n_peak": 22,
+      "last34_wis": 2.6486,
+      "tweedie_beats_baseline": true,
+      "dm_significant_better": true,
+      "small_n_unstable_dm": false
+    },
+    {
+      "T0": 235,
+      "n_origins": 102,
+      "weeks": "235..336",
+      "cap": 133.857,
+      "n_bounds_clipped_at_cap": 1,
+      "cap_affects_coverage": false,
+      "baseline_wis": 2.1866,
+      "tweedie_wis": 1.9799,
+      "delta_pct": -9.45,
+      "dm_p": 1.9052196709168356e-08,
+      "dm_meandiff": -0.2067,
+      "tweedie_picp95": 0.951,
+      "k_of_n": "97/102",
+      "cp95ci": [
+        0.889,
+        0.984
+      ],
+      "peak_picp95": 0.8824,
+      "n_peak": 17,
+      "last34_wis": 2.6475,
+      "tweedie_beats_baseline": true,
+      "dm_significant_better": true,
+      "small_n_unstable_dm": false
+    }
+  ],
+  "verdict": "generalizes",
+  "verdict_line": "GENERALIZES \u2014 Tweedie beats the fair baseline (WIS lower) AND is DM-significant (p<0.05) in ALL 5/5 windows.",
+  "p_recipe_dm_significant_every_window": true,
+  "elapsed_sec": 0.2
+}

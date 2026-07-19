@@ -1,0 +1,26 @@
+{
+  "out_dir": "<REPO_ROOT>/simulation/results/phase15_xai",
+  "n_models_target": 3,
+  "models_by_type": {
+    "tree": 0,
+    "linear": 2,
+    "dl": 0,
+    "graph": 0,
+    "skip": 1
+  },
+  "models_target_by_type": {
+    "tree": [],
+    "linear": [
+      "NegBinGLM",
+      "PoissonAutoreg"
+    ],
+    "dl": [],
+    "graph": [],
+    "skip": [
+      "FusedEpi"
+    ]
+  },
+  "status": "model-type classifier (real SHAP is shap_analysis.run_shap)",
+  "note": "The per-family SHAP body (TreeExplainer/Linear-permutation/Deep/Kernel) + the 4-axis explanation (feature/input/output/model, xai_explanation.json) are DONE in simulation.pipeline.shap_analysis.run_shap \u2014 both run in R11 (xai). This function provides the model\u2192explainer-type classification summary only.",
+  "elapsed": 5.316734313964844e-05
+}

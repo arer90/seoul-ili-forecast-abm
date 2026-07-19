@@ -1,0 +1,160 @@
+{
+  "probe1_fusedepi_same_process": {
+    "point_r2_on_yf": 0.9346,
+    "n68": 68,
+    "weeks": "269..336",
+    "faithful_reconstruction": {
+      "thesis_reported_wis": 3.2784,
+      "reconstructed_ssot_wis_medwt1.0": 3.2908,
+      "recon_from_kband_medwt1.0_check": 3.2908,
+      "kband_is_pipeline_band": true,
+      "reconstructed_picp95": 0.75,
+      "thesis_reported_picp95": 0.735,
+      "note": "If reconstructed_ssot ~ 3.28 and picp95 ~ 0.735, the FE reconstruction faithfully reproduces the thesis PI; the k-band IS the pipeline band."
+    },
+    "rows": [
+      {
+        "model": "FusedEpi_static",
+        "wis": 3.1208,
+        "picp95": 0.75,
+        "k_of_n": "51/68",
+        "wis_from_bounds_check": 3.1208,
+        "indep_matches_ref": true
+      },
+      {
+        "model": "FusedEpi_adaptivePID",
+        "wis": 2.9782,
+        "picp95": 0.8971,
+        "k_of_n": "61/68",
+        "wis_from_bounds_check": 2.9782,
+        "indep_matches_ref": true
+      },
+      {
+        "model": "FusedEpi_asym(steelman)",
+        "wis": 3.4025,
+        "picp95": 0.6029,
+        "k_of_n": "41/68",
+        "wis_from_bounds_check": 3.4025,
+        "indep_matches_ref": true
+      },
+      {
+        "model": "FusedEpi_online_cqr(steelman)",
+        "wis": 2.9801,
+        "picp95": 0.8824,
+        "k_of_n": "60/68",
+        "wis_from_bounds_check": 2.9801,
+        "indep_matches_ref": true
+      },
+      {
+        "model": "Tweedie_champion",
+        "wis": 2.6604,
+        "picp95": 0.9265,
+        "k_of_n": "63/68",
+        "wis_from_bounds_check": 2.6604,
+        "indep_matches_ref": true
+      }
+    ],
+    "tweedie_vs_fe": {
+      "FusedEpi_static": {
+        "fe_wis": 3.1208,
+        "tw_wis": 2.6604,
+        "meandiff_tw_minus_fe": -0.4604,
+        "dm_p_hln": 0.00513,
+        "tweedie_lower": true,
+        "boot_mean_fe_minus_tw": 0.4604,
+        "boot_ci95": [
+          0.1647,
+          0.8287
+        ],
+        "boot_ci_excludes_zero_tw_better": true,
+        "significant_tw_beats_fe": true
+      },
+      "FusedEpi_adaptivePID": {
+        "fe_wis": 2.9782,
+        "tw_wis": 2.6604,
+        "meandiff_tw_minus_fe": -0.3178,
+        "dm_p_hln": 0.00389,
+        "tweedie_lower": true,
+        "boot_mean_fe_minus_tw": 0.3178,
+        "boot_ci95": [
+          0.1577,
+          0.5249
+        ],
+        "boot_ci_excludes_zero_tw_better": true,
+        "significant_tw_beats_fe": true
+      },
+      "FusedEpi_asym(steelman)": {
+        "fe_wis": 3.4025,
+        "tw_wis": 2.6604,
+        "meandiff_tw_minus_fe": -0.7421,
+        "dm_p_hln": 0.0005,
+        "tweedie_lower": true,
+        "boot_mean_fe_minus_tw": 0.7421,
+        "boot_ci95": [
+          0.3711,
+          1.2007
+        ],
+        "boot_ci_excludes_zero_tw_better": true,
+        "significant_tw_beats_fe": true
+      },
+      "FusedEpi_online_cqr(steelman)": {
+        "fe_wis": 2.9801,
+        "tw_wis": 2.6604,
+        "meandiff_tw_minus_fe": -0.3196,
+        "dm_p_hln": 0.01004,
+        "tweedie_lower": true,
+        "boot_mean_fe_minus_tw": 0.3196,
+        "boot_ci95": [
+          0.1127,
+          0.5934
+        ],
+        "boot_ci_excludes_zero_tw_better": true,
+        "significant_tw_beats_fe": true
+      }
+    }
+  },
+  "probe2_leak_and_champion": {
+    "champion_p1.5_reproduced": {
+      "wis": 2.2427,
+      "picp95": 0.9318,
+      "k_of_n": "123/132"
+    },
+    "champion_p1.7_reproduced": {
+      "wis": 2.2176,
+      "picp95": 0.9242,
+      "k_of_n": "122/132",
+      "note": "modify.py beat-target 2.2378"
+    },
+    "leak_perturbation_test": {
+      "perturbed_future_week": 300,
+      "earlier_origins_bounds_identical": true,
+      "max_abs_diff_on_earlier_bounds": 0.0,
+      "later_origins_changed": true,
+      "n_later_bound_values_changed": 446,
+      "VERDICT": "LEAK-FREE"
+    },
+    "native_quantile": {
+      "wis": 2.216,
+      "picp95": 0.947,
+      "k_of_n": "125/132",
+      "native_median_vs_champpoint_mae": 0.0,
+      "dm_p_hln_vs_champ17": 0.974,
+      "meandiff_native_minus_champ": -0.0016,
+      "boot_mean_champ_minus_native": 0.0016,
+      "boot_ci95": [
+        -0.0714,
+        0.0748
+      ],
+      "boot_ci_excludes_zero": false,
+      "native_significantly_beats_champ": false,
+      "verdict": "TIE (not a significant beat)"
+    }
+  },
+  "verdict": {
+    "fusedepi_reconstruction_faithful": true,
+    "tweedie_beats_ALL_fe_variants_incl_steelmen": true,
+    "champion_interval_builder_leak_free": true,
+    "no_new_model_significantly_beats_champion": true,
+    "headline": "Tweedie DM-beats every FusedEpi interval variant (static, adaptive-PID, and two steelmen) on the identical 68-week eval; champion builder is leak-free; no engineered model DM-beats WIS 2.238 -> data floor confirmed."
+  }
+}

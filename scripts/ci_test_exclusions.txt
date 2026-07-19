@@ -1,0 +1,93 @@
+# Test files CI cannot run, and why.
+#
+# CI runs EVERYTHING ELSE. A new test file is included by default — that is the
+# point of listing exclusions rather than inclusions, so nothing is silently
+# left unverified because someone forgot to add it.
+#
+# Categories, measured 2026-07-19 in a runner-equivalent environment
+# (python 3.12, pytest + numpy<2.2 + scipy + scikit-learn + optuna + polars +
+# pandas + pyyaml + requests; deliberately NO torch — pyproject pins it to the
+# pytorch-cu128 index on linux/win32, so installing it would pull multi-gigabyte
+# CUDA wheels onto a GPU-less runner):
+#
+#   DATA   needs the database or a result file this distribution excludes
+#          (epi_real_seoul.db, pubmed_abstracts, feature_cache.parquet, ...)
+#   DEP    needs a package outside the light set above (usually torch)
+#   FAIL   passes locally with the full environment, fails on the light one
+#   EMPTY  contains no test functions
+#
+# Re-measure with: python scripts/ci_run_tests.py --survey
+#
+# format: <category> <tab> <path>
+
+# ── DATA: needs the database or a result file this distribution excludes ────
+DATA	simulation/tests/test_abm_variant_ablation.py
+DATA	simulation/tests/test_age_metapop.py
+DATA	simulation/tests/test_agent_kernel_attrs.py
+DATA	simulation/tests/test_agent_world_fit.py
+DATA	simulation/tests/test_counterfactual.py
+DATA	simulation/tests/test_deployment_gate.py
+DATA	simulation/tests/test_e2e_connection_chain.py
+DATA	simulation/tests/test_epi_proof.py
+DATA	simulation/tests/test_feature_optuna_size.py
+DATA	simulation/tests/test_forecast_abm_connection.py
+DATA	simulation/tests/test_forecast_anchor.py
+DATA	simulation/tests/test_graph_rag.py
+DATA	simulation/tests/test_multiproxy_behavioral.py
+DATA	simulation/tests/test_network_interventions.py
+DATA	simulation/tests/test_network_params_from_db.py
+DATA	simulation/tests/test_phase11_bss_climatology.py
+DATA	simulation/tests/test_phase13_preproc_first_corr1se.py
+DATA	simulation/tests/test_pooling_justification.py
+DATA	simulation/tests/test_realdata_identifiability.py
+DATA	simulation/tests/test_rerank_y_test.py
+DATA	simulation/tests/test_sim_champion_default.py
+DATA	simulation/tests/test_synthetic_population.py
+DATA	simulation/tests/test_within_season_validation.py
+DATA	tests/test_abm_surrogate.py
+DATA	tests/test_agent_history.py
+DATA	tests/test_contact_network.py
+DATA	tests/test_enkf_assimilation.py
+DATA	tests/test_external_impact.py
+DATA	tests/test_multistrain.py
+
+# ── DEP: needs a package outside the light CI set (usually torch) ───────────
+DEP	simulation/tests/test_a_per_model_mc.py
+DEP	simulation/tests/test_collector_schemas.py
+DEP	simulation/tests/test_conformal_extended.py
+DEP	simulation/tests/test_d2_feature_mc_order.py
+DEP	simulation/tests/test_d3_mc_family_vs_global.py
+DEP	simulation/tests/test_inner_hp_fast_and_cqr_earlystop.py
+DEP	simulation/tests/test_inner_hp_fast_flat.py
+DEP	simulation/tests/test_internal_y_transform_removed.py
+DEP	simulation/tests/test_mc_filter_stage3.py
+DEP	simulation/tests/test_mc_overfitting_control.py
+DEP	simulation/tests/test_phase13_isolation.py
+DEP	simulation/tests/test_postrun_fixes_group1.py
+DEP	simulation/tests/test_subprocess_isolation.py
+DEP	simulation/tests/test_training_history.py
+DEP	simulation/tests/test_visualize.py
+DEP	tests/test_g338_theta_bstyle.py
+
+# ── FAIL: green with the full environment, red on the light one ─────────────
+FAIL	simulation/tests/test_aria_grounding.py
+FAIL	simulation/tests/test_g316_cpu_aware_stall.py
+FAIL	simulation/tests/test_g317_isolate_heartbeat.py
+FAIL	simulation/tests/test_llm_compare_hardening.py
+FAIL	simulation/tests/test_mc_per_model_compare.py
+FAIL	simulation/tests/test_optuna_dnn_tcn_retrain.py
+FAIL	simulation/tests/test_order_full_comparison.py
+FAIL	simulation/tests/test_sci_supplement.py
+FAIL	tests/test_g362_shap_fallback.py
+FAIL	tests/test_sci_driver_attribution.py
+
+# ── EMPTY: no test functions ────────────────────────────────────────────────
+EMPTY	simulation/tests/test_agent_kernel_rust.py
+EMPTY	simulation/tests/test_aria_langchain.py
+EMPTY	simulation/tests/test_g278_scaled_space_floor.py
+EMPTY	simulation/tests/test_g278b_hhh4_log1p_ar.py
+EMPTY	simulation/tests/test_g279_overseas_real_transfer.py
+EMPTY	simulation/tests/test_overseas_encoder_cache.py
+EMPTY	simulation/tests/test_sbi_calibration.py
+EMPTY	simulation/tests/test_shap_all_families.py
+EMPTY	tests/test_eq_citations_match_seq.py

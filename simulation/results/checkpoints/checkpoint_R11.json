@@ -1,0 +1,1092 @@
+{
+  "phase": "R11",
+  "label": "SHAP",
+  "timestamp": "2026-07-15 00:15:04",
+  "data": {
+    "feature_importance": {
+      "mi_ranking": [
+        {
+          "feature": "ili_rate_lag1",
+          "score": 1.495105
+        },
+        {
+          "feature": "rt_subcrowd_ili",
+          "score": 1.493919
+        },
+        {
+          "feature": "bus_ili",
+          "score": 1.493334
+        },
+        {
+          "feature": "rt_highrisk_ili",
+          "score": 1.492465
+        },
+        {
+          "feature": "subway_ili",
+          "score": 1.492186
+        },
+        {
+          "feature": "rt_nonresnt_ili",
+          "score": 1.491685
+        },
+        {
+          "feature": "rt_roadcong_ili",
+          "score": 1.491302
+        },
+        {
+          "feature": "ili_rate_lag1_log1p",
+          "score": 1.426885
+        },
+        {
+          "feature": "ili_rate_lag1_qbin",
+          "score": 1.422563
+        },
+        {
+          "feature": "ili_rate_lag1_qnorm",
+          "score": 1.414759
+        },
+        {
+          "feature": "humid_ili",
+          "score": 1.375887
+        },
+        {
+          "feature": "ili_rate_savgol_smooth_w9",
+          "score": 1.329995
+        },
+        {
+          "feature": "ili_age_7_12_lag1",
+          "score": 1.27081
+        },
+        {
+          "feature": "mr_month_max",
+          "score": 1.257768
+        },
+        {
+          "feature": "ili_age_13_18_lag1",
+          "score": 1.247541
+        },
+        {
+          "feature": "mr_month_avg",
+          "score": 1.242427
+        },
+        {
+          "feature": "ili_age_19_49_lag1",
+          "score": 1.217837
+        },
+        {
+          "feature": "ili_rate_lag2_log1p",
+          "score": 1.14888
+        },
+        {
+          "feature": "ili_rate_lag2",
+          "score": 1.142912
+        },
+        {
+          "feature": "ili_rate_rmax4",
+          "score": 1.112034
+        },
+        {
+          "feature": "ili_rate_rmean4",
+          "score": 1.103922
+        },
+        {
+          "feature": "ili_rate_savgol_smooth_w17",
+          "score": 1.075232
+        },
+        {
+          "feature": "ili_rate_rmin4",
+          "score": 1.075122
+        },
+        {
+          "feature": "ili_age_1_6_lag1",
+          "score": 1.035589
+        },
+        {
+          "feature": "ili_age_13_18_lag2",
+          "score": 1.020831
+        },
+        {
+          "feature": "ili_rate_hampel_cleaned_w13",
+          "score": 1.010942
+        },
+        {
+          "feature": "ili_age_50_64_lag1",
+          "score": 0.998307
+        },
+        {
+          "feature": "ili_age_7_12_lag2",
+          "score": 0.974642
+        },
+        {
+          "feature": "ili_age_19_49_lag2",
+          "score": 0.966091
+        },
+        {
+          "feature": "ili_rate_rmax8",
+          "score": 0.96165
+        },
+        {
+          "feature": "ili_rate_lag3",
+          "score": 0.941549
+        },
+        {
+          "feature": "ili_rate_rmean8",
+          "score": 0.892961
+        },
+        {
+          "feature": "ili_rate_ewm_4w",
+          "score": 0.872806
+        },
+        {
+          "feature": "ili_age_1_6_lag2",
+          "score": 0.860906
+        },
+        {
+          "feature": "mr_quarter_max",
+          "score": 0.837623
+        },
+        {
+          "feature": "ili_rate_takens_d1_t4",
+          "score": 0.835736
+        },
+        {
+          "feature": "ili_rate_lag4",
+          "score": 0.83573
+        },
+        {
+          "feature": "ili_rate_rmin8",
+          "score": 0.822874
+        },
+        {
+          "feature": "ili_rate_rmax13",
+          "score": 0.82032
+        },
+        {
+          "feature": "season_cum_ili",
+          "score": 0.807607
+        },
+        {
+          "feature": "emp_residence_avg",
+          "score": 0.803408
+        },
+        {
+          "feature": "ili_age_50_64_lag2",
+          "score": 0.802771
+        },
+        {
+          "feature": "hira_inpat_ratio",
+          "score": 0.77633
+        },
+        {
+          "feature": "child_vax_avg",
+          "score": 0.775631
+        },
+        {
+          "feature": "child_vax_min",
+          "score": 0.771307
+        },
+        {
+          "feature": "emp_workplace_avg",
+          "score": 0.765487
+        },
+        {
+          "feature": "ili_age_0_lag1",
+          "score": 0.761913
+        },
+        {
+          "feature": "ili_rate_rstd8",
+          "score": 0.759888
+        },
+        {
+          "feature": "ili_rate_diff4",
+          "score": 0.755911
+        },
+        {
+          "feature": "hira_visits_avg",
+          "score": 0.748587
+        }
+      ],
+      "per_model": {
+        "ARIMA": {
+          "model": "ARIMA",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "humidity",
+            "wind_speed",
+            "rainfall",
+            "temp_std"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/ARIMA/importance.csv"
+        },
+        "BayesianMCMC": {
+          "model": "BayesianMCMC",
+          "permutation": true,
+          "native": true,
+          "family": "linear",
+          "top_permutation": [
+            "rt_subcrowd_ili",
+            "ili_rate_lag1",
+            "ili_rate_lag1_log1p",
+            "bus_ili",
+            "ili_age_50_64_lag1"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "rt_subcrowd_ili",
+            "ili_rate_lag1",
+            "ili_rate_lag1_log1p",
+            "ili_age_50_64_lag1",
+            "bus_ili"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/BayesianMCMC/importance.csv"
+        },
+        "BayesianRidge": {
+          "model": "BayesianRidge",
+          "permutation": true,
+          "native": true,
+          "family": "linear",
+          "top_permutation": [
+            "temp_min",
+            "humidity",
+            "pressure",
+            "sunshine",
+            "vax_coverage"
+          ],
+          "top_native": [
+            "temp_avg",
+            "humidity",
+            "rainfall",
+            "temp_min",
+            "pressure"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "temp_avg",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/BayesianRidge/importance.csv"
+        },
+        "CQR-LightGBM": {
+          "model": "CQR-LightGBM",
+          "permutation": true,
+          "native": true,
+          "family": "tree",
+          "top_permutation": [
+            "ili_rate_lag1",
+            "ili_rate_lag1_log1p",
+            "humid_ili",
+            "ili_age_1_6_lag1",
+            "ili_age_50_64_lag1"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "ili_rate_lag1",
+            "ili_rate_lag1_log1p",
+            "humid_ili",
+            "ili_age_1_6_lag1",
+            "ili_age_50_64_lag1"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/CQR-LightGBM/importance.csv"
+        },
+        "CQR-QuantReg": {
+          "model": "CQR-QuantReg",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "rt_highrisk_ili",
+            "rt_subcrowd_ili",
+            "rt_nonresnt_ili",
+            "humid_ili",
+            "ili_rate_lag1"
+          ],
+          "top_native": [
+            "ili_rate_savgol_smooth_w9",
+            "ili_age_1_6_lag1",
+            "humid_ili",
+            "rt_nonresnt_ili",
+            "rt_roadcong_ili"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "ili_rate_savgol_smooth_w9",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/CQR-QuantReg/importance.csv"
+        },
+        "DLinear": {
+          "model": "DLinear",
+          "permutation": false,
+          "native": false,
+          "family": "linear",
+          "permutation_note": "X-independent foundation (USES_FEATURES=False) — forecasts from ILI history only; feature permutation N/A",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/DLinear/importance.csv"
+        },
+        "DNN": {
+          "model": "DNN",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/DNN/importance.csv"
+        },
+        "DNN-Conformal": {
+          "model": "DNN-Conformal",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "ili_rate_lag1",
+            "rt_roadcong_ili",
+            "rt_nonresnt_ili",
+            "rt_highrisk_ili",
+            "rt_subcrowd_ili"
+          ],
+          "top_native": [
+            "ili_age_1_6_lag1",
+            "ili_age_65p_lag1",
+            "ili_age_50_64_lag1",
+            "rt_nonresnt_ili",
+            "ili_rate_savgol_smooth_w9"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "ili_age_1_6_lag1",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/DNN-Conformal/importance.csv"
+        },
+        "ElasticNet": {
+          "model": "ElasticNet",
+          "permutation": true,
+          "native": true,
+          "family": "linear",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "top_native": [
+            "ili_rate_lag1",
+            "ili_age_0_lag1",
+            "ili_rate_lag2",
+            "gt_bodyache_lag1",
+            "ili_age_0_lag2"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "ili_rate_lag1",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/ElasticNet/importance.csv"
+        },
+        "EpiEstim": {
+          "model": "EpiEstim",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_min",
+            "temp_avg",
+            "pressure",
+            "sunshine",
+            "wind_speed"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/EpiEstim/importance.csv"
+        },
+        "FluSight-Baseline": {
+          "model": "FluSight-Baseline",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/FluSight-Baseline/importance.csv"
+        },
+        "FusedEpi": {
+          "model": "FusedEpi",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "ili_rate_lag1_wavelet16",
+            "ili_rate_lag1_wavelet8",
+            "ili_rate_lag1_wavelet4",
+            "ili_rate_lag12",
+            "temp_avg"
+          ],
+          "top_native": [
+            "ili_rate_lag1_wavelet16",
+            "ili_rate_lag1",
+            "ili_rate_lag1_bit7",
+            "ili_rate_lag1_bit6",
+            "ili_rate_lag12"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "ili_rate_lag1_wavelet16",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/FusedEpi/importance.csv"
+        },
+        "GAM-Spline": {
+          "model": "GAM-Spline",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/GAM-Spline/importance.csv"
+        },
+        "GAT": {
+          "model": "GAT",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "rt_highrisk_ili",
+            "rt_nonresnt_ili",
+            "rt_subcrowd_ili",
+            "ili_rate_lag1",
+            "bus_ili"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "rt_nonresnt_ili",
+            "rt_highrisk_ili",
+            "ili_rate_lag1",
+            "rt_subcrowd_ili",
+            "bus_ili"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/GAT/importance.csv"
+        },
+        "GCN": {
+          "model": "GCN",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "ili_rate_lag1",
+            "ili_rate_lag2",
+            "ili_rate_lag52",
+            "ili_rate_lag3",
+            "ili_rate_lag1_bit0"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "ili_rate_lag1",
+            "rt_nonresnt_ili",
+            "rt_subcrowd_ili",
+            "above_threshold",
+            "rt_roadcong_ili"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/GCN/importance.csv"
+        },
+        "KRR": {
+          "model": "KRR",
+          "permutation": true,
+          "native": true,
+          "family": "kernel",
+          "top_permutation": [
+            "ili_rate_lag1",
+            "rt_nonresnt_ili",
+            "rt_roadcong_ili",
+            "rt_highrisk_ili",
+            "rt_subcrowd_ili"
+          ],
+          "top_native": [
+            "rt_subcrowd_ili",
+            "rt_roadcong_ili",
+            "ili_rate_lag1",
+            "ili_age_1_6_lag1",
+            "ili_age_50_64_lag1"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "rt_subcrowd_ili",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/KRR/importance.csv"
+        },
+        "LightGBM": {
+          "model": "LightGBM",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "sch_closure_lag1",
+            "fourier_sin_h2",
+            "temp_avg",
+            "temp_min",
+            "humidity"
+          ],
+          "top_native": [
+            "gt_bodyache_lag1",
+            "fourier_cos_h1",
+            "sch_closure_lag1",
+            "mr_yoy_ratio",
+            "ili_rate_lag2"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "gt_bodyache_lag1",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/LightGBM/importance.csv"
+        },
+        "Mamba": {
+          "model": "Mamba",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/Mamba/importance.csv"
+        },
+        "N-BEATS": {
+          "model": "N-BEATS",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "sunshine",
+            "rainfall",
+            "wind_speed",
+            "temp_avg",
+            "pressure"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/N-BEATS/importance.csv"
+        },
+        "N-HiTS": {
+          "model": "N-HiTS",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "rt_nonresnt_ili",
+            "rt_subcrowd_ili",
+            "bus_ili",
+            "ili_rate_lag3",
+            "rt_highrisk_ili"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "rt_nonresnt_ili",
+            "ili_rate_lag4",
+            "vax_coverage",
+            "ili_rate_lag6",
+            "ili_rate_lag1_wavelet16"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/N-HiTS/importance.csv"
+        },
+        "NegBinGLM": {
+          "model": "NegBinGLM",
+          "permutation": false,
+          "native": false,
+          "family": "linear",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/NegBinGLM/importance.csv"
+        },
+        "OverseasTransfer": {
+          "model": "OverseasTransfer",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "rt_roadcong_ili",
+            "ili_rate_lag1_bit9",
+            "rt_nonresnt_ili",
+            "rt_subcrowd_ili",
+            "ili_rate_lag1"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "ili_rate_lag1_bit9",
+            "rt_nonresnt_ili",
+            "rt_subcrowd_ili",
+            "rt_roadcong_ili",
+            "ili_rate_lag1"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/OverseasTransfer/importance.csv"
+        },
+        "PatchTST": {
+          "model": "PatchTST",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/PatchTST/importance.csv"
+        },
+        "PoissonAutoreg": {
+          "model": "PoissonAutoreg",
+          "permutation": false,
+          "native": false,
+          "family": "linear",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/PoissonAutoreg/importance.csv"
+        },
+        "RandomForest": {
+          "model": "RandomForest",
+          "permutation": true,
+          "native": true,
+          "family": "tree",
+          "top_permutation": [
+            "rt_highrisk_ili",
+            "ili_rate_lag1",
+            "rt_roadcong_ili",
+            "humid_ili",
+            "rt_nonresnt_ili"
+          ],
+          "top_native": [
+            "rt_highrisk_ili",
+            "ili_rate_lag1",
+            "rt_roadcong_ili",
+            "rt_subcrowd_ili",
+            "bus_ili"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "rt_highrisk_ili",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/RandomForest/importance.csv"
+        },
+        "SARIMA": {
+          "model": "SARIMA",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_min",
+            "sunshine",
+            "temp_std",
+            "wind_speed",
+            "pressure"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/SARIMA/importance.csv"
+        },
+        "SARIMAX": {
+          "model": "SARIMAX",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "sunshine",
+            "temp_std",
+            "pressure",
+            "ari_사람_보카바이러스",
+            "ari_아데노바이러스"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "pressure",
+            "temp_std",
+            "sunshine",
+            "temp_avg",
+            "temp_min"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/SARIMAX/importance.csv"
+        },
+        "SVR-Linear": {
+          "model": "SVR-Linear",
+          "permutation": true,
+          "native": true,
+          "family": "kernel",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "top_native": [
+            "temp_avg",
+            "humidity",
+            "temp_min",
+            "rainfall",
+            "pressure"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "temp_avg",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/SVR-Linear/importance.csv"
+        },
+        "SVR-RBF": {
+          "model": "SVR-RBF",
+          "permutation": true,
+          "native": true,
+          "family": "kernel",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/SVR-RBF/importance.csv"
+        },
+        "SeirCount-TabPFN": {
+          "model": "SeirCount-TabPFN",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "wind_speed",
+            "temp_avg",
+            "sunshine",
+            "rainfall",
+            "humidity"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/SeirCount-TabPFN/importance.csv"
+        },
+        "TCN": {
+          "model": "TCN",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "ili_rate_lag1",
+            "rt_roadcong_ili",
+            "rt_nonresnt_ili",
+            "ili_rate_lag2",
+            "bus_ili"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "ili_rate_lag1",
+            "above_threshold",
+            "rt_roadcong_ili",
+            "rt_nonresnt_ili",
+            "ili_rate_lag1_log1p"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/TCN/importance.csv"
+        },
+        "TabPFN": {
+          "model": "TabPFN",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "ili_rate_lag1",
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed"
+          ],
+          "top_native": [
+            "fourier_cos_h1",
+            "fourier_sin_h3",
+            "fourier_cos_h3",
+            "fourier_cos_h2",
+            "fourier_sin_h2"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "fourier_cos_h1",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/TabPFN/importance.csv"
+        },
+        "Theta": {
+          "model": "Theta",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_std",
+            "temp_min",
+            "temp_avg",
+            "sunshine",
+            "rainfall"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/Theta/importance.csv"
+        },
+        "TiDE": {
+          "model": "TiDE",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "rt_nonresnt_ili",
+            "rt_roadcong_ili",
+            "rt_subcrowd_ili",
+            "ili_rate_lag1",
+            "ili_rate_lag1_qbin"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "rt_nonresnt_ili",
+            "rt_roadcong_ili",
+            "rt_subcrowd_ili",
+            "ili_rate_lag1",
+            "ili_rate_lag1_wavelet16"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/TiDE/importance.csv"
+        },
+        "TiRex": {
+          "model": "TiRex",
+          "permutation": false,
+          "native": false,
+          "family": "dl",
+          "permutation_note": "X-independent foundation (USES_FEATURES=False) — forecasts from ILI history only; feature permutation N/A",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/TiRex/importance.csv"
+        },
+        "TimesFM-2.5": {
+          "model": "TimesFM-2.5",
+          "permutation": false,
+          "native": false,
+          "family": "other",
+          "permutation_note": "X-independent foundation (USES_FEATURES=False) — forecasts from ILI history only; feature permutation N/A",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/TimesFM-2.5/importance.csv"
+        },
+        "TimesNet": {
+          "model": "TimesNet",
+          "permutation": false,
+          "native": false,
+          "family": "dl",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/TimesNet/importance.csv"
+        },
+        "Wallinga-Teunis": {
+          "model": "Wallinga-Teunis",
+          "permutation": true,
+          "native": true,
+          "family": "other",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "sunshine",
+            "temp_min",
+            "humidity",
+            "wind_speed"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/Wallinga-Teunis/importance.csv"
+        },
+        "XGBoost": {
+          "model": "XGBoost",
+          "permutation": true,
+          "native": true,
+          "family": "tree",
+          "top_permutation": [
+            "ili_rate_lag3",
+            "gt_bodyache_lag1",
+            "temp_avg",
+            "temp_min",
+            "humidity"
+          ],
+          "top_native": [
+            "rt_fcst_ppltn_max_avg",
+            "ili_rate_lag1",
+            "ili_rate_lag4",
+            "fourier_sin_h1",
+            "flu_AH3_share_lag1"
+          ],
+          "xai_axes": [
+            "feature",
+            "input",
+            "output",
+            "model"
+          ],
+          "dominant_feature": "rt_fcst_ppltn_max_avg",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/XGBoost/importance.csv"
+        },
+        "hhh4-equivalent": {
+          "model": "hhh4-equivalent",
+          "permutation": false,
+          "native": false,
+          "family": "other",
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/hhh4-equivalent/importance.csv"
+        },
+        "iTransformer": {
+          "model": "iTransformer",
+          "permutation": true,
+          "native": true,
+          "family": "dl",
+          "top_permutation": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "native_method": "permutation_shap (G-362 fallback)",
+          "top_native": [
+            "temp_avg",
+            "temp_min",
+            "humidity",
+            "wind_speed",
+            "rainfall"
+          ],
+          "importance_csv": "<REPO_ROOT>/simulation/results/shap/iTransformer/importance.csv"
+        }
+      },
+      "summary_path": "<REPO_ROOT>/simulation/results/shap/_summary.json"
+    },
+    "elapsed": 2719.401524066925,
+    "resource_tracker": {
+      "phase_id": "shap",
+      "elapsed_sec": 2719.4,
+      "start_at": "2026-07-14T23:29:44",
+      "end_at": "2026-07-15T00:15:04",
+      "peak_rss_mb": 4253,
+      "mean_cpu_pct": 95.3,
+      "peak_gpu_memory_mb": 0,
+      "platform": "mps",
+      "_n_samples": 5364
+    }
+  }
+}

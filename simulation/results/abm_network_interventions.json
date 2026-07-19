@@ -1,0 +1,63 @@
+{
+  "baseline": {
+    "attack_rate": 0.1951,
+    "peak_prevalence": 418.6
+  },
+  "interventions": [
+    {
+      "type": "layer_closure",
+      "layer": "school",
+      "efficacy": 0.8,
+      "attack_rate": 0.1455,
+      "delta_attack_rate": -0.0496,
+      "delta_peak": -132.4,
+      "averted_fraction": 0.2545
+    },
+    {
+      "type": "layer_closure",
+      "layer": "workplace",
+      "efficacy": 0.8,
+      "attack_rate": 0.1486,
+      "delta_attack_rate": -0.0466,
+      "delta_peak": -113.0,
+      "averted_fraction": 0.2387
+    },
+    {
+      "type": "layer_closure",
+      "layer": "community",
+      "efficacy": 0.8,
+      "attack_rate": 0.1515,
+      "delta_attack_rate": -0.0436,
+      "delta_peak": -110.4,
+      "averted_fraction": 0.2237
+    },
+    {
+      "type": "targeted_immunization",
+      "coverage": 0.1,
+      "target": "degree",
+      "attack_rate": 0.116,
+      "delta_attack_rate": -0.0791,
+      "delta_peak": -187.0,
+      "averted_fraction": 0.4053
+    },
+    {
+      "type": "targeted_immunization",
+      "coverage": 0.1,
+      "target": "random",
+      "attack_rate": 0.1425,
+      "delta_attack_rate": -0.0526,
+      "delta_peak": -134.0,
+      "averted_fraction": 0.2698
+    },
+    {
+      "type": "targeted_immunization",
+      "coverage": 0.2,
+      "target": "degree",
+      "attack_rate": 0.0788,
+      "delta_attack_rate": -0.1163,
+      "delta_peak": -280.0,
+      "averted_fraction": 0.5963
+    }
+  ],
+  "leak_free": "counterfactual scenarios vs a no-intervention baseline on a fixed network/seed set; real forward ILI never read (not forecasts)"
+}

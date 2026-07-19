@@ -1,0 +1,112 @@
+{
+  "feature_axis": [
+    {
+      "feature": "temp_avg",
+      "mean_abs_shap": 7.723902,
+      "mean_shap": -6.618269,
+      "direction": "lowers"
+    },
+    {
+      "feature": "humidity",
+      "mean_abs_shap": 2.954578,
+      "mean_shap": -2.037313,
+      "direction": "lowers"
+    },
+    {
+      "feature": "temp_min",
+      "mean_abs_shap": 1.785641,
+      "mean_shap": 1.57898,
+      "direction": "raises"
+    },
+    {
+      "feature": "rainfall",
+      "mean_abs_shap": 0.98355,
+      "mean_shap": 0.847063,
+      "direction": "raises"
+    },
+    {
+      "feature": "pressure",
+      "mean_abs_shap": 0.53751,
+      "mean_shap": 0.28038,
+      "direction": "raises"
+    },
+    {
+      "feature": "wind_speed",
+      "mean_abs_shap": 0.067474,
+      "mean_shap": -0.012031,
+      "direction": "lowers"
+    },
+    {
+      "feature": "temp_std",
+      "mean_abs_shap": 0.05877,
+      "mean_shap": 0.028926,
+      "direction": "raises"
+    },
+    {
+      "feature": "dis_a형간염",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    },
+    {
+      "feature": "dis_디프테리아",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    },
+    {
+      "feature": "ari_코로나19_바이러스",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    },
+    {
+      "feature": "ari_사람_메타뉴모바이러스",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    },
+    {
+      "feature": "ari_호흡기세포융합바이러스(rsv)",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    }
+  ],
+  "input_axis": {
+    "representative": {
+      "row": 0,
+      "prediction": null,
+      "top_drivers": [
+        {
+          "feature": "humidity",
+          "shap": -4.1569
+        },
+        {
+          "feature": "temp_avg",
+          "shap": -3.0022
+        },
+        {
+          "feature": "rainfall",
+          "shap": 1.3312
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": null,
+    "prediction_mean": null,
+    "prediction_range": null,
+    "fraction_explained_by_top3": 0.8833
+  },
+  "model_axis": {
+    "family": "kernel",
+    "n_features_explained": 12,
+    "n_samples": 30,
+    "dominant_feature": "temp_avg",
+    "dominant_feature_sign_consistency": 0.8,
+    "global_mean_abs_shap": 1.175952,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

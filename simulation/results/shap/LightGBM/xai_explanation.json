@@ -1,0 +1,130 @@
+{
+  "feature_axis": [
+    {
+      "feature": "gt_bodyache_lag1",
+      "mean_abs_shap": 0.179024,
+      "mean_shap": -0.018477,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_cos_h1",
+      "mean_abs_shap": 0.103327,
+      "mean_shap": -0.089187,
+      "direction": "lowers"
+    },
+    {
+      "feature": "sch_closure_lag1",
+      "mean_abs_shap": 0.025639,
+      "mean_shap": -0.010145,
+      "direction": "lowers"
+    },
+    {
+      "feature": "mr_yoy_ratio",
+      "mean_abs_shap": 0.011002,
+      "mean_shap": 0.004347,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag2",
+      "mean_abs_shap": 0.007424,
+      "mean_shap": 0.007412,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_sin_h2",
+      "mean_abs_shap": 0.001527,
+      "mean_shap": 0.00151,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_age_0_lag1",
+      "mean_abs_shap": 1.9e-05,
+      "mean_shap": -2e-06,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_sin_h1",
+      "mean_abs_shap": 1e-05,
+      "mean_shap": -1e-05,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag1",
+      "mean_abs_shap": 8e-06,
+      "mean_shap": -8e-06,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_sin_h3",
+      "mean_abs_shap": 7e-06,
+      "mean_shap": -7e-06,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_age_0_lag2",
+      "mean_abs_shap": 6e-06,
+      "mean_shap": -6e-06,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag4",
+      "mean_abs_shap": 5e-06,
+      "mean_shap": -5e-06,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_cos_h3",
+      "mean_abs_shap": 4e-06,
+      "mean_shap": -4e-06,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_cos_h2",
+      "mean_abs_shap": 3e-06,
+      "mean_shap": -3e-06,
+      "direction": "lowers"
+    },
+    {
+      "feature": "school_외국인학교",
+      "mean_abs_shap": 0.0,
+      "mean_shap": 0.0,
+      "direction": "raises"
+    }
+  ],
+  "input_axis": {
+    "representative": {
+      "row": 0,
+      "prediction": null,
+      "top_drivers": [
+        {
+          "feature": "fourier_cos_h1",
+          "shap": 0.1738
+        },
+        {
+          "feature": "gt_bodyache_lag1",
+          "shap": 0.1267
+        },
+        {
+          "feature": "sch_closure_lag1",
+          "shap": -0.0337
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": null,
+    "prediction_mean": null,
+    "prediction_range": null,
+    "fraction_explained_by_top3": 0.939
+  },
+  "model_axis": {
+    "family": "other",
+    "n_features_explained": 20,
+    "n_samples": 30,
+    "dominant_feature": "gt_bodyache_lag1",
+    "dominant_feature_sign_consistency": 0.367,
+    "global_mean_abs_shap": 0.0164,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

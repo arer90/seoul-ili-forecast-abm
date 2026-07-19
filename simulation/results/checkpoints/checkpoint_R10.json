@@ -1,0 +1,23 @@
+{
+  "phase": "R10",
+  "label": "Per-Model Eval (regenerated)",
+  "timestamp": "2026-07-19 22:10:05",
+  "data": {
+    "metrics_csv": "simulation/results/per_model_eval/per_model_metrics.csv",
+    "ranking_top10": [
+      "FusedEpi",
+      "GAM-Spline",
+      "TiRex",
+      "SVR-RBF",
+      "NegBinGLM",
+      "PoissonAutoreg",
+      "ElasticNet",
+      "KRR",
+      "CQR-QuantReg",
+      "ARIMA"
+    ],
+    "n_models": 48,
+    "regenerated_from": "per_model_eval/per_model_metrics.csv",
+    "note": "scripts/regenerate_r12.py --sync-checkpoints"
+  }
+}

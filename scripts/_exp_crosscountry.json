@@ -1,0 +1,68 @@
+{
+  "US": {
+    "country": "US",
+    "source": "delphi_national",
+    "N_weeks": 1404,
+    "n_test_origins": 300,
+    "T0": 1104,
+    "peak_thr_p90": 4.22,
+    "cap_train_only": 15.43,
+    "p_star": 1.9,
+    "val_wis_by_p": {
+      "1.1": 0.233,
+      "1.3": 0.2276,
+      "1.5": 0.222,
+      "1.7": 0.2168,
+      "1.9": 0.212
+    },
+    "baseline_wis": 0.1171,
+    "tweedie_wis": 0.1043,
+    "delta_pct": -10.91,
+    "dm_p": 2.266714697496397e-06,
+    "dm_meandiff": -0.0128,
+    "tweedie_picp95": 0.9733,
+    "k_of_n": "292/300",
+    "cp95ci": [
+      0.948,
+      0.988
+    ],
+    "peak_picp95": 0.935,
+    "n_peak": 46,
+    "last34_tweedie_wis": 0.177,
+    "last34_baseline_wis": 0.2105,
+    "beats_baseline_sig": true
+  },
+  "JP": {
+    "country": "JP",
+    "source": "japan_jihs",
+    "N_weeks": 316,
+    "n_test_origins": 132,
+    "T0": 184,
+    "peak_thr_p90": 30.32,
+    "cap_train_only": 106.83,
+    "p_star": 1.5,
+    "val_wis_by_p": {
+      "1.1": 0.8538,
+      "1.3": 0.843,
+      "1.5": 0.8384,
+      "1.7": 0.8419,
+      "1.9": 0.8526
+    },
+    "baseline_wis": 1.921,
+    "tweedie_wis": 1.714,
+    "delta_pct": -10.78,
+    "dm_p": 2.3548264755923753e-06,
+    "dm_meandiff": -0.207,
+    "tweedie_picp95": 0.947,
+    "k_of_n": "125/132",
+    "cp95ci": [
+      0.894,
+      0.978
+    ],
+    "peak_picp95": 0.867,
+    "n_peak": 15,
+    "last34_tweedie_wis": 1.872,
+    "last34_baseline_wis": 2.0988,
+    "beats_baseline_sig": true
+  }
+}

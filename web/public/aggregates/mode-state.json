@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-10T07:54:52Z",
+  "mode": "SEASONAL",
+  "mode_ord": 0,
+  "raw_mode": "SEASONAL",
+  "raw_ord": 0,
+  "reason": "평시 — seasonal nowcast 단독",
+  "switched": false,
+  "pending_ord": 0,
+  "pending_since": "2026-06-10",
+  "pending_weeks": 1,
+  "signals": {
+    "kdca": 0,
+    "don_novel": false,
+    "news_spike": false,
+    "surge": false,
+    "kdca_stale": false,
+    "arrivals_pressure": false
+  },
+  "recent_ili": [
+    8.2,
+    6.5,
+    4.9,
+    5.1
+  ],
+  "routing": "seasonal nowcast 단독",
+  "routing_manifest": {
+    "primary": "ili-forecast.json",
+    "secondary": null,
+    "fallback": null,
+    "alert_level": "none",
+    "alert": ""
+  },
+  "note": "KDCA 경계(3)↑만 hard PANDEMIC(즉시). WATCH=소프트신호 2주진입/4주해제. surge=2차 안전망(1차 아님). 상세 docs/PANDEMIC_MODE_DESIGN."
+}

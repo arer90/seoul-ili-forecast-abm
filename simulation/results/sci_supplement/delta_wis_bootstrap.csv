@@ -1,0 +1,7 @@
+pair,competitor,competitor_in_top_set,mean_delta_ae,ci95_lo,ci95_hi,ci_includes_zero,verdict,boot_p_two_sided,champion_mean_ae,competitor_mean_ae
+FusedEpi vs NegBinGLM,NegBinGLM,True,-1.4989,-2.8929,0.0338,True,tie,0.06,3.8959,5.3948
+FusedEpi vs TiRex,TiRex,True,0.0176,-0.1066,0.1544,True,tie,0.8352,3.8959,3.8783
+FusedEpi vs SeirCount-TabPFN,SeirCount-TabPFN,False,-1.3916,-2.6515,-0.1012,False,decisive,0.0276,3.8959,5.2875
+FusedEpi vs ARIMA,ARIMA,False,-0.3549,-0.8296,0.0839,True,tie,0.1256,3.8959,4.2508
+FusedEpi vs SARIMA,SARIMA,False,-1.6812,-2.4238,-1.0031,False,decisive,0.0,3.8959,5.5771
+FusedEpi vs Theta,Theta,False,-1.8049,-3.3749,-0.5176,False,decisive,0.0024,3.8959,5.7008

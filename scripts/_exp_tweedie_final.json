@@ -1,0 +1,79 @@
+{
+  "best_config": "tirex_pearson_p1.5_expand",
+  "reference_wis": 2.4012,
+  "n": 132,
+  "val_wis_by_p": {
+    "1.1": 1.58,
+    "1.2": 1.5665,
+    "1.3": 1.5521,
+    "1.4": 1.5401,
+    "1.5": 1.536,
+    "1.6": 1.5407
+  },
+  "p_star": 1.5,
+  "headline_full_cap": {
+    "wis": 2.2427,
+    "dm_p": 3.353596273569792e-06,
+    "dm_meandiff": -0.1585,
+    "picp95": 0.9318,
+    "k_of_n": "123/132",
+    "cp95ci": [
+      0.875,
+      0.968
+    ],
+    "last34_wis": 2.6491,
+    "mean_w95": 17.518,
+    "peak_picp95": 0.87,
+    "n_peak": 23
+  },
+  "headline_train_cap": {
+    "wis": 2.2425,
+    "dm_p": 3.3112820652103636e-06,
+    "dm_meandiff": -0.1587,
+    "picp95": 0.9318,
+    "k_of_n": "123/132",
+    "cp95ci": [
+      0.875,
+      0.968
+    ],
+    "last34_wis": 2.6491,
+    "mean_w95": 17.502,
+    "peak_picp95": 0.87,
+    "n_peak": 23
+  },
+  "bars": {
+    "beats_wis": true,
+    "dm_sig": true,
+    "picp_in_band": true,
+    "last34_lt_272": true
+  },
+  "all_bars": true,
+  "cap_binds": true,
+  "expand_eq_static_first_origin": true,
+  "robust_winners": [
+    "tirex_gamma_p1.1_expand",
+    "tirex_gamma_p1.1_trail78",
+    "tirex_gamma_p1.2_expand",
+    "tirex_gamma_p1.2_trail78",
+    "tirex_gamma_p1.3_expand",
+    "tirex_gamma_p1.3_trail78",
+    "tirex_gamma_p1.4_expand",
+    "tirex_gamma_p1.4_trail78",
+    "tirex_gamma_p1.5_trail78",
+    "tirex_pearson_p1.1_expand",
+    "tirex_pearson_p1.1_trail78",
+    "tirex_pearson_p1.2_expand",
+    "tirex_pearson_p1.2_trail78",
+    "tirex_pearson_p1.3_expand",
+    "tirex_pearson_p1.3_trail78",
+    "tirex_pearson_p1.3_aci0.02",
+    "tirex_pearson_p1.4_expand",
+    "tirex_pearson_p1.4_trail78",
+    "tirex_pearson_p1.4_aci0.02",
+    "tirex_pearson_p1.4_aci0.05",
+    "tirex_pearson_p1.5_expand",
+    "tirex_pearson_p1.5_trail78",
+    "tirex_pearson_p1.5_aci0.02",
+    "tirex_pearson_p1.5_aci0.05"
+  ]
+}

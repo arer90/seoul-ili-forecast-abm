@@ -1,0 +1,164 @@
+{
+  "generated_at": "2026-07-01T03:27:17.544902Z",
+  "observed_at": "2026-05-24T00:00:00Z",
+  "forecast_at": "2026-05-31T00:00:00Z",
+  "source": "production-refit-forecast",
+  "model": "NegBinGLM",
+  "model_version": "V6 salvage (RidgeCV+log1p; NB2 diverged p=381, n≈256)",
+  "horizon_weeks": 1,
+  "city_forecast": 8.9774,
+  "city_lo": 0.0,
+  "city_hi": 18.7651,
+  "conformal_q95": 9.7877,
+  "gate": {
+    "passed": true,
+    "n_violations": 0,
+    "reason": "ok",
+    "replaced": false
+  },
+  "surge": {
+    "detected": false,
+    "reason": "trajectory-bounded (false-explosion guard)",
+    "action": "none"
+  },
+  "metrics": {
+    "test_r2": 0.9085,
+    "test_rmse": 7.8597,
+    "test_mae": 4.9024
+  },
+  "note": "production 운영 forecast — 전체 refit→미래 1-step, climatology, gated. Champion: NegBinGLM (V6 salvage (RidgeCV+log1p; NB2 diverged p=381, n≈256)). Test R²=0.9085, RMSE=7.86, MAE=4.90. Gate: ok. Conformal PI 95% half-width: 9.788/1k (test-slab OOS 잔차 n=68, Lei 2018). Weather/mobility: climatology (주차 평균, in-sample). gate passed",
+  "gu_source": {
+    "selected_tier": 3,
+    "source": "uniform_city",
+    "confidence": "구별 분배 안 함(검증 실패)",
+    "quality": null,
+    "note": "1차 실측 ILI → 2차 endemic(순열검정 p<0.05 유의시만) → 3차 도시균등. 검증 실패시 구별 분배 안 함(정직). 각 단계 검정수치 = ladder.eval."
+  },
+  "gu": {
+    "강남구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "강동구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "강북구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "강서구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "관악구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "광진구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "구로구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "금천구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "노원구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "도봉구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "동대문구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "동작구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "마포구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "서대문구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "서초구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "성동구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "성북구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "송파구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "양천구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "영등포구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "용산구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "은평구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "종로구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "중구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    },
+    "중랑구": {
+      "ili": 8.9774,
+      "lo": 0.0,
+      "hi": 18.7651
+    }
+  }
+}

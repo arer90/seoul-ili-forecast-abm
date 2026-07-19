@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+.env*.local
+.vercel
+*.tsbuildinfo
+.DS_Store
+
+# Auto-synced from /web_prototype/ on prebuild — never commit
+public/abs/

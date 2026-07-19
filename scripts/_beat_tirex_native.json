@@ -1,0 +1,31 @@
+{
+  "raw_native_wis": 2.2427,
+  "n": 132,
+  "variants": [
+    {
+      "variant": "A_tail_cqr",
+      "wis": 2.2263,
+      "delta_pct": -0.73,
+      "dm_hln_p": 0.513,
+      "dm_boot_p": 0.2588,
+      "beats_native": false
+    },
+    {
+      "variant": "B_widthscale_c0.80",
+      "wis": 2.2834,
+      "delta_pct": 1.82,
+      "dm_hln_p": 0.1368,
+      "dm_boot_p": 0.9605,
+      "beats_native": false
+    },
+    {
+      "variant": "C_hybrid_tail",
+      "wis": 2.2427,
+      "delta_pct": 0.0,
+      "dm_hln_p": 1.0,
+      "dm_boot_p": 1.0,
+      "beats_native": false
+    }
+  ],
+  "winners": []
+}

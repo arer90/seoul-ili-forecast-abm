@@ -1,0 +1,36 @@
+{
+  "ref_wis": 2.4012,
+  "cand_wis": 2.2427,
+  "picp95": 0.9318,
+  "k_of_n": "123/132",
+  "cp95ci": [
+    0.875,
+    0.968
+  ],
+  "last34": 2.6491,
+  "mean_diff": -0.1585,
+  "dm_p_hln": 3.353596273569792e-06,
+  "dm_p_mbb_L6": 0.0,
+  "mbb_p_by_L": {
+    "1": 0.0,
+    "4": 0.0,
+    "8": 0.0,
+    "12": 0.0
+  },
+  "leak_last_identical": true,
+  "leak_last_maxdiff": 0.0,
+  "leak_interior_first_changed": 261,
+  "leak_interior_past_leak": [],
+  "train_end_for_T0": 165,
+  "cal_start": 165,
+  "verdict": {
+    "reproduces": true,
+    "leak_free": true,
+    "beats_wis": true,
+    "dm_sig_hln": true,
+    "dm_sig_mbb": true,
+    "picp_in_band": true,
+    "last34_ok": true
+  },
+  "decisive": true
+}

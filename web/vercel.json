@@ -1,0 +1,37 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci --no-audit --no-fund",
+  "regions": ["icn1"],
+  "env": {
+    "NEXT_PUBLIC_HIDE_OLLAMA": "1"
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "cache-control", "value": "no-store" },
+        { "key": "x-content-type-options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/aggregates/(.*)",
+      "headers": [
+        { "key": "cache-control", "value": "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/abs/(app\\.jsx|index\\.html|data\\.json)",
+      "headers": [
+        { "key": "cache-control", "value": "no-cache, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/abs/styles\\.css",
+      "headers": [
+        { "key": "cache-control", "value": "public, max-age=300, s-maxage=600" }
+      ]
+    }
+  ]
+}

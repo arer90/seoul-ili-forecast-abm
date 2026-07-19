@@ -1,0 +1,32 @@
+{
+  "model": "Ensemble-Diversity",
+  "best_config": {
+    "transform": "identity",
+    "scaler": "none",
+    "n_features": null,
+    "feature_indices": null,
+    "preproc_optuna_params": null
+  },
+  "val_metrics": {
+    "wis": NaN,
+    "oof_wis": Infinity,
+    "oof_wis_folds": null,
+    "insample_residuals": null,
+    "mae": NaN,
+    "rmse": null
+  },
+  "test_metrics": {},
+  "refit_test_predictions": null,
+  "refit_real_predictions": null,
+  "refit_real_pi95_lo": null,
+  "refit_real_pi95_hi": null,
+  "real_metrics": null,
+  "aci_alpha_history": null,
+  "best_metrics": {
+    "wis": NaN,
+    "mae": NaN,
+    "rmse": null
+  },
+  "champion_decision": "skipped",
+  "optuna_trial_results": []
+}

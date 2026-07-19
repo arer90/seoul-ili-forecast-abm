@@ -1,0 +1,116 @@
+[
+  {
+    "window": "A_thesis_68wk",
+    "n": 68,
+    "wis_negbin": 2.7439,
+    "wis_tweedie": 2.8001,
+    "reproduces_prior": {
+      "negbin": [
+        2.7439,
+        2.7439,
+        true
+      ],
+      "tweedie": [
+        2.8001,
+        2.8001,
+        true
+      ]
+    },
+    "mean_diff_tw_minus_nb": 0.0562,
+    "t_ci95": [
+      -0.0554,
+      0.1678
+    ],
+    "boot_ci95": [
+      -0.0286,
+      0.1498
+    ],
+    "dm_hln_p": 0.3222,
+    "tost": [
+      {
+        "margin": 0.05,
+        "ci90": [
+          -0.0371,
+          0.1495
+        ],
+        "p_tost": 0.5439,
+        "equivalent": false
+      },
+      {
+        "margin": 0.1,
+        "ci90": [
+          -0.0371,
+          0.1495
+        ],
+        "p_tost": 0.2181,
+        "equivalent": false
+      },
+      {
+        "margin": 0.15,
+        "ci90": [
+          -0.0371,
+          0.1495
+        ],
+        "p_tost": 0.0491,
+        "equivalent": true
+      }
+    ]
+  },
+  {
+    "window": "B_robust_132origin",
+    "n": 132,
+    "wis_negbin": 2.3287,
+    "wis_tweedie": 2.2824,
+    "reproduces_prior": {
+      "negbin": [
+        2.3287,
+        2.3287,
+        true
+      ],
+      "tweedie": [
+        2.2824,
+        2.2824,
+        true
+      ]
+    },
+    "mean_diff_tw_minus_nb": -0.0464,
+    "t_ci95": [
+      -0.1231,
+      0.0304
+    ],
+    "boot_ci95": [
+      -0.1099,
+      0.0248
+    ],
+    "dm_hln_p": 0.2359,
+    "tost": [
+      {
+        "margin": 0.05,
+        "ci90": [
+          -0.1106,
+          0.0179
+        ],
+        "p_tost": 0.4626,
+        "equivalent": false
+      },
+      {
+        "margin": 0.1,
+        "ci90": [
+          -0.1106,
+          0.0179
+        ],
+        "p_tost": 0.0845,
+        "equivalent": false
+      },
+      {
+        "margin": 0.15,
+        "ci90": [
+          -0.1106,
+          0.0179
+        ],
+        "p_tost": 0.0042,
+        "equivalent": true
+      }
+    ]
+  }
+]

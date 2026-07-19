@@ -1,0 +1,130 @@
+{
+  "feature_axis": [
+    {
+      "feature": "fourier_cos_h1",
+      "mean_abs_shap": 2.361074,
+      "mean_shap": 0.723343,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_sin_h3",
+      "mean_abs_shap": 1.985849,
+      "mean_shap": -0.802384,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_cos_h3",
+      "mean_abs_shap": 1.609922,
+      "mean_shap": 1.14878,
+      "direction": "raises"
+    },
+    {
+      "feature": "fourier_cos_h2",
+      "mean_abs_shap": 1.534865,
+      "mean_shap": -0.824266,
+      "direction": "lowers"
+    },
+    {
+      "feature": "fourier_sin_h2",
+      "mean_abs_shap": 1.207893,
+      "mean_shap": 0.838172,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag3",
+      "mean_abs_shap": 1.008867,
+      "mean_shap": -0.512163,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag2",
+      "mean_abs_shap": 0.632578,
+      "mean_shap": 0.496258,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_age_0_lag1",
+      "mean_abs_shap": 0.408425,
+      "mean_shap": -0.000533,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag1",
+      "mean_abs_shap": 0.400051,
+      "mean_shap": 0.205598,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag4",
+      "mean_abs_shap": 0.348184,
+      "mean_shap": -0.01011,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_age_0_lag2",
+      "mean_abs_shap": 0.091667,
+      "mean_shap": -0.011714,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_rmean8",
+      "mean_abs_shap": 0.086888,
+      "mean_shap": 0.086888,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_ewm_12w",
+      "mean_abs_shap": 0.085119,
+      "mean_shap": 0.012793,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag52",
+      "mean_abs_shap": 0.077202,
+      "mean_shap": 0.077202,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_rmax8",
+      "mean_abs_shap": 0.066484,
+      "mean_shap": -0.020181,
+      "direction": "lowers"
+    }
+  ],
+  "input_axis": {
+    "representative": {
+      "row": 0,
+      "prediction": null,
+      "top_drivers": [
+        {
+          "feature": "fourier_sin_h2",
+          "shap": 2.527
+        },
+        {
+          "feature": "fourier_cos_h2",
+          "shap": -2.4931
+        },
+        {
+          "feature": "fourier_sin_h3",
+          "shap": -2.0431
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": null,
+    "prediction_mean": null,
+    "prediction_range": null,
+    "fraction_explained_by_top3": 0.4869
+  },
+  "model_axis": {
+    "family": "other",
+    "n_features_explained": 32,
+    "n_samples": 30,
+    "dominant_feature": "fourier_cos_h1",
+    "dominant_feature_sign_consistency": 0.6,
+    "global_mean_abs_shap": 0.382296,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

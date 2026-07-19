@@ -1,0 +1,326 @@
+{
+  "analysis": {
+    "heterogeneous": {
+      "best_for_deaths": "target_high_contact",
+      "best_for_infections": "target_high_contact",
+      "death_strategy_spread": 0.00046666666666666655,
+      "infection_strategy_spread": 0.7301333333333335,
+      "per_strategy": {
+        "target_elderly": {
+          "deaths_averted_per_dose": 0.0002,
+          "infections_averted_per_dose": 1.1316666666666664
+        },
+        "target_high_contact": {
+          "deaths_averted_per_dose": 0.0006,
+          "infections_averted_per_dose": 1.8618
+        },
+        "uniform": {
+          "deaths_averted_per_dose": 0.0001333333333333334,
+          "infections_averted_per_dose": 1.4244
+        }
+      }
+    },
+    "homogeneous": {
+      "best_for_deaths": "uniform",
+      "best_for_infections": "target_elderly",
+      "death_strategy_spread": 0.0,
+      "infection_strategy_spread": 0.012466666666666848,
+      "per_strategy": {
+        "target_elderly": {
+          "deaths_averted_per_dose": 0.0006,
+          "infections_averted_per_dose": 1.0902666666666665
+        },
+        "target_high_contact": {
+          "deaths_averted_per_dose": 0.0006,
+          "infections_averted_per_dose": 1.0902666666666665
+        },
+        "uniform": {
+          "deaths_averted_per_dose": 0.0006,
+          "infections_averted_per_dose": 1.0777999999999996
+        }
+      }
+    },
+    "summary": {
+      "best_strategy_deaths_het": "target_high_contact",
+      "best_strategy_infections_het": "target_high_contact",
+      "claim_supported": true,
+      "het_death_strategy_spread": 0.00046666666666666655,
+      "het_infection_strategy_spread": 0.7301333333333335,
+      "hom_death_strategy_spread": 0.0,
+      "hom_infection_strategy_spread": 0.012466666666666848,
+      "interpretation": "Heterogeneous ABM: targeting separates strategies (infections averted/dose spread 0.730, deaths 0.0005); optimum is 'target_high_contact' for infections and 'target_high_contact' for deaths \u2014 vaccinating high-contact spreaders averts more INFECTIONS than uniform or directly vaccinating the low-contact elderly (transmission-blocking / indirect protection, cf. Medlock-Galvani 2009 Science); the deaths-averted ordering is directionally consistent but UNDERPOWERED (per-arm ~2-4 deaths, CIs overlap, p>0.05) so no significant death claim is made. The homogeneous mean-field control shows no separation (infections 0.012, deaths 0.0000) and is structurally blind to dose allocation."
+    }
+  },
+  "metadata": {
+    "K": 12,
+    "behaviour": {
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "tau": 1000000000.0,
+      "theta": 0.0
+    },
+    "budget": 1250,
+    "budget_frac": 0.1,
+    "db_path": "<REPO_ROOT>/simulation/data/db/epi_real_seoul.db",
+    "disease": {
+      "beta": 0.18,
+      "beta_amp": 0.65,
+      "beta_phase": 120.0,
+      "delta": 0.002,
+      "gamma": 0.18,
+      "import_rate": 0.0003,
+      "nu": 0.0002,
+      "sigma": 0.45
+    },
+    "n_agents": 12500,
+    "populations": [
+      "heterogeneous",
+      "homogeneous"
+    ],
+    "strategies": [
+      "none",
+      "uniform",
+      "target_elderly",
+      "target_high_contact"
+    ],
+    "year": 2025
+  },
+  "results": {
+    "heterogeneous": {
+      "none": {
+        "K": 12,
+        "attack_rate": 0.57584,
+        "attack_rate_ci95": [
+          0.5654727828667645,
+          0.5862072171332355
+        ],
+        "death_rate": 0.00014000000000000001,
+        "death_rate_ci95": [
+          6.770884834982313e-05,
+          0.0002122911516501769
+        ],
+        "deaths": 1.75,
+        "deaths_ci95": [
+          0.846360604372789,
+          2.653639395627211
+        ],
+        "doses": 0,
+        "infections": 7198.0,
+        "infections_ci95": [
+          7068.409785834555,
+          7327.590214165445
+        ],
+        "peak_I": 426.5,
+        "peak_I_ci95": [
+          400.7602194536566,
+          452.2397805463434
+        ]
+      },
+      "target_elderly": {
+        "K": 12,
+        "attack_rate": 0.4626733333333333,
+        "attack_rate_ci95": [
+          0.4532677900825417,
+          0.47207887658412495
+        ],
+        "death_rate": 0.00012,
+        "death_rate_ci95": [
+          6.064384431130322e-05,
+          0.00017935615568869678
+        ],
+        "deaths": 1.5,
+        "deaths_ci95": [
+          0.7580480538912902,
+          2.24195194610871
+        ],
+        "doses": 1250,
+        "infections": 5783.416666666667,
+        "infections_ci95": [
+          5665.847376031772,
+          5900.985957301562
+        ],
+        "peak_I": 306.5,
+        "peak_I_ci95": [
+          288.0027148803064,
+          324.9972851196936
+        ]
+      },
+      "target_high_contact": {
+        "K": 12,
+        "attack_rate": 0.38966000000000006,
+        "attack_rate_ci95": [
+          0.37889184612261023,
+          0.4004281538773899
+        ],
+        "death_rate": 8e-05,
+        "death_rate_ci95": [
+          1.4978589205024361e-05,
+          0.00014502141079497565
+        ],
+        "deaths": 1.0,
+        "deaths_ci95": [
+          0.1872323650628045,
+          1.8127676349371955
+        ],
+        "doses": 1250,
+        "infections": 4870.75,
+        "infections_ci95": [
+          4736.148076532627,
+          5005.351923467373
+        ],
+        "peak_I": 245.58333333333334,
+        "peak_I_ci95": [
+          227.37206105824316,
+          263.7946056084235
+        ]
+      },
+      "uniform": {
+        "K": 12,
+        "attack_rate": 0.43339999999999995,
+        "attack_rate_ci95": [
+          0.42337349371361904,
+          0.44342650628638086
+        ],
+        "death_rate": 0.00012666666666666666,
+        "death_rate_ci95": [
+          5.016601989292644e-05,
+          0.0002031673134404069
+        ],
+        "deaths": 1.5833333333333333,
+        "deaths_ci95": [
+          0.6270752486615806,
+          2.539591418005086
+        ],
+        "doses": 1250,
+        "infections": 5417.5,
+        "infections_ci95": [
+          5292.168671420239,
+          5542.831328579761
+        ],
+        "peak_I": 283.4166666666667,
+        "peak_I_ci95": [
+          264.0566804889936,
+          302.77665284433976
+        ]
+      }
+    },
+    "homogeneous": {
+      "none": {
+        "K": 12,
+        "attack_rate": 0.40812666666666675,
+        "attack_rate_ci95": [
+          0.39935261790667237,
+          0.41690071542666113
+        ],
+        "death_rate": 7.333333333333333e-05,
+        "death_rate_ci95": [
+          3.3027439285048076e-05,
+          0.0001136392273816186
+        ],
+        "deaths": 0.9166666666666666,
+        "deaths_ci95": [
+          0.41284299106310096,
+          1.4204903422702322
+        ],
+        "doses": 0,
+        "infections": 5101.583333333333,
+        "infections_ci95": [
+          4991.907723833403,
+          5211.258942833263
+        ],
+        "peak_I": 238.41666666666666,
+        "peak_I_ci95": [
+          219.63984158599393,
+          257.19349174733935
+        ]
+      },
+      "target_elderly": {
+        "K": 12,
+        "attack_rate": 0.2991,
+        "attack_rate_ci95": [
+          0.28887924169124873,
+          0.3093207583087512
+        ],
+        "death_rate": 1.3333333333333335e-05,
+        "death_rate_ci95": [
+          -6.452051896232263e-06,
+          3.311871856289893e-05
+        ],
+        "deaths": 0.16666666666666666,
+        "deaths_ci95": [
+          -0.08065064870290323,
+          0.41398398203623654
+        ],
+        "doses": 1250,
+        "infections": 3738.75,
+        "infections_ci95": [
+          3610.9905211406094,
+          3866.5094788593906
+        ],
+        "peak_I": 155.83333333333334,
+        "peak_I_ci95": [
+          143.9471694996305,
+          167.7194971670362
+        ]
+      },
+      "target_high_contact": {
+        "K": 12,
+        "attack_rate": 0.2991,
+        "attack_rate_ci95": [
+          0.28887924169124873,
+          0.3093207583087512
+        ],
+        "death_rate": 1.3333333333333335e-05,
+        "death_rate_ci95": [
+          -6.452051896232263e-06,
+          3.311871856289893e-05
+        ],
+        "deaths": 0.16666666666666666,
+        "deaths_ci95": [
+          -0.08065064870290323,
+          0.41398398203623654
+        ],
+        "doses": 1250,
+        "infections": 3738.75,
+        "infections_ci95": [
+          3610.9905211406094,
+          3866.5094788593906
+        ],
+        "peak_I": 155.83333333333334,
+        "peak_I_ci95": [
+          143.9471694996305,
+          167.7194971670362
+        ]
+      },
+      "uniform": {
+        "K": 12,
+        "attack_rate": 0.30034666666666665,
+        "attack_rate_ci95": [
+          0.29383996364775283,
+          0.30685336968558047
+        ],
+        "death_rate": 1.3333333333333335e-05,
+        "death_rate_ci95": [
+          -6.452051896232263e-06,
+          3.311871856289893e-05
+        ],
+        "deaths": 0.16666666666666666,
+        "deaths_ci95": [
+          -0.08065064870290325,
+          0.41398398203623654
+        ],
+        "doses": 1250,
+        "infections": 3754.3333333333335,
+        "infections_ci95": [
+          3672.999545596911,
+          3835.667121069756
+        ],
+        "peak_I": 156.16666666666666,
+        "peak_I_ci95": [
+          143.61960819606205,
+          168.71372513727127
+        ]
+      }
+    }
+  }
+}

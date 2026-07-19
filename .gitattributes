@@ -1,0 +1,16 @@
+# Windows checks out CRLF by default. Several tests read a source file and
+# assert on its text, and the repository's own line-ending assumptions are
+# LF throughout, so normalise on checkout everywhere.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.parquet binary
+*.npy binary
+*.pt binary
+*.db binary
+*.emf binary
+*.ico binary

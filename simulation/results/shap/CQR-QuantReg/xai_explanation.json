@@ -1,0 +1,130 @@
+{
+  "feature_axis": [
+    {
+      "feature": "ili_rate_savgol_smooth_w9",
+      "mean_abs_shap": 4.728348,
+      "mean_shap": -2.204715,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_age_1_6_lag1",
+      "mean_abs_shap": 3.826575,
+      "mean_shap": -1.399592,
+      "direction": "lowers"
+    },
+    {
+      "feature": "humid_ili",
+      "mean_abs_shap": 3.395048,
+      "mean_shap": 1.206786,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_nonresnt_ili",
+      "mean_abs_shap": 2.870037,
+      "mean_shap": 1.49176,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_roadcong_ili",
+      "mean_abs_shap": 2.790539,
+      "mean_shap": 1.112292,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1",
+      "mean_abs_shap": 2.74085,
+      "mean_shap": 1.281403,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_subcrowd_ili",
+      "mean_abs_shap": 2.660324,
+      "mean_shap": 0.927783,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_highrisk_ili",
+      "mean_abs_shap": 2.534616,
+      "mean_shap": 1.120733,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_age_65p_lag1",
+      "mean_abs_shap": 1.665223,
+      "mean_shap": -0.049582,
+      "direction": "lowers"
+    },
+    {
+      "feature": "bus_ili",
+      "mean_abs_shap": 1.30473,
+      "mean_shap": 0.789501,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_log1p",
+      "mean_abs_shap": 0.328525,
+      "mean_shap": 0.047627,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_age_50_64_lag1",
+      "mean_abs_shap": 0.281038,
+      "mean_shap": 0.2646,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag2_log1p",
+      "mean_abs_shap": 0.167729,
+      "mean_shap": 0.116367,
+      "direction": "raises"
+    },
+    {
+      "feature": "above_threshold",
+      "mean_abs_shap": 0.165876,
+      "mean_shap": 0.132996,
+      "direction": "raises"
+    },
+    {
+      "feature": "emp_monthly_avg",
+      "mean_abs_shap": 0.092308,
+      "mean_shap": 0.051228,
+      "direction": "raises"
+    }
+  ],
+  "input_axis": {
+    "representative": {
+      "row": 0,
+      "prediction": null,
+      "top_drivers": [
+        {
+          "feature": "ili_rate_savgol_smooth_w9",
+          "shap": 4.8924
+        },
+        {
+          "feature": "humid_ili",
+          "shap": -3.3562
+        },
+        {
+          "feature": "rt_subcrowd_ili",
+          "shap": -3.2993
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": null,
+    "prediction_mean": null,
+    "prediction_range": null,
+    "fraction_explained_by_top3": 0.4035
+  },
+  "model_axis": {
+    "family": "other",
+    "n_features_explained": 20,
+    "n_samples": 30,
+    "dominant_feature": "ili_rate_savgol_smooth_w9",
+    "dominant_feature_sign_consistency": 0.367,
+    "global_mean_abs_shap": 1.480931,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

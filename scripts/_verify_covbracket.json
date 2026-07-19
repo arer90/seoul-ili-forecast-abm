@@ -1,0 +1,320 @@
+{
+  "reconciliation": {
+    "computed": {
+      "pid_mech_g1.0": {
+        "wis": 2.2194,
+        "picp95": 0.9242,
+        "k_of_n": "122/132",
+        "cp95ci": [
+          0.8651,
+          0.9631
+        ],
+        "w95": 20.2
+      },
+      "cqr_mech_g0.75": {
+        "wis": 2.2221,
+        "picp95": 0.9848,
+        "k_of_n": "130/132",
+        "cp95ci": [
+          0.9463,
+          0.9982
+        ],
+        "w95": 23.57
+      },
+      "pid_plain": {
+        "wis": 2.308,
+        "picp95": 0.9015,
+        "k_of_n": "119/132",
+        "cp95ci": [
+          0.8375,
+          0.9465
+        ],
+        "w95": 19.17
+      },
+      "cqr_static": {
+        "wis": 2.2688,
+        "picp95": 0.9848,
+        "k_of_n": "130/132",
+        "cp95ci": [
+          0.9463,
+          0.9982
+        ],
+        "w95": 22.51
+      }
+    },
+    "verified": {
+      "pid_mech_g1.0": {
+        "wis": 2.2194,
+        "picp95": 0.9242
+      },
+      "cqr_mech_g0.75": {
+        "wis": 2.2221,
+        "picp95": 0.9848
+      },
+      "pid_plain": {
+        "wis": 2.308,
+        "picp95": 0.9015
+      },
+      "cqr_static": {
+        "wis": 2.2688,
+        "picp95": 0.9848
+      }
+    },
+    "match": true
+  },
+  "n_test_origins": 132,
+  "n_val_origins": 40,
+  "bracket_resolution_note": "132 origins -> step=0.0076; [0.94,0.96] == k in {125..126} = [125, 126]",
+  "val_endpoints": {
+    "pid_mech_g1.0": {
+      "picp95": 0.95,
+      "wis": 1.6974
+    },
+    "cqr_mech_g0.75": {
+      "picp95": 0.725,
+      "wis": 1.6437
+    }
+  },
+  "approach_a_blend": {
+    "w_star": 0.37,
+    "val_picp95_at_w": 0.95,
+    "val_wis_at_w": 1.564,
+    "test": {
+      "all": {
+        "wis": 2.2014,
+        "picp95": 0.9773,
+        "k_of_n": "129/132",
+        "cp95ci": [
+          0.935,
+          0.9953
+        ],
+        "w95": 22.33
+      },
+      "peak": {
+        "wis": 5.5649,
+        "picp95": 0.9565,
+        "k_of_n": "22/23",
+        "cp95ci": [
+          0.7805,
+          0.9989
+        ],
+        "w95": 41.67
+      },
+      "last34": {
+        "wis": 2.6864,
+        "picp95": 0.9706,
+        "k_of_n": "33/34",
+        "cp95ci": [
+          0.8467,
+          0.9993
+        ],
+        "w95": 28.15
+      }
+    },
+    "in_bracket": false,
+    "wis_ok": true
+  },
+  "approach_b_scale": {
+    "pid_base": {
+      "c_star": 0.74,
+      "val_picp95_at_c": 0.95,
+      "test": {
+        "all": {
+          "wis": 2.2346,
+          "picp95": 0.8788,
+          "k_of_n": "116/132",
+          "cp95ci": [
+            0.8106,
+            0.9291
+          ],
+          "w95": 14.95
+        },
+        "peak": {
+          "wis": 5.7367,
+          "picp95": 0.6957,
+          "k_of_n": "16/23",
+          "cp95ci": [
+            0.4708,
+            0.8679
+          ],
+          "w95": 30.89
+        },
+        "last34": {
+          "wis": 2.6597,
+          "picp95": 0.8529,
+          "k_of_n": "29/34",
+          "cp95ci": [
+            0.6894,
+            0.9505
+          ],
+          "w95": 20.07
+        }
+      },
+      "in_bracket": false,
+      "wis_ok": true
+    },
+    "cqr_base": {
+      "c_star": 1.92,
+      "val_picp95_at_c": 0.925,
+      "test": {
+        "all": {
+          "wis": 2.5764,
+          "picp95": 1.0,
+          "k_of_n": "132/132",
+          "cp95ci": [
+            0.9724,
+            1.0
+          ],
+          "w95": 41.63
+        },
+        "peak": {
+          "wis": 6.0345,
+          "picp95": 1.0,
+          "k_of_n": "23/23",
+          "cp95ci": [
+            0.8518,
+            1.0
+          ],
+          "w95": 79.56
+        },
+        "last34": {
+          "wis": 3.4012,
+          "picp95": 1.0,
+          "k_of_n": "34/34",
+          "cp95ci": [
+            0.8972,
+            1.0
+          ],
+          "w95": 52.26
+        }
+      },
+      "in_bracket": false,
+      "wis_ok": true
+    }
+  },
+  "approach_c_pareto": {
+    "configs_sorted_by_picp95": [
+      {
+        "config": "pid_plain",
+        "picp95": 0.9015,
+        "wis": 2.308,
+        "in_bracket": false
+      },
+      {
+        "config": "pid_mech_g2.0",
+        "picp95": 0.9167,
+        "wis": 2.2385,
+        "in_bracket": false
+      },
+      {
+        "config": "pid_mech_g0.75",
+        "picp95": 0.9242,
+        "wis": 2.2286,
+        "in_bracket": false
+      },
+      {
+        "config": "pid_mech_g1.0",
+        "picp95": 0.9242,
+        "wis": 2.2194,
+        "in_bracket": false
+      },
+      {
+        "config": "pid_mech_g1.25",
+        "picp95": 0.9242,
+        "wis": 2.2198,
+        "in_bracket": false
+      },
+      {
+        "config": "pid_mech_g1.5",
+        "picp95": 0.9242,
+        "wis": 2.2246,
+        "in_bracket": false
+      },
+      {
+        "config": "cqr_mech_g2.0",
+        "picp95": 0.9697,
+        "wis": 2.2706,
+        "in_bracket": false
+      },
+      {
+        "config": "cqr_mech_g1.5",
+        "picp95": 0.9773,
+        "wis": 2.2466,
+        "in_bracket": false
+      },
+      {
+        "config": "cqr_static",
+        "picp95": 0.9848,
+        "wis": 2.2688,
+        "in_bracket": false
+      },
+      {
+        "config": "cqr_mech_g0.75",
+        "picp95": 0.9848,
+        "wis": 2.2221,
+        "in_bracket": false
+      },
+      {
+        "config": "cqr_mech_g1.0",
+        "picp95": 0.9848,
+        "wis": 2.2238,
+        "in_bracket": false
+      },
+      {
+        "config": "cqr_mech_g1.25",
+        "picp95": 0.9848,
+        "wis": 2.2334,
+        "in_bracket": false
+      }
+    ],
+    "any_single_config_in_bracket": false
+  },
+  "approach_d_online_blend": {
+    "warmup": 20,
+    "n_eval": 112,
+    "test": {
+      "all_post_warm": {
+        "wis": 1.9152,
+        "picp95": 0.9732,
+        "k_of_n": "109/112",
+        "cp95ci": [
+          0.9237,
+          0.9944
+        ],
+        "w95": 21.38
+      },
+      "peak_post_warm": {
+        "wis": 5.1252,
+        "picp95": 1.0,
+        "k_of_n": "18/18",
+        "cp95ci": [
+          0.8147,
+          1.0
+        ],
+        "w95": 45.56
+      },
+      "last34": {
+        "wis": 2.6825,
+        "picp95": 0.9412,
+        "k_of_n": "32/34",
+        "cp95ci": [
+          0.8032,
+          0.9928
+        ],
+        "w95": 27.25
+      }
+    },
+    "in_bracket": false,
+    "wis_ok": true,
+    "w_online_mean": 0.618
+  },
+  "best_config": {
+    "tag": "d_online_blend",
+    "picp95": 0.9732,
+    "wis": 1.9152,
+    "in_bracket_and_wis_ok": false,
+    "param": "w_mean=0.618 (n=112)"
+  },
+  "nominal_0p95_leakfree_reachable": false,
+  "elapsed_sec": 1004.0
+}

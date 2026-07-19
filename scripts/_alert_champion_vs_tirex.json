@@ -1,0 +1,29 @@
+{
+  "note": "alert signal = model's UPPER 95% forecast bound (precautionary early warning); WIS is a tie (~2.24)",
+  "tirex_point": {
+    "model": "TiRex point",
+    "max_alert_f1": 1.0,
+    "f1_at_thr50": 0.8095,
+    "sensitivity_at_thr50": 0.7391
+  },
+  "tirex_upper95": {
+    "model": "TiRex native upper-95",
+    "max_alert_f1": 0.9685,
+    "f1_at_thr50": 0.7692,
+    "sensitivity_at_thr50": 0.8696
+  },
+  "champion_point": {
+    "model": "champion point",
+    "max_alert_f1": 1.0,
+    "f1_at_thr50": 0.8182,
+    "sensitivity_at_thr50": 0.7826
+  },
+  "champion_upper95": {
+    "model": "champion (Tweedie) upper-95",
+    "max_alert_f1": 0.9647,
+    "f1_at_thr50": 0.8,
+    "sensitivity_at_thr50": 0.9565
+  },
+  "thr_at_sens0.9_tirex_upper": 87.5,
+  "thr_at_sens0.9_champion_upper": 87.5
+}

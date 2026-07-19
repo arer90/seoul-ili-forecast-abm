@@ -1,0 +1,11 @@
+proxy,spearman_rho,pearson_r,ci95_lo,ci95_hi,n_pairs,by_construction,note
+"Daytime living-pop density",0.7931,0.8475,0.5259,0.9498,25,1,"BY-CONSTRUCTION: burden surface is built FROM this density (mechanical)."
+"Resident population",0.7477,0.8126,0.4502,0.9242,25,0,"Independent: KOSIS resident headcount (not used to build the surface)."
+"Childhood resp. disease cases (sum)",0.4046,0.4249,0.0379,0.6757,25,0,"varicella+mumps+pertussis+scarlet, 2020-24; tracks RESIDENTIAL density."
+"Childhood resp. incidence /100k",-0.2185,-0.2385,-0.5245,0.1544,25,0,"population-normalised; removes the headcount confound."
+"Varicella cases",0.4100,0.3088,0.0663,0.6605,25,0,"chickenpox 2020-24 annual."
+"Mumps cases",0.4962,0.5007,0.1373,0.7873,25,0,"2020-24 annual."
+"Pertussis cases",0.3062,0.4188,-0.0890,0.6056,25,0,"whooping cough 2020-24 annual."
+"Scarlet-fever cases",0.1662,0.1233,-0.2966,0.5756,25,0,"2020-24 annual."
+"Pneumococcal cases (neg. control)",0.0520,0.2003,-0.3327,0.4674,25,0,"WEAK NEGATIVE CONTROL: elderly/residential, should NOT track daytime burden."
+"Hospital count",0.2953,0.5645,-0.1180,0.6220,25,0,"health-system capacity per gu."

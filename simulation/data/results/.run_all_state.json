@@ -1,0 +1,17 @@
+{
+ "bootstrap": {
+ "status": "OK",
+ "elapsed": 28.3,
+ "completed_at": "2026-04-16 22:18:02"
+ },
+ "collect": {
+ "status": "OK",
+ "elapsed": 1.4,
+ "completed_at": "2026-04-16 22:18:03"
+ },
+ "db-optimize": {
+ "status": "OK",
+ "elapsed": 9.9,
+ "completed_at": "2026-04-16 22:18:13"
+ }
+}

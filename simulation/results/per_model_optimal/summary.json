@@ -1,0 +1,56 @@
+{
+  "n_models_optimized": 3,
+  "transforms_actually_searched": [
+    "HIER_individual",
+    "HIER_none"
+  ],
+  "scalers_actually_searched": [
+    "HIER_none"
+  ],
+  "transforms_searched": [
+    "HIER_individual",
+    "HIER_none"
+  ],
+  "scalers_searched": [
+    "HIER_none"
+  ],
+  "db_fingerprint": {
+    "combined_sha256": "340a5d3dee09da3aad1295f8",
+    "computed_at": "2026-07-14T14:29:44Z",
+    "db_path": "simulation/data/db/epi_real_seoul.db"
+  },
+  "best_per_model": {
+    "NegBinGLM": {
+      "transform": "identity",
+      "scaler": "none",
+      "val_wis": NaN,
+      "val_mae": NaN,
+      "test_wis": 4.677058092581503,
+      "test_mae": 4.560196684789258,
+      "test_r2": 0.9039441629208173,
+      "test_n": 68
+    },
+    "PoissonAutoreg": {
+      "transform": "identity",
+      "scaler": "none",
+      "val_wis": NaN,
+      "val_mae": NaN,
+      "test_wis": 4.458760265797303,
+      "test_mae": 4.213093008967142,
+      "test_r2": 0.920168532435741,
+      "test_n": 68
+    },
+    "FusedEpi": {
+      "transform": "HIER_none",
+      "scaler": "HIER_none",
+      "val_wis": 2.9794184390287657,
+      "val_mae": 0.750227580976319,
+      "test_wis": 4.276250064380842,
+      "test_mae": 3.909518108820968,
+      "test_r2": 0.9345690997476578,
+      "test_n": 68
+    }
+  },
+  "elapsed_sec": 2.182708978652954,
+  "note": "val metrics chose the (transform \u00d7 scaler) config; test_* metrics are the FINAL evaluation on the held-out test slab (n=68, HWP \u00a73) after refitting with chosen config on full train+val pool."
+}

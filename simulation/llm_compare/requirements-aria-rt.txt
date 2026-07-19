@@ -1,0 +1,14 @@
+# ARIA real-time retrieval — OPTIONAL Rust-accelerated BM25 index.
+#
+# tantivy ships prebuilt wheels (macOS/Linux/Windows), needs NO Rust toolchain,
+# and has NO python dependencies → zero-churn. It is NEVER required: when absent,
+# simulation/server/rag/rust_index.py uses an exact numpy Okapi-BM25 fallback
+# (portability principle #1, mirroring seir_core→numba).
+#
+# Install into the main venv (zero-churn pip, like requirements-multiagent.txt) OR
+# an isolated venv — DO NOT run `uv sync` (it would prune undeclared packages and
+# has broken ARIA before). Pin verified at install time.
+#
+#   pip install -r simulation/llm_compare/requirements-aria-rt.txt
+#
+tantivy>=0.22,<0.25

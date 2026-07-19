@@ -1,0 +1,524 @@
+{
+  "base_origin": {
+    "cutoff": "2026-02-09",
+    "is_base_origin": true,
+    "anchor_source": "champion",
+    "n_forward": 16,
+    "r2_anchored_floor": 0.725,
+    "r2_anchored_floor_stored": 0.722,
+    "r2_forecast_ceiling": 0.904,
+    "r2_enkf_coupled": 0.789,
+    "rmse_enkf_coupled": 5.5229,
+    "enkf_gain_over_floor": 0.064,
+    "enkf_obs_var_sweep": {
+      "0.25x": 0.8395,
+      "1.0x": 0.789,
+      "4.0x": 0.7492
+    },
+    "obs_var_used": 7.17995,
+    "reconstruction_ok": true
+  },
+  "n_origins": 26,
+  "n_proxy_origins": 25,
+  "proxy_enkf_gain_median": -0.0948,
+  "proxy_enkf_gain_positive_count": 3,
+  "leak_free": true,
+  "honest_note": "EnKF-coupling the ABM forward ensemble to the CHAMPION (FusedEpi) at the base origin lifts forward R2 from the anchored floor 0.725 to 0.789 (champion-alone ceiling 0.904) with a parameter-free, leak-free obs_var (median ensemble variance) — the gain is LARGELY the champion's forward skill entering via Bayesian combination, while the ABM retains its mechanistic/counterfactual compartment state. The 25 non-base origins have NO champion artifact (zero-retraining rule); their anchor is the leak-free scaled-climatology proxy, so EnKF-coupling there gives a median gain of -0.0948 (positive in only 3/25) — confirming the improvement is CHAMPION-SPECIFIC, not a generic EnKF effect. obs_var is never tuned to the forward truth (the obs_var sweep traces the ABM↔champion continuum transparently). Single-season Seoul window; ABM is simulation not learning ⇒ zero retraining; no live code modified.",
+  "per_origin": [
+    {
+      "cutoff": "2025-11-10",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -12.5594,
+      "r2_anchored_floor_stored": -12.9121,
+      "r2_forecast_ceiling": -24.8537,
+      "r2_enkf_coupled": -17.7205,
+      "rmse_enkf_coupled": 65.597,
+      "enkf_gain_over_floor": -5.1612,
+      "enkf_obs_var_sweep": {
+        "0.25x": -20.355,
+        "1.0x": -17.7205,
+        "4.0x": -15.0324
+      },
+      "obs_var_used": 36.70848,
+      "reconstruction_ok": false
+    },
+    {
+      "cutoff": "2025-11-17",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -27.8086,
+      "r2_anchored_floor_stored": -28.6945,
+      "r2_forecast_ceiling": -40.5179,
+      "r2_enkf_coupled": -34.6557,
+      "rmse_enkf_coupled": 93.7279,
+      "enkf_gain_over_floor": -6.8471,
+      "enkf_obs_var_sweep": {
+        "0.25x": -36.8806,
+        "1.0x": -34.6557,
+        "4.0x": -31.4128
+      },
+      "obs_var_used": 380.99369,
+      "reconstruction_ok": false
+    },
+    {
+      "cutoff": "2025-11-24",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -31.8472,
+      "r2_anchored_floor_stored": -32.5067,
+      "r2_forecast_ceiling": -41.267,
+      "r2_enkf_coupled": -35.869,
+      "rmse_enkf_coupled": 92.5482,
+      "enkf_gain_over_floor": -4.0218,
+      "enkf_obs_var_sweep": {
+        "0.25x": -38.3938,
+        "1.0x": -35.869,
+        "4.0x": -33.3668
+      },
+      "obs_var_used": 521.57667,
+      "reconstruction_ok": false
+    },
+    {
+      "cutoff": "2025-12-01",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -19.5144,
+      "r2_anchored_floor_stored": -19.7121,
+      "r2_forecast_ceiling": -24.5494,
+      "r2_enkf_coupled": -23.1036,
+      "rmse_enkf_coupled": 76.1835,
+      "enkf_gain_over_floor": -3.5892,
+      "enkf_obs_var_sweep": {
+        "0.25x": -24.3048,
+        "1.0x": -23.1036,
+        "4.0x": -21.3447
+      },
+      "obs_var_used": 290.89445,
+      "reconstruction_ok": false
+    },
+    {
+      "cutoff": "2025-12-08",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -7.2058,
+      "r2_anchored_floor_stored": -7.0549,
+      "r2_forecast_ceiling": -8.9177,
+      "r2_enkf_coupled": -8.1224,
+      "rmse_enkf_coupled": 49.5128,
+      "enkf_gain_over_floor": -0.9166,
+      "enkf_obs_var_sweep": {
+        "0.25x": -8.7403,
+        "1.0x": -8.1224,
+        "4.0x": -7.5736
+      },
+      "obs_var_used": 133.68993,
+      "reconstruction_ok": false
+    },
+    {
+      "cutoff": "2025-12-15",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -1.1175,
+      "r2_anchored_floor_stored": -1.0786,
+      "r2_forecast_ceiling": -1.88,
+      "r2_enkf_coupled": -1.3682,
+      "rmse_enkf_coupled": 27.2374,
+      "enkf_gain_over_floor": -0.2506,
+      "enkf_obs_var_sweep": {
+        "0.25x": -1.5902,
+        "1.0x": -1.3682,
+        "4.0x": -1.214
+      },
+      "obs_var_used": 155.86686,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2025-12-22",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": 0.212,
+      "r2_anchored_floor_stored": 0.1944,
+      "r2_forecast_ceiling": -0.364,
+      "r2_enkf_coupled": -0.0524,
+      "rmse_enkf_coupled": 19.4315,
+      "enkf_gain_over_floor": -0.2644,
+      "enkf_obs_var_sweep": {
+        "0.25x": -0.1526,
+        "1.0x": -0.0524,
+        "4.0x": 0.0518
+      },
+      "obs_var_used": 54.45385,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2025-12-29",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -0.2174,
+      "r2_anchored_floor_stored": -0.2392,
+      "r2_forecast_ceiling": -0.4811,
+      "r2_enkf_coupled": -0.4119,
+      "rmse_enkf_coupled": 23.9954,
+      "enkf_gain_over_floor": -0.1944,
+      "enkf_obs_var_sweep": {
+        "0.25x": -0.4403,
+        "1.0x": -0.4119,
+        "4.0x": -0.3459
+      },
+      "obs_var_used": 17.14423,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-01-05",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -0.4333,
+      "r2_anchored_floor_stored": -0.456,
+      "r2_forecast_ceiling": -0.5433,
+      "r2_enkf_coupled": -0.5608,
+      "rmse_enkf_coupled": 25.7966,
+      "enkf_gain_over_floor": -0.1275,
+      "enkf_obs_var_sweep": {
+        "0.25x": -0.5706,
+        "1.0x": -0.5608,
+        "4.0x": -0.5197
+      },
+      "obs_var_used": 5.93549,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-01-12",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -0.2733,
+      "r2_anchored_floor_stored": -0.2887,
+      "r2_forecast_ceiling": -0.3118,
+      "r2_enkf_coupled": -0.3682,
+      "rmse_enkf_coupled": 24.0103,
+      "enkf_gain_over_floor": -0.0948,
+      "enkf_obs_var_sweep": {
+        "0.25x": -0.3673,
+        "1.0x": -0.3682,
+        "4.0x": -0.339
+      },
+      "obs_var_used": 2.68912,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-01-19",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": 0.031,
+      "r2_anchored_floor_stored": 0.0245,
+      "r2_forecast_ceiling": 0.0383,
+      "r2_enkf_coupled": -0.0489,
+      "rmse_enkf_coupled": 20.1152,
+      "enkf_gain_over_floor": -0.0799,
+      "enkf_obs_var_sweep": {
+        "0.25x": -0.0427,
+        "1.0x": -0.0489,
+        "4.0x": -0.0233
+      },
+      "obs_var_used": 1.31777,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-01-26",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": 0.1018,
+      "r2_anchored_floor_stored": 0.1011,
+      "r2_forecast_ceiling": 0.185,
+      "r2_enkf_coupled": 0.067,
+      "rmse_enkf_coupled": 17.9534,
+      "enkf_gain_over_floor": -0.0349,
+      "enkf_obs_var_sweep": {
+        "0.25x": 0.0885,
+        "1.0x": 0.067,
+        "4.0x": 0.0739
+      },
+      "obs_var_used": 0.22175,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-02-02",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -0.4169,
+      "r2_anchored_floor_stored": -0.4109,
+      "r2_forecast_ceiling": -0.238,
+      "r2_enkf_coupled": -0.4689,
+      "rmse_enkf_coupled": 19.0854,
+      "enkf_gain_over_floor": -0.052,
+      "enkf_obs_var_sweep": {
+        "0.25x": -0.4478,
+        "1.0x": -0.4689,
+        "4.0x": -0.4607
+      },
+      "obs_var_used": 0.02612,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-02-09",
+      "is_base_origin": true,
+      "anchor_source": "champion",
+      "n_forward": 16,
+      "r2_anchored_floor": 0.725,
+      "r2_anchored_floor_stored": 0.722,
+      "r2_forecast_ceiling": 0.904,
+      "r2_enkf_coupled": 0.789,
+      "rmse_enkf_coupled": 5.5229,
+      "enkf_gain_over_floor": 0.064,
+      "enkf_obs_var_sweep": {
+        "0.25x": 0.8395,
+        "1.0x": 0.789,
+        "4.0x": 0.7492
+      },
+      "obs_var_used": 7.17995,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-02-16",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -16.0946,
+      "r2_anchored_floor_stored": -16.0766,
+      "r2_forecast_ceiling": -15.7915,
+      "r2_enkf_coupled": -15.8455,
+      "rmse_enkf_coupled": 32.3502,
+      "enkf_gain_over_floor": 0.2491,
+      "enkf_obs_var_sweep": {
+        "0.25x": -15.9016,
+        "1.0x": -15.8455,
+        "4.0x": -15.8741
+      },
+      "obs_var_used": 0.3936,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-02-23",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 16,
+      "r2_anchored_floor": -17.6285,
+      "r2_anchored_floor_stored": -17.6391,
+      "r2_forecast_ceiling": -18.6937,
+      "r2_enkf_coupled": -18.5095,
+      "rmse_enkf_coupled": 30.9582,
+      "enkf_gain_over_floor": -0.881,
+      "enkf_obs_var_sweep": {
+        "0.25x": -18.6273,
+        "1.0x": -18.5095,
+        "4.0x": -18.1549
+      },
+      "obs_var_used": 0.66811,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-03-02",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 15,
+      "r2_anchored_floor": -15.1403,
+      "r2_anchored_floor_stored": -15.1719,
+      "r2_forecast_ceiling": -15.8712,
+      "r2_enkf_coupled": -15.705,
+      "rmse_enkf_coupled": 26.3802,
+      "enkf_gain_over_floor": -0.5647,
+      "enkf_obs_var_sweep": {
+        "0.25x": -15.7939,
+        "1.0x": -15.705,
+        "4.0x": -15.5126
+      },
+      "obs_var_used": 3.40168,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-03-09",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 14,
+      "r2_anchored_floor": -7.4241,
+      "r2_anchored_floor_stored": -7.4669,
+      "r2_forecast_ceiling": -7.8359,
+      "r2_enkf_coupled": -7.6547,
+      "rmse_enkf_coupled": 17.6902,
+      "enkf_gain_over_floor": -0.2306,
+      "enkf_obs_var_sweep": {
+        "0.25x": -7.7183,
+        "1.0x": -7.6547,
+        "4.0x": -7.5683
+      },
+      "obs_var_used": 2.70148,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-03-16",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 13,
+      "r2_anchored_floor": -7.6797,
+      "r2_anchored_floor_stored": -7.7135,
+      "r2_forecast_ceiling": -7.8479,
+      "r2_enkf_coupled": -7.7306,
+      "rmse_enkf_coupled": 15.3785,
+      "enkf_gain_over_floor": -0.051,
+      "enkf_obs_var_sweep": {
+        "0.25x": -7.7587,
+        "1.0x": -7.7306,
+        "4.0x": -7.6981
+      },
+      "obs_var_used": 0.86669,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-03-23",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 12,
+      "r2_anchored_floor": -9.703,
+      "r2_anchored_floor_stored": -9.7371,
+      "r2_forecast_ceiling": -9.6951,
+      "r2_enkf_coupled": -9.5736,
+      "rmse_enkf_coupled": 13.2735,
+      "enkf_gain_over_floor": 0.1294,
+      "enkf_obs_var_sweep": {
+        "0.25x": -9.5974,
+        "1.0x": -9.5736,
+        "4.0x": -9.6123
+      },
+      "obs_var_used": 0.98593,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-03-30",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 11,
+      "r2_anchored_floor": -14.4308,
+      "r2_anchored_floor_stored": -14.3872,
+      "r2_forecast_ceiling": -14.4961,
+      "r2_enkf_coupled": -14.4999,
+      "rmse_enkf_coupled": 11.6211,
+      "enkf_gain_over_floor": -0.0692,
+      "enkf_obs_var_sweep": {
+        "0.25x": -14.4387,
+        "1.0x": -14.4999,
+        "4.0x": -14.5275
+      },
+      "obs_var_used": 0.59125,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-04-06",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 10,
+      "r2_anchored_floor": -10.5669,
+      "r2_anchored_floor_stored": -10.5356,
+      "r2_forecast_ceiling": -10.6574,
+      "r2_enkf_coupled": -10.6188,
+      "rmse_enkf_coupled": 7.9313,
+      "enkf_gain_over_floor": -0.0519,
+      "enkf_obs_var_sweep": {
+        "0.25x": -10.587,
+        "1.0x": -10.6188,
+        "4.0x": -10.6261
+      },
+      "obs_var_used": 0.37891,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-04-13",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 9,
+      "r2_anchored_floor": -6.4217,
+      "r2_anchored_floor_stored": -6.4826,
+      "r2_forecast_ceiling": -6.4936,
+      "r2_enkf_coupled": -6.439,
+      "rmse_enkf_coupled": 4.9323,
+      "enkf_gain_over_floor": -0.0173,
+      "enkf_obs_var_sweep": {
+        "0.25x": -6.462,
+        "1.0x": -6.439,
+        "4.0x": -6.4343
+      },
+      "obs_var_used": 0.33466,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-04-20",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 8,
+      "r2_anchored_floor": -1.0462,
+      "r2_anchored_floor_stored": -1.04,
+      "r2_forecast_ceiling": -1.0769,
+      "r2_enkf_coupled": -1.063,
+      "rmse_enkf_coupled": 2.5585,
+      "enkf_gain_over_floor": -0.0168,
+      "enkf_obs_var_sweep": {
+        "0.25x": -1.0635,
+        "1.0x": -1.063,
+        "4.0x": -1.0612
+      },
+      "obs_var_used": 0.06728,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-04-27",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 7,
+      "r2_anchored_floor": -1.7595,
+      "r2_anchored_floor_stored": -1.7095,
+      "r2_forecast_ceiling": -1.7481,
+      "r2_enkf_coupled": -1.7486,
+      "rmse_enkf_coupled": 2.2122,
+      "enkf_gain_over_floor": 0.0109,
+      "enkf_obs_var_sweep": {
+        "0.25x": -1.7482,
+        "1.0x": -1.7486,
+        "4.0x": -1.7512
+      },
+      "obs_var_used": 0.0775,
+      "reconstruction_ok": true
+    },
+    {
+      "cutoff": "2026-05-04",
+      "is_base_origin": false,
+      "anchor_source": "scaled_climatology",
+      "n_forward": 6,
+      "r2_anchored_floor": -4.915,
+      "r2_anchored_floor_stored": -4.8188,
+      "r2_forecast_ceiling": -5.0395,
+      "r2_enkf_coupled": -4.9593,
+      "rmse_enkf_coupled": 1.8894,
+      "enkf_gain_over_floor": -0.0444,
+      "enkf_obs_var_sweep": {
+        "0.25x": -4.9966,
+        "1.0x": -4.9593,
+        "4.0x": -4.936
+      },
+      "obs_var_used": 0.07837,
+      "reconstruction_ok": true
+    }
+  ],
+  "figure": "<REPO_ROOT>/simulation/results/figures/abm_champion_enkf.png"
+}

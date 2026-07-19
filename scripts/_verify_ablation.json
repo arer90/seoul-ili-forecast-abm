@@ -1,0 +1,155 @@
+{
+  "setup": {
+    "n_origins": 132,
+    "T0": 205,
+    "refit_k": 4,
+    "n_configs": 6,
+    "cqr_best_gamma": 0.75,
+    "pid_best_gamma": 1.0
+  },
+  "ladders": {
+    "cqr": {
+      "A_tirex_alone": {
+        "wis": 2.4421,
+        "picp95": 0.8864,
+        "k_of_n": "117/132"
+      },
+      "B_plus_gbm_static": {
+        "wis": 2.2688,
+        "picp95": 0.9848,
+        "k_of_n": "130/132"
+      },
+      "C_plus_mech_g0.75": {
+        "wis": 2.2221,
+        "picp95": 0.9848,
+        "k_of_n": "130/132"
+      },
+      "gbm_delta": 0.1733,
+      "mech_delta": 0.0467
+    },
+    "pid": {
+      "A_tirex_alone": {
+        "wis": 2.5004,
+        "picp95": 0.9242,
+        "k_of_n": "122/132"
+      },
+      "B_plus_gbm_plain": {
+        "wis": 2.308,
+        "picp95": 0.9015,
+        "k_of_n": "119/132"
+      },
+      "C_plus_mech_g1.0": {
+        "wis": 2.2194,
+        "picp95": 0.9242,
+        "k_of_n": "122/132"
+      },
+      "gbm_delta": 0.1925,
+      "mech_delta": 0.0885
+    }
+  },
+  "significance_mechanism_step": {
+    "cqr_mech": {
+      "n_origins": 132,
+      "n_nonzero_diff": 132,
+      "dm_hln_h1": {
+        "dbar": 0.046686216597316095,
+        "dm": 0.8643359694760154,
+        "dm_hln": 0.8610557452347586,
+        "df": 131,
+        "p_value": 0.3907806124952843
+      },
+      "dm_hac_nw": {
+        "dbar": 0.046686216597316095,
+        "nw_lag": 4,
+        "dm_hac": 1.063408988559251,
+        "p_value": 0.2875965182812278
+      },
+      "bootstrap_iid_10k": {
+        "observed_mean_delta": 0.046686216597316095,
+        "boot_ci95": [
+          -0.04385814875919544,
+          0.1655357180013748
+        ],
+        "p_sign": 0.3938,
+        "p_centered_null": 0.3879,
+        "frac_boot_le_0": 0.1969,
+        "B": 10000,
+        "block": 1
+      },
+      "bootstrap_block6_10k": {
+        "observed_mean_delta": 0.046686216597316095,
+        "boot_ci95": [
+          -0.017677530657262266,
+          0.14854766721584028
+        ],
+        "p_sign": 0.2274,
+        "p_centered_null": 0.2669,
+        "frac_boot_le_0": 0.1137,
+        "B": 10000,
+        "block": 6
+      },
+      "wilcoxon": {
+        "stat": 3800.0,
+        "p_value": 0.18096766749202275
+      }
+    },
+    "pid_mech": {
+      "n_origins": 132,
+      "n_nonzero_diff": 132,
+      "dm_hln_h1": {
+        "dbar": 0.08854506146051228,
+        "dm": 1.1407399537235714,
+        "dm_hln": 1.1364107542209259,
+        "df": 131,
+        "p_value": 0.2578592968769783
+      },
+      "dm_hac_nw": {
+        "dbar": 0.08854506146051228,
+        "nw_lag": 4,
+        "dm_hac": 1.3198569037894654,
+        "p_value": 0.1868827986153503
+      },
+      "bootstrap_iid_10k": {
+        "observed_mean_delta": 0.08854506146051228,
+        "boot_ci95": [
+          -0.04013041179819552,
+          0.2660045102998394
+        ],
+        "p_sign": 0.2428,
+        "p_centered_null": 0.2518,
+        "frac_boot_le_0": 0.1214,
+        "B": 10000,
+        "block": 1
+      },
+      "bootstrap_block6_10k": {
+        "observed_mean_delta": 0.08854506146051228,
+        "boot_ci95": [
+          -0.01037552573735266,
+          0.2433000651120866
+        ],
+        "p_sign": 0.0984,
+        "p_centered_null": 0.162,
+        "frac_boot_le_0": 0.0492,
+        "B": 10000,
+        "block": 6
+      },
+      "wilcoxon": {
+        "stat": 3337.0,
+        "p_value": 0.01687673169234463
+      }
+    }
+  },
+  "reconciliation": {
+    "tirex_alone_cqr_wis_here": 2.4421,
+    "tirex_alone_cqr_picp95_here": 0.8864,
+    "verified_apples_tirex_alone_wis": 2.5626,
+    "verified_apples_tirex_alone_picp95": 0.833,
+    "note": "rung-A is fixed-seed method-matched CQR (same machinery as B/C); the apples anchor 2.5626 used its own empirical conformal — compare, do not assume equal."
+  },
+  "verified_targets": {
+    "cqr_static": 2.2688,
+    "cqr_mech_g0.75": 2.2221,
+    "pid_plain": 2.308,
+    "pid_mech_g1.0": 2.2194
+  }
+}

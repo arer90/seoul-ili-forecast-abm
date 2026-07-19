@@ -1,0 +1,244 @@
+{
+  "abm_anchored_forward": [
+    28.35884239052814,
+    24.677330757031164,
+    24.112553404165148,
+    24.13347108390093,
+    22.229962227945105,
+    20.891230724855298,
+    18.736709712070134,
+    14.887856640686937,
+    11.980299157413757,
+    10.244131739344159,
+    6.855467622148079,
+    5.061836967055743,
+    3.8224040604602307,
+    3.806776182909046,
+    4.700946609362918,
+    4.931041086456479
+  ],
+  "anchor_corr_sim_vs_forecast": 0.858774763084881,
+  "anchor_degenerate": false,
+  "anchor_mechanism": "forecast_anchored",
+  "behavior_helps_forward": true,
+  "behaviour_calibration": {
+    "affine_on_calibration_mean": {
+      "offset": 122.6916290336887,
+      "scale": -0.2788120212015378
+    },
+    "best_wis": 9.09897174508445,
+    "fitted_behaviour": {
+      "alpha": 0.9,
+      "kappa": 0.0,
+      "tau": 14.0,
+      "theta": 0.2
+    },
+    "grid_size": 24,
+    "leak_free_note": "calibrated on the in-sample 2025-26 season tail (<= forecasting cutoff); the forward window starts strictly after IN_SAMPLE_END.",
+    "objective": "calibration-season WIS after affine map",
+    "season": 2025,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "target_n_weeks": 24,
+    "target_window": [
+      "2025-09-01",
+      "2026-02-09"
+    ]
+  },
+  "calibrated_behaviour": {
+    "alpha": 0.9,
+    "kappa": 0.0,
+    "tau": 14.0,
+    "theta": 0.2
+  },
+  "champion_forward_forecast": [
+    45.075122474578684,
+    17.058895434213536,
+    21.69784360536415,
+    20.114062076420343,
+    23.096675504740176,
+    20.048718087553667,
+    15.367214450292064,
+    10.844873562927205,
+    10.133010715376017,
+    6.605551149836371,
+    9.84832786148293,
+    8.009040608749048,
+    6.404178836849292,
+    4.516841812886843,
+    5.080016081649934,
+    4.662283629876936
+  ],
+  "fitted_forcing": {
+    "beta": 0.15,
+    "beta_amp": 0.45,
+    "beta_phase": 105.0,
+    "import_rate": 0.0003
+  },
+  "forward_dates": [
+    "2026-02-16",
+    "2026-02-23",
+    "2026-03-02",
+    "2026-03-09",
+    "2026-03-16",
+    "2026-03-23",
+    "2026-03-30",
+    "2026-04-06",
+    "2026-04-13",
+    "2026-04-20",
+    "2026-04-27",
+    "2026-05-04",
+    "2026-05-11",
+    "2026-05-18",
+    "2026-05-25",
+    "2026-06-01"
+  ],
+  "forward_r2": 0.7219759660930809,
+  "forward_r2_behavior_off": 0.04077955455033633,
+  "forward_r2_behavior_on": 0.5566482899518054,
+  "forward_rmse": 6.340399949744448,
+  "forward_window": [
+    "2026-02-16",
+    "2026-06-15"
+  ],
+  "gu_distribution_summary": {
+    "cv_across_gu": 0.4067165912104307,
+    "max_I_frac": 0.012437810945273632,
+    "mean_I_frac": 0.00664739332701014,
+    "min_I_frac": 0.0017035775127768314,
+    "n_gu": 25,
+    "per_gu_I_frac": [
+      0.004830917874396135,
+      0.006509357200976403,
+      0.001718213058419244,
+      0.006855184233076264,
+      0.00398406374501992,
+      0.006172839506172839,
+      0.006688963210702341,
+      0.008396305625524769,
+      0.012437810945273632,
+      0.007563025210084034,
+      0.006493506493506494,
+      0.005627009646302251,
+      0.0017035775127768314,
+      0.004088307440719542,
+      0.004081632653061225,
+      0.007978723404255319,
+      0.006284367635506678,
+      0.006589785831960461,
+      0.010572687224669603,
+      0.011265164644714038,
+      0.008058017727639,
+      0.009917355371900827,
+      0.002586206896551724,
+      0.008517887563884156,
+      0.007263922518159807
+    ],
+    "std_I_frac": 0.002703605154396528
+  },
+  "honest_note": "FORWARD prediction validation (NOT retrospective season fit): the ABM is anchored to the champion's forward operational forecast and used to predict the forward/real-2026 window (2026-02-16..2026-06-15). forward_r2 scores the forecast-anchored forward ABM vs the real 2026 forward. behavior ON beats OFF on the forward window. The behaviour-ON params (alpha/theta/kappa/tau) are calibrated on the in-sample real ILI (2025-09-01..2026-02-09), NOT hardcoded; leak-free w.r.t. the forward window. degenerate(anchor)=False; if degenerate or smoke, treat metrics as a wiring check only. per-gu + alert layers are possibility-exploration, not scored forecasts.",
+  "in_sample_end": "2026-02-09",
+  "metadata": {
+    "champion_forecast_len": 16,
+    "champion_path": "<REPO_ROOT>/simulation/results/per_model_optimal/FusedEpi.json",
+    "db_path": "<REPO_ROOT>/simulation/data/db/epi_real_seoul.db",
+    "local_only": true,
+    "n_agents": 30000,
+    "n_forward_available": 18,
+    "protocol": "forward_prediction_NOT_retrospective_fit",
+    "read_only_db": true,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "smoke": false
+  },
+  "n_forward": 16,
+  "real_forward_ili": [
+    52.55714285714286,
+    28.87142857142857,
+    23.957142857142856,
+    21.37142857142857,
+    22.057142857142857,
+    21.02857142857143,
+    17.95714285714286,
+    13.457142857142857,
+    11.4,
+    8.057142857142859,
+    9.285714285714286,
+    8.2,
+    6.542857142857143,
+    4.8999999999999995,
+    5.142857142857143,
+    4.728571428571429
+  ],
+  "realtime_alert_summary": {
+    "forward_alert_labels": [
+      "caution",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention",
+      "attention"
+    ],
+    "forward_alert_levels": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "forward_regime_shift_count": 4,
+    "max_forward_alert_level": 1,
+    "n_forward": 18,
+    "note": "leak-free causal alert/regime over the forward window; possibility-exploration layer, not a scored forward prediction."
+  },
+  "theta_sd_default": 0.15,
+  "theta_sd_sweep": [
+    {
+      "forward_r2_behavior_on": 0.21716185209461247,
+      "theta_sd": 0.1
+    },
+    {
+      "forward_r2_behavior_on": 0.5566482899518054,
+      "theta_sd": 0.15
+    },
+    {
+      "forward_r2_behavior_on": 0.5386040576627757,
+      "theta_sd": 0.25
+    }
+  ]
+}

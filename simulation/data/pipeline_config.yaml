@@ -1,0 +1,110 @@
+# ============================================================
+# MPH Infection Simulation V16 Pipeline Config
+# ============================================================
+# Usage: uv run run__pipeline.py --config pipeline_config.yaml
+# ============================================================
+
+preset: aggressive
+save_dir: ./results
+log_level: INFO
+resume_from_phase: 0
+dry_run: false
+force_overwrite: false
+no_cache: false
+
+data:
+ db_path: ./data/db/epi_real_seoul.db
+ cache_dir: ./cache
+ use_fe_cache: true
+ leakage_corr_threshold: 0.95
+ leakage_action: warn
+
+features:
+ include_weather: true
+ include_vaccination: true
+ include_sentinel_ari: true
+ include_weekly_disease: true
+ include_population_district: true
+ include_subway: true
+ include_bus: true
+ include_hotspot: true
+ include_school: true
+ include_hospitals: true
+ include_employment: true
+ include_hira: true
+ include_hourly_population: true
+ include_weather_forecast: true
+ # rename: legacy `include_subway_hourly`/`include_bus_hourly` 가
+ # 실제로는 `monthly_subway_hourly` / `monthly_bus_hourly` 로더를 게이트.
+ # 원래 hourly 테이블은 에서 월별 집계로 이관되어 없어졌다.
+ include_monthly_subway_hourly: true
+ include_monthly_bus_hourly: true
+ include_sentinel_sari: true
+ include_sentinel_hfmd: true
+ include_sentinel_enterovirus: true
+ include_hira_inpat: true
+ include_hira_region: true
+ include_childhood_vax: true
+ include_dong_population: true
+ include_emp_residence: true
+ # RT real-time (Seoul citydata 115 POI)
+ # 2026-04-17: include_rt_bike \uc81c\uac70 (\ub530\ub989\uc774 \ud53c\ucc98 \uc81c\uc678 \uc9c0\uc2dc)
+ include_rt_road: true
+ include_rt_subway_crowd: true
+ include_rt_pop_detail: true
+ include_rt_pop_forecast: true
+ # RT spatial/temporal aggregation ( new)
+ include_rt_spatial: true
+ include_rt_temporal: true
+ # External
+ include_google_trends: true
+ include_school_closure: true
+
+split:
+ train_ratio: 0.7
+ val_ratio: 0.15
+ test_ratio: 0.15
+ use_validation: false
+
+optuna:
+ mode: none # none | external | inline | all
+ trials: 100
+ n_trials: 100
+ cv_folds: 3
+ timeout_seconds: 3600
+ strategy: hp_then_feature # joint | sequential | greedy | hp_then_feature [: default 전환]
+ epochs_per_trial: 100
+ external_json_dir: null
+
+training:
+ run_ensembles: true
+ save_models: false
+ model_dir: ./models
+ batch_size: 32
+ epochs: 100
+ early_stopping_patience: 10
+
+wfcv:
+ min_train_weeks: 120
+ step_size: 1
+ retune_every: 50
+
+memory:
+ use_float32: true
+ use_sparse: false
+ max_memory_gb: 8.0
+ min_free_mb: 800
+ gc_after_each_fold: false
+
+output:
+ log_dir: ./logs
+ structured_logging: true
+ report_name: _diagnostics_report.json
+ save_plots: true
+
+scoring:
+ w_r2: 0.40
+ w_rmse_rank: 0.20
+ w_dm_win_rate: 0.15
+ w_stability: 0.15
+ w_conformal: 0.10

@@ -1,0 +1,97 @@
+{
+  "analysis": "ANALYSIS_1_delta_loss_moving_block_bootstrap",
+  "loss_used": "per_week_absolute_error",
+  "loss_rationale": "Per-week WIS quantiles are persisted only for the pi_source=r9_leakfree subset; TiRex/ARIMA/SARIMA/Theta carry wis=nan / pi_source=unavailable (no per-week quantiles). Absolute error is the only per-week loss reconstructable identically across all 7 models. WIS dominant term is |y-median|, so tie/decisive structure transfers.",
+  "champion": "FusedEpi",
+  "top_set_claimed_tie": [
+    "FusedEpi",
+    "NegBinGLM",
+    "TiRex"
+  ],
+  "n_test_weeks": 68,
+  "block_weeks": 4,
+  "reps": 5000,
+  "seed": 42,
+  "sign_convention": "delta = AE_FusedEpi - AE_competitor; negative => FusedEpi lower loss (better)",
+  "pairs": [
+    {
+      "pair": "FusedEpi vs NegBinGLM",
+      "competitor": "NegBinGLM",
+      "competitor_in_top_set": true,
+      "mean_delta_ae": -1.4989,
+      "ci95_lo": -2.8929,
+      "ci95_hi": 0.0338,
+      "ci_includes_zero": true,
+      "verdict": "tie",
+      "boot_p_two_sided": 0.06,
+      "champion_mean_ae": 3.8959,
+      "competitor_mean_ae": 5.3948
+    },
+    {
+      "pair": "FusedEpi vs TiRex",
+      "competitor": "TiRex",
+      "competitor_in_top_set": true,
+      "mean_delta_ae": 0.0176,
+      "ci95_lo": -0.1066,
+      "ci95_hi": 0.1544,
+      "ci_includes_zero": true,
+      "verdict": "tie",
+      "boot_p_two_sided": 0.8352,
+      "champion_mean_ae": 3.8959,
+      "competitor_mean_ae": 3.8783
+    },
+    {
+      "pair": "FusedEpi vs SeirCount-TabPFN",
+      "competitor": "SeirCount-TabPFN",
+      "competitor_in_top_set": false,
+      "mean_delta_ae": -1.3916,
+      "ci95_lo": -2.6515,
+      "ci95_hi": -0.1012,
+      "ci_includes_zero": false,
+      "verdict": "decisive",
+      "boot_p_two_sided": 0.0276,
+      "champion_mean_ae": 3.8959,
+      "competitor_mean_ae": 5.2875
+    },
+    {
+      "pair": "FusedEpi vs ARIMA",
+      "competitor": "ARIMA",
+      "competitor_in_top_set": false,
+      "mean_delta_ae": -0.3549,
+      "ci95_lo": -0.8296,
+      "ci95_hi": 0.0839,
+      "ci_includes_zero": true,
+      "verdict": "tie",
+      "boot_p_two_sided": 0.1256,
+      "champion_mean_ae": 3.8959,
+      "competitor_mean_ae": 4.2508
+    },
+    {
+      "pair": "FusedEpi vs SARIMA",
+      "competitor": "SARIMA",
+      "competitor_in_top_set": false,
+      "mean_delta_ae": -1.6812,
+      "ci95_lo": -2.4238,
+      "ci95_hi": -1.0031,
+      "ci_includes_zero": false,
+      "verdict": "decisive",
+      "boot_p_two_sided": 0.0,
+      "champion_mean_ae": 3.8959,
+      "competitor_mean_ae": 5.5771
+    },
+    {
+      "pair": "FusedEpi vs Theta",
+      "competitor": "Theta",
+      "competitor_in_top_set": false,
+      "mean_delta_ae": -1.8049,
+      "ci95_lo": -3.3749,
+      "ci95_hi": -0.5176,
+      "ci_includes_zero": false,
+      "verdict": "decisive",
+      "boot_p_two_sided": 0.0024,
+      "champion_mean_ae": 3.8959,
+      "competitor_mean_ae": 5.7008
+    }
+  ],
+  "figure_path": "<REPO_ROOT>/simulation/results/figures/delta_wis_bootstrap_forest.png"
+}

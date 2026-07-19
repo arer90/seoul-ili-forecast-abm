@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "behaviour": {
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "tau": 1000000000.0,
+      "theta": 0.0
+    },
+    "budget": 1600,
+    "budget_frac": 0.2,
+    "design": "paired-by-seed (same population per seed across arms)",
+    "disease": {
+      "beta": 0.18,
+      "beta_amp": 0.65,
+      "beta_phase": 120.0,
+      "delta": 0.002,
+      "gamma": 0.18,
+      "import_rate": 0.0003,
+      "nu": 0.0002,
+      "sigma": 0.45
+    },
+    "n_agents": 8000,
+    "n_seeds": 20,
+    "note": "read-only ABM; no model retrain; no sqlite write",
+    "year": 2025
+  },
+  "tests": {
+    "heterogeneous": {
+      "cohen_dz": 3.2550051320563207,
+      "comparison": "target_high_contact vs uniform (infections averted/dose)",
+      "high_contact_ci95": [
+        1.5267836502265943,
+        1.6294663497734057
+      ],
+      "high_contact_mean": 1.578125,
+      "n_seed": 20,
+      "paired_diff_ci95": [
+        0.24758049659377818,
+        0.3307320034062217
+      ],
+      "paired_diff_mean": 0.28915624999999995,
+      "paired_ttest_p": 9.316911215223988e-12,
+      "paired_ttest_t": 14.556825484777226,
+      "significant_at_0.05": true,
+      "strategy_ci_overlap": false,
+      "uniform_ci95": [
+        1.236521059586362,
+        1.341416440413638
+      ],
+      "uniform_mean": 1.28896875,
+      "wilcoxon_p": 1.9073486328125e-06,
+      "wilcoxon_stat": 0.0
+    }
+  }
+}

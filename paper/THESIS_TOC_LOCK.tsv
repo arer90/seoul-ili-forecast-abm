@@ -1,0 +1,69 @@
+1	CHAPTER 1. INTRODUCTION
+7	CHAPTER 2. LITERATURE REVIEW
+14	CHAPTER 3. METHODS
+14	3.1 Data and notation
+17	3.2 Integrated-system overview and methodological roadmap
+21	3.3 Metapopulation SEIR-V-D with a behavioral agent layer
+32	3.4 The forecast anchor and the 48-model benchmark
+37	3.5 Leakage-controlled evaluation, model selection, and statistical analysis
+42	3.5.1 Per-model selection hierarchy and optimization
+45	3.5.2 Uncertainty quantification
+47	3.5.3 Evaluation metrics
+52	3.5.4 Champion selection
+53	3.6 Calibration and identifiability of the behavioral model
+56	3.7 Alert-week and epidemic-threshold evaluation
+56	3.8 Large-language-model and ARIA advisory layer
+60	3.9 Real-time and forward operational deployment
+61	3.10 Ethics
+62	CHAPTER 4. RESULTS
+62	4.1 Data and exploratory analysis
+65	4.2 Forecasting benchmark and predictive skill
+78	4.2.1 Statistical significance: Diebold-Mariano tests
+82	4.2.2 Prediction-interval coverage and calibration
+88	4.3 Predictor importance and driver attribution
+89	4.3.1 Leak-free driver attribution
+92	4.4 Behavioral metapopulation ABM: validation and forward
+96	4.4.1 Validation against a real wave and forward skill
+112	4.5 Cross-region pattern similarity
+115	4.6 ARIA advisory layer
+119	4.7 Methodological findings and negative findings
+124	CHAPTER 5. DISCUSSION
+124	5.1 What the registry and the data reveal
+126	5.2 Epidemiological value of the integrated approach
+130	5.3 Validity, bias, and public-health significance
+136	5.4 Limitations
+149	5.5 Core contribution
+151	5.6 Conclusion
+152	DATA AND CODE AVAILABILITY
+153	REFERENCES
+167	APPENDICES
+167	Appendix A. Disease-parameterization scope of the mechanistic layer
+168	Appendix B. Driver-attribution analysis
+173	Appendix C. District-resolution validation
+180	Appendix D. Transferability probes: cross-country and cross-pathogen
+184	Appendix E. Agent-based realism ablation: supplementary figures
+188	Appendix F. Model registry
+198	Appendix G. Metric catalogue
+213	Appendix H. Per-model evaluation
+229	Appendix H.1 External-validity and robustness diagnostics
+232	Appendix H.2 Influenza subtype distribution and sentinel testing intensity
+234	Appendix H.3 Simulation-based calibration of the agent-model inference
+238	Appendix I. Preprocessing, feature stability, and hyper-parameter optimization
+238	Appendix I.1 Target transform and scaling
+239	Appendix I.2 Feature stability selection
+239	Appendix I.3 Hyper-parameter optimization
+240	Appendix I.4 Conformal prediction intervals
+245	Appendix J. Large-language-model background
+245	Appendix K. ARIA architecture
+247	Appendix L. Language-model evaluation
+248	Appendix M. Additional methods
+249	Appendix N. Training dynamics and improvement analysis
+252	Appendix O. ARIA language-model layer
+252	Appendix O.1 Architecture: why the layer is not a single model
+255	Appendix O.2 Three implementations
+260	Appendix O.3 Multi-model grounding evaluation
+266	Appendix O.4 The Self-Ask sub-question module
+267	Appendix O.5 Model survey: specialized versus general
+268	Appendix O.6 Prompt optimization with DSPy
+273	Appendix P. Per-model catalogue, metric prioritization, and full evaluation matrix
+346	Appendix Q. Additional evaluation and robustness diagnostics

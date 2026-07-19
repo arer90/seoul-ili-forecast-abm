@@ -1,0 +1,7 @@
+Variant,Mechanism,Forward R2,RMSE,Person-like metrics
+A,mean-field (district FoI),0.7491,6.0172,no
+B,agent-to-agent (contact network),0.6812,6.7819,yes
+A+B,prediction ensemble,0.7529,5.971,yes
+H,hybrid fusion (mean-field ⊕ network),0.7946,5.4442,yes
+H+EnKF,hybrid + real-time assimilation,0.8169,5.1392,yes
+(ceiling),FusedEpi forecast alone,0.9085,-,-

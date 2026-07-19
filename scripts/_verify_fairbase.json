@@ -1,0 +1,66 @@
+{
+  "n_origins": 132,
+  "T0": 205,
+  "weeks": "205..336",
+  "cap": 201.4,
+  "tirex_test_maxdiff_vs_frozen": null,
+  "harness_reconciliation": {
+    "gbm_cqr_static": {
+      "wis": 2.2688,
+      "picp95": 0.9848,
+      "k_of_n": "130/132",
+      "w95": 22.51
+    },
+    "gbm_pid_plain": {
+      "wis": 2.308,
+      "picp95": 0.9015,
+      "k_of_n": "119/132",
+      "w95": 19.17
+    }
+  },
+  "reference_json": {
+    "cqr_static": [
+      2.2688,
+      0.9848
+    ],
+    "pid_plain": [
+      2.308,
+      0.9015
+    ]
+  },
+  "tirex_alone_method_matched": {
+    "cqr": {
+      "wis": 2.4012,
+      "picp95": 0.9545,
+      "k_of_n": "126/132",
+      "w95": 26.59
+    },
+    "pid": {
+      "wis": 2.4781,
+      "picp95": 0.9318,
+      "k_of_n": "123/132",
+      "w95": 24.24
+    }
+  },
+  "tirex_alone_simple_absresid": {
+    "wis": 2.5626,
+    "picp95": 0.8333,
+    "k_of_n": "110/132",
+    "w95": 12.98
+  },
+  "reference_simple_apples": {
+    "wis": 2.5626,
+    "picp95": 0.833
+  },
+  "verdict": {
+    "full_pid_mech_wis": 2.2194,
+    "full_cqr_mech_wis": 2.2221,
+    "best_full_wis": 2.2194,
+    "tirex_alone_cqr_wis": 2.4012,
+    "tirex_alone_pid_wis": 2.4781,
+    "best_method_matched_fair_wis": 2.4012,
+    "method_beats_fair_baseline": true,
+    "margin_pct_vs_best_fair": 7.57
+  },
+  "elapsed_sec": 872.4
+}

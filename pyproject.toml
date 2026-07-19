@@ -1,0 +1,196 @@
+[project]
+name = "mph-infection-simulation"
+version = "1.0.0"
+description = "Seoul influenza ILI rate multi-model forecasting + Metapopulation SEIR-V-D simulation + ARIA (Adaptive Response Integrated Advisor)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "arer90", email = "arer90@gmail.com" }]
+
+dependencies = [
+    # === Data Layer ===
+    "duckdb>=1.5.0",
+    "polars>=1.39.3",
+    "pyarrow>=23.0.1",
+    "requests>=2.31.0",
+    "pandas>=2.0",
+    "pyyaml>=6.0",
+
+    # === Core ML ===
+    "numpy<2.2",           # SHAP/numba compat
+    "scipy>=1.11",
+    "scikit-learn>=1.4",
+    "statsmodels>=0.14",
+    "glum>=3.0",            # 진짜 NB-GLM (elastic-net, NegBinGLM-Glum, G-263) — scipy 무충돌
+    "tabpfn>=8.0",          # TabPFN v2 tabular foundation (G-264) — 가중치=공개 HF + model_path (priorlabs-1-1 학술)
+    "tirex-ts>=1.4",        # TiRex xLSTM foundation (G-265) — transformers-free, ILI rolling 0.944 (최고)
+    "xgboost>=2.0",
+    "lightgbm>=4.0",
+    "catboost>=1.2",      # CatBoostForecaster (active) — uv-sync 사고로 누락됐던 것 정식 선언 (G-269)
+    "optuna>=3.0",
+    "numba>=0.60",         # JIT for simulation/sim/stepper.py hot loops
+
+    # === Deep Learning ===
+    # torch auto-selects: Linux/Win -> CUDA wheel (via tool.uv.sources),
+    # macOS -> pypi arm64 wheel with MPS support.
+    "torch>=2.2",
+
+    # === Time Series (NeuralForecast) ===
+    "neuralforecast>=1.7.0",
+    "coreforecast>=0.0.9",
+    "datasetsforecast>=0.0.8",
+    "utilsforecast>=0.2.0",
+
+    # === PyTorch Forecasting (TFT etc.) ===
+    "pytorch-forecasting>=1.0.0",
+    "pytorch-lightning>=2.0",
+
+    # === PyTorch Geometric (GNN spatial) ===
+    "torch-geometric>=2.5",
+
+    # === Analysis / Visualization ===
+    "shap>=0.43",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+
+    # === System ===
+    "psutil>=5.9",
+    "chardet>=7.4.2",
+
+    # === Imported directly, previously only present transitively ===
+    #   A transitive dependency can vanish when an upstream package drops it, so
+    #   anything `simulation/` imports by name is declared here.
+    #   openpyxl is on the DB-build path (collector group T reads .xlsx commuter
+    #   tables), so a missing wheel breaks `simulation collect --groups all`.
+    "openpyxl>=3.1",
+    "pydantic>=2.0",       # simulation/collectors/schemas.py
+    "packaging>=23.0",     # simulation/utils/doctor.py version comparison
+    "urllib3>=2.0",        # simulation/utils/http.py Retry/HTTPAdapter
+    "shapely>=2.0",        # web/scripts/build_schools.py — district centroids.
+                           #   On the documented web-data rebuild path
+                           #   (web/scripts/rebuild_all_web.sh, refresh_web_data.py),
+                           #   imported unguarded inside _gu_centroids().
+
+    # === Experiment tracking ===
+    "mlflow>=2.10",
+
+    # === Cache (Redis optional; falls back to in-memory) ===
+    "redis>=5.0",
+
+    # === Vector RAG (embedded — LanceDB + sentence-transformers) ===
+    "lancedb>=0.13",
+    "sentence-transformers>=3.0",
+
+    # === Foundation model: TimesFM 2.5 (Google) — Chronos 대체 (G-261, 2026-06-13) ===
+    #   TimesFM 은 transformers 의존이 전혀 없음 → 메인 env(transformers 5.x + mlx-lm/ARIA) 네이티브,
+    #   격리 불필요. Chronos 를 대체한 이유: chronos-forecasting 은 모든 버전이 transformers<5 강제
+    #   (PyPI 실측 — 최신 2.2.2 도 동일), 메인 env(mlx-lm = ARIA LLM 라우터가 transformers>=5 요구)와
+    #   영구 충돌(uv: No solution). 실측 우위(rolling 1-step +0.939 > chronos +0.927).
+    #   chronos 가 필요하면 별도 격리 venv(.venv_chronos, transformers 4.x)에서만 — 메인 deps 제외.
+    "timesfm[torch]>=2.0",          # google/timesfm-2.5-200m-pytorch — TimeSeriesForecaster foundation
+    # ⚠ G-267: transformers>=5 is required by mlx-lm (the ARIA LLM router). A floor of >=4.40
+    #   lets the resolver fall back to 4.x, which breaks mlx-lm/ARIA — keep the >=5 floor.
+    #   NOTE: the previous "uv sync is forbidden" rule no longer applies. mlx-lm and the ARIA
+    #   stack are now declared, so `uv sync` produces a working environment. The optional Rust
+    #   accelerator (seir-core) is still built separately via maturin — it is not a uv dependency.
+    #   `requirements.lock` remains the bit-exact set that produced the published numbers.
+    "transformers>=5",
+    "accelerate>=0.28",
+    "huggingface-hub>=0.22",
+    "tokenizers>=0.19",
+    "safetensors>=0.4",
+
+    # === Modern TS attention stacks (PatchTST / iTransformer) ===
+    "einops>=0.8",
+
+    # === PDF extraction ===
+    "pdfplumber>=0.11",
+    "pdfminer.six>=20240706",
+    "pypdfium2>=4.28",
+
+    # === Web data (Google Trends) ===
+    "pytrends>=4.9",
+    "lxml>=5.0",
+
+    # === ARIA advisory layer (retrieval + LLM backends) ===
+    #   These were previously ad-hoc pip installs, which is why `uv sync` pruned them
+    #   and broke the layer. Declared here so `uv sync` yields a working environment.
+    "openai>=2.44",                 # OpenAI backend
+    "ag2>=0.14",                    # multi-agent orchestration (imported as `autogen`)
+    "dspy>=3.2",                    # prompt optimisation (BootstrapFewShot)
+    "langchain-core>=1.4",
+    "langchain-community>=0.4",
+    "langchain-chroma>=1.1",        # vector store
+    "langchain-ollama>=1.1",        # local Ollama backend
+    "tantivy>=0.24",                # Rust full-text index for grounding retrieval
+    "datasets>=5.0",                # HF datasets loader
+    "krippendorff>=0.8",            # inter-rater agreement for LLM-judge evaluation
+
+    # === Simulation-based inference (ABM calibration: NPE / ABC-SMC) ===
+    "sbi>=0.26",
+
+    # === Apple-Silicon local LLM router (macOS arm64 only) ===
+    #   Marker keeps Linux/Windows resolution clean.
+    "mlx-lm>=0.31 ; sys_platform == 'darwin' and platform_machine == 'arm64'",
+]
+
+[project.optional-dependencies]
+# Opt-in native SEIR accelerator. Requires a Rust toolchain (https://rustup.rs).
+# Without it the stepper falls back to Numba automatically — results are unchanged.
+rust = ["maturin>=1.5"]   # then: cd simulation/rust && maturin develop --release
+dev = ["ipykernel>=6.29.0", "jupyter>=1.0.0", "pytest>=8.0", "pytest-timeout>=2.3", "ruff>=0.6"]
+
+# Deferred models — excluded from the default training run (DEFER_MODELS in
+# simulation/models/registry.py) and reachable only via `--include-only`.
+# Their imports sit inside fit(), so a default run never touches them; enabling
+# one without this extra fails at training time, not at import time.
+deferred-models = [
+    "lifelines>=0.27",   # CoxPH  — simulation/models/cox_models.py
+    "prophet>=1.1",      # PROPHET — simulation/models/prophet_models.py
+]
+
+[project.scripts]
+mph-simulation = "simulation.__main__:main"
+
+# ───────────────────────────────────────────────────────────────
+# Build system — hatchling for pure Python; maturin opt-in for Rust.
+# ───────────────────────────────────────────────────────────────
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["simulation"]
+
+# ───────────────────────────────────────────────────────────────
+# uv configuration — cross-platform torch handling.
+# ───────────────────────────────────────────────────────────────
+[tool.uv]
+# Conflict-free resolution across platforms.
+
+[tool.uv.sources]
+# CUDA build on Linux/Windows, default pypi (arm64+MPS or cpu) on macOS.
+# uv will pick the index per platform marker below.
+torch = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+# ───────────────────────────────────────────────────────────────
+# Lint / format
+# ───────────────────────────────────────────────────────────────
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501"]  # long lines allowed for Korean comments
+
+[tool.pytest.ini_options]
+testpaths = ["simulation/tests"]
+python_files = ["test_*.py"]

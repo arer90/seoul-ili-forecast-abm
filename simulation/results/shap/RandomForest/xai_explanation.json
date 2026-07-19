@@ -1,0 +1,169 @@
+{
+  "feature_axis": [
+    {
+      "feature": "rt_highrisk_ili",
+      "mean_abs_shap": 2.447475,
+      "mean_shap": 1.916882,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1",
+      "mean_abs_shap": 1.95084,
+      "mean_shap": 1.529855,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_roadcong_ili",
+      "mean_abs_shap": 1.875544,
+      "mean_shap": 1.39813,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_subcrowd_ili",
+      "mean_abs_shap": 1.796543,
+      "mean_shap": 1.373488,
+      "direction": "raises"
+    },
+    {
+      "feature": "bus_ili",
+      "mean_abs_shap": 1.672021,
+      "mean_shap": 0.92732,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_nonresnt_ili",
+      "mean_abs_shap": 1.464138,
+      "mean_shap": 1.174274,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_log1p",
+      "mean_abs_shap": 1.316951,
+      "mean_shap": 1.079661,
+      "direction": "raises"
+    },
+    {
+      "feature": "subway_ili",
+      "mean_abs_shap": 1.117838,
+      "mean_shap": -1.117838,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_rate_lag1_qnorm",
+      "mean_abs_shap": 0.809473,
+      "mean_shap": 0.495632,
+      "direction": "raises"
+    },
+    {
+      "feature": "humid_ili",
+      "mean_abs_shap": 0.687539,
+      "mean_shap": 0.37733,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_savgol_smooth_w9",
+      "mean_abs_shap": 0.490817,
+      "mean_shap": 0.383464,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_qbin",
+      "mean_abs_shap": 0.384848,
+      "mean_shap": 0.233392,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_age_65p_lag1",
+      "mean_abs_shap": 0.20133,
+      "mean_shap": 0.062653,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_age_50_64_lag1",
+      "mean_abs_shap": 0.180043,
+      "mean_shap": 0.128911,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag2_log1p",
+      "mean_abs_shap": 0.167971,
+      "mean_shap": -0.00892,
+      "direction": "lowers"
+    }
+  ],
+  "input_axis": {
+    "highest_prediction": {
+      "row": 55,
+      "prediction": 49.8382,
+      "top_drivers": [
+        {
+          "feature": "rt_highrisk_ili",
+          "shap": 6.1618
+        },
+        {
+          "feature": "bus_ili",
+          "shap": 5.0438
+        },
+        {
+          "feature": "ili_rate_lag1",
+          "shap": 4.9627
+        }
+      ]
+    },
+    "lowest_prediction": {
+      "row": 0,
+      "prediction": 3.5587,
+      "top_drivers": [
+        {
+          "feature": "rt_highrisk_ili",
+          "shap": -1.0549
+        },
+        {
+          "feature": "bus_ili",
+          "shap": -1.0154
+        },
+        {
+          "feature": "subway_ili",
+          "shap": -0.8974
+        }
+      ]
+    },
+    "median_prediction": {
+      "row": 6,
+      "prediction": 14.2142,
+      "top_drivers": [
+        {
+          "feature": "subway_ili",
+          "shap": -1.0425
+        },
+        {
+          "feature": "rt_highrisk_ili",
+          "shap": 0.6363
+        },
+        {
+          "feature": "ili_rate_lag1",
+          "shap": 0.5785
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": 11.0762,
+    "prediction_mean": 21.2119,
+    "prediction_range": [
+      3.5587,
+      49.8382
+    ],
+    "fraction_explained_by_top3": 0.3725
+  },
+  "model_axis": {
+    "family": "tree",
+    "n_features_explained": 20,
+    "n_samples": 68,
+    "dominant_feature": "rt_highrisk_ili",
+    "dominant_feature_sign_consistency": 0.618,
+    "global_mean_abs_shap": 0.842109,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

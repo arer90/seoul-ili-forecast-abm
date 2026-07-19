@@ -1,0 +1,106 @@
+{
+  "metric": "Notifiable disease burden (class 2, latest year)",
+  "disclaimer": "KDCA sentinel ILI is national-only; this layer shows the nearest available per-gu notifiable-disease signal.",
+  "rows": [
+    {
+      "gu_nm": "강남구",
+      "cases": 1215
+    },
+    {
+      "gu_nm": "강동구",
+      "cases": 1253
+    },
+    {
+      "gu_nm": "강북구",
+      "cases": 391
+    },
+    {
+      "gu_nm": "강서구",
+      "cases": 1196
+    },
+    {
+      "gu_nm": "관악구",
+      "cases": 639
+    },
+    {
+      "gu_nm": "광진구",
+      "cases": 439
+    },
+    {
+      "gu_nm": "구로구",
+      "cases": 1484
+    },
+    {
+      "gu_nm": "금천구",
+      "cases": 356
+    },
+    {
+      "gu_nm": "노원구",
+      "cases": 1291
+    },
+    {
+      "gu_nm": "도봉구",
+      "cases": 452
+    },
+    {
+      "gu_nm": "동대문구",
+      "cases": 1113
+    },
+    {
+      "gu_nm": "동작구",
+      "cases": 592
+    },
+    {
+      "gu_nm": "마포구",
+      "cases": 483
+    },
+    {
+      "gu_nm": "서대문구",
+      "cases": 1249
+    },
+    {
+      "gu_nm": "서초구",
+      "cases": 1017
+    },
+    {
+      "gu_nm": "성동구",
+      "cases": 568
+    },
+    {
+      "gu_nm": "성북구",
+      "cases": 1302
+    },
+    {
+      "gu_nm": "송파구",
+      "cases": 2214
+    },
+    {
+      "gu_nm": "양천구",
+      "cases": 1109
+    },
+    {
+      "gu_nm": "영등포구",
+      "cases": 1319
+    },
+    {
+      "gu_nm": "용산구",
+      "cases": 287
+    },
+    {
+      "gu_nm": "은평구",
+      "cases": 1343
+    },
+    {
+      "gu_nm": "종로구",
+      "cases": 505
+    },
+    {
+      "gu_nm": "중구",
+      "cases": 154
+    },
+    {
+      "gu_nm": "중랑구",
+      "cases": 818
+    }
+  ]
+}

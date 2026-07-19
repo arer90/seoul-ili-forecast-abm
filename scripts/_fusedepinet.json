@@ -1,0 +1,14 @@
+{
+  "n_test": 132,
+  "best_val_wis": 4.7631,
+  "fusedepinet_wis": 5.4759,
+  "fusedepinet_picp95": 0.871,
+  "champion_tweedie_wis": 2.2378,
+  "tweedie_p": 1.7,
+  "baseline_wis": 2.4157,
+  "dm_p_vs_tweedie": 0.0,
+  "dm_p_vs_baseline": 0.0,
+  "beats_champion": false,
+  "beats_baseline": false,
+  "elapsed_s": 3.0
+}

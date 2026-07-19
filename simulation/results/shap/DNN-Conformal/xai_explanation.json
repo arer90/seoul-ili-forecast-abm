@@ -1,0 +1,130 @@
+{
+  "feature_axis": [
+    {
+      "feature": "ili_age_1_6_lag1",
+      "mean_abs_shap": 1.004814,
+      "mean_shap": -0.232996,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_age_65p_lag1",
+      "mean_abs_shap": 0.846872,
+      "mean_shap": -0.042471,
+      "direction": "lowers"
+    },
+    {
+      "feature": "ili_age_50_64_lag1",
+      "mean_abs_shap": 0.698478,
+      "mean_shap": 0.249648,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_nonresnt_ili",
+      "mean_abs_shap": 0.625329,
+      "mean_shap": 0.298456,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_savgol_smooth_w9",
+      "mean_abs_shap": 0.522188,
+      "mean_shap": -0.244585,
+      "direction": "lowers"
+    },
+    {
+      "feature": "rt_highrisk_ili",
+      "mean_abs_shap": 0.49833,
+      "mean_shap": 0.114234,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_subcrowd_ili",
+      "mean_abs_shap": 0.487778,
+      "mean_shap": 0.243817,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1_log1p",
+      "mean_abs_shap": 0.434222,
+      "mean_shap": 0.261063,
+      "direction": "raises"
+    },
+    {
+      "feature": "bus_ili",
+      "mean_abs_shap": 0.385231,
+      "mean_shap": 0.23432,
+      "direction": "raises"
+    },
+    {
+      "feature": "rt_roadcong_ili",
+      "mean_abs_shap": 0.368385,
+      "mean_shap": 0.052597,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag1",
+      "mean_abs_shap": 0.342595,
+      "mean_shap": 0.049798,
+      "direction": "raises"
+    },
+    {
+      "feature": "humid_ili",
+      "mean_abs_shap": 0.331499,
+      "mean_shap": 0.117795,
+      "direction": "raises"
+    },
+    {
+      "feature": "above_threshold",
+      "mean_abs_shap": 0.164995,
+      "mean_shap": 0.076625,
+      "direction": "raises"
+    },
+    {
+      "feature": "ili_rate_lag2_log1p",
+      "mean_abs_shap": 0.09577,
+      "mean_shap": 0.070376,
+      "direction": "raises"
+    },
+    {
+      "feature": "emp_monthly_avg",
+      "mean_abs_shap": 0.043295,
+      "mean_shap": 0.038542,
+      "direction": "raises"
+    }
+  ],
+  "input_axis": {
+    "representative": {
+      "row": 0,
+      "prediction": null,
+      "top_drivers": [
+        {
+          "feature": "ili_age_65p_lag1",
+          "shap": 0.8773
+        },
+        {
+          "feature": "rt_roadcong_ili",
+          "shap": -0.8152
+        },
+        {
+          "feature": "ili_rate_lag1_log1p",
+          "shap": -0.731
+        }
+      ]
+    }
+  },
+  "output_axis": {
+    "identity": "prediction ≈ base_value + Σ_j shap_j",
+    "base_value": null,
+    "prediction_mean": null,
+    "prediction_range": null,
+    "fraction_explained_by_top3": 0.3698
+  },
+  "model_axis": {
+    "family": "other",
+    "n_features_explained": 20,
+    "n_samples": 30,
+    "dominant_feature": "ili_age_1_6_lag1",
+    "dominant_feature_sign_consistency": 0.2,
+    "global_mean_abs_shap": 0.344773,
+    "behavior": "context-dependent (feature interactions)"
+  }
+}

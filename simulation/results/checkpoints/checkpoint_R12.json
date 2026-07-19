@@ -1,0 +1,36 @@
+{
+  "phase": "R12",
+  "label": "Comprehensive Eval (regenerated)",
+  "timestamp": "2026-07-19 22:10:05",
+  "data": {
+    "n_models": 48,
+    "n_per_model_dives": 48,
+    "master_grid_csv": "simulation/results/comprehensive_eval/MASTER_GRID.csv",
+    "ranking_consolidated_path": "simulation/results/comprehensive_eval/ranking_consolidated.json",
+    "tables": {
+      "dm_pvalues": "simulation/results/comprehensive_eval/tables/dm_pvalues.csv"
+    },
+    "figures": {
+      "forest_plot_wis": "simulation/results/comprehensive_eval/figures/forest_plot_wis.png",
+      "heatmap_model_x_metric": "simulation/results/comprehensive_eval/figures/heatmap_model_x_metric.png",
+      "calibration_curve": "simulation/results/comprehensive_eval/figures/calibration_curve.png",
+      "horizon_decay": "simulation/results/comprehensive_eval/figures/horizon_decay.png"
+    },
+    "report_path": "simulation/results/comprehensive_eval/REPORT.md",
+    "elapsed": 1.5375068187713623,
+    "elife_phase12_status": "subprocess returncode=1",
+    "resource_tracker": {
+      "phase_id": "comprehensive_eval",
+      "elapsed_sec": 1.54,
+      "start_at": "2026-07-19T22:10:04",
+      "end_at": "2026-07-19T22:10:05",
+      "peak_rss_mb": 378,
+      "mean_cpu_pct": 67.7,
+      "peak_gpu_memory_mb": 0,
+      "platform": "mps",
+      "_n_samples": 4
+    },
+    "regenerated_from": "comprehensive_eval/ rebuild",
+    "note": "scripts/regenerate_r12.py --sync-checkpoints"
+  }
+}

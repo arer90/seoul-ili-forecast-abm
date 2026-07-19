@@ -1,0 +1,174 @@
+{
+  "n_origins": 132,
+  "T0": 205,
+  "weeks": "205..336",
+  "ref_fair_wis": 2.4012,
+  "ref_tweedie_wis": 2.2427,
+  "tweedie_p": 1.5,
+  "span_sanity_match": true,
+  "part_a": {
+    "point_error": {
+      "test": {
+        "tirex": {
+          "mae": 3.2604,
+          "rmse": 5.6519
+        },
+        "tabpfn": {
+          "mae": 4.0102,
+          "rmse": 10.5474
+        }
+      },
+      "val": {
+        "tirex": {
+          "mae": 2.2051,
+          "rmse": 3.4887
+        },
+        "tabpfn": {
+          "mae": 5.6823,
+          "rmse": 11.0806
+        }
+      }
+    },
+    "point_tabpfn_beats_tirex_mae": false,
+    "ensemble_pick": {
+      "w": 1.0,
+      "p": 1.5,
+      "valwis": 1.536
+    },
+    "headline_base": "tirex",
+    "metrics": {
+      "tirex": {
+        "wis": 2.2427,
+        "dm_p_vs_fair": 3.353596273569792e-06,
+        "dm_meandiff_vs_fair": -0.1585,
+        "dm_p_vs_tweedie": 1.0,
+        "dm_meandiff_vs_tweedie": 0.0,
+        "picp95": 0.9318,
+        "k_of_n": "123/132",
+        "cp95ci": [
+          0.875,
+          0.968
+        ],
+        "peak_picp95": 0.87,
+        "n_peak": 23,
+        "last34_wis": 2.6491,
+        "mean_w95": 17.518,
+        "p": 1.5,
+        "val_wis": 1.536
+      },
+      "tabpfn": {
+        "wis": 2.8706,
+        "dm_p_vs_fair": 0.4827889552241291,
+        "dm_meandiff_vs_fair": 0.4694,
+        "dm_p_vs_tweedie": 0.3388778400327028,
+        "dm_meandiff_vs_tweedie": 0.6279,
+        "picp95": 0.9924,
+        "k_of_n": "131/132",
+        "cp95ci": [
+          0.959,
+          1.0
+        ],
+        "peak_picp95": 0.957,
+        "n_peak": 23,
+        "last34_wis": 2.5794,
+        "mean_w95": 34.065,
+        "p": 1.6,
+        "val_wis": 4.3893
+      },
+      "ens": {
+        "wis": 2.2427,
+        "dm_p_vs_fair": 3.353596273569792e-06,
+        "dm_meandiff_vs_fair": -0.1585,
+        "dm_p_vs_tweedie": 1.0,
+        "dm_meandiff_vs_tweedie": 0.0,
+        "picp95": 0.9318,
+        "k_of_n": "123/132",
+        "cp95ci": [
+          0.875,
+          0.968
+        ],
+        "peak_picp95": 0.87,
+        "n_peak": 23,
+        "last34_wis": 2.6491,
+        "mean_w95": 17.518,
+        "p": 1.5,
+        "val_wis": 1.536
+      }
+    }
+  },
+  "part_b": {
+    "resid_median_point_error_test": {
+      "mae": 3.482,
+      "rmse": 5.7304
+    },
+    "headline_scheme": "cqr_expand",
+    "metrics": {
+      "raw": {
+        "wis": 2.2861,
+        "dm_p_vs_fair": 0.3098587465683147,
+        "dm_meandiff_vs_fair": -0.115,
+        "dm_p_vs_tweedie": 0.6853023599741666,
+        "dm_meandiff_vs_tweedie": 0.0434,
+        "picp95": 0.9394,
+        "k_of_n": "124/132",
+        "cp95ci": [
+          0.884,
+          0.973
+        ],
+        "peak_picp95": 0.87,
+        "n_peak": 23,
+        "last34_wis": 2.7001,
+        "mean_w95": 20.777,
+        "val_wis": 1.686
+      },
+      "cqr_static": {
+        "wis": 2.3402,
+        "dm_p_vs_fair": 0.5988015109842961,
+        "dm_meandiff_vs_fair": -0.061,
+        "dm_p_vs_tweedie": 0.37046873163908955,
+        "dm_meandiff_vs_tweedie": 0.0975,
+        "picp95": 0.9924,
+        "k_of_n": "131/132",
+        "cp95ci": [
+          0.959,
+          1.0
+        ],
+        "peak_picp95": 1.0,
+        "n_peak": 23,
+        "last34_wis": 2.7996,
+        "mean_w95": 25.938,
+        "val_wis": 1.65
+      },
+      "cqr_expand": {
+        "wis": 2.3068,
+        "dm_p_vs_fair": 0.4122460678470292,
+        "dm_meandiff_vs_fair": -0.0944,
+        "dm_p_vs_tweedie": 0.5525402624434079,
+        "dm_meandiff_vs_tweedie": 0.0641,
+        "picp95": 0.9773,
+        "k_of_n": "129/132",
+        "cp95ci": [
+          0.935,
+          0.995
+        ],
+        "peak_picp95": 0.957,
+        "n_peak": 23,
+        "last34_wis": 2.7389,
+        "mean_w95": 24.462,
+        "val_wis": 1.6298
+      }
+    }
+  },
+  "overall_best": {
+    "name": "point_tirex",
+    "wis": 2.2427,
+    "dm_p_vs_fair": 3.353596273569792e-06,
+    "dm_p_vs_tweedie": 1.0,
+    "picp95": 0.9318,
+    "peak_picp95": 0.87,
+    "last34_wis": 2.6491,
+    "beats_tweedie": false,
+    "cap_note": "train_cap_WIS=2.2425 (full=2.2427, binds=True)"
+  },
+  "elapsed_sec": 256.5
+}

@@ -1,0 +1,46 @@
+{
+  "protocol": "head hyperparams selected on VAL[165,205) ONLY; expanding per-origin training; TEST[205,337) untouched",
+  "selected_cfg": {
+    "K_pca": 16,
+    "hidden": 16,
+    "wd": 0.01,
+    "dropout": 0.3
+  },
+  "val_wis_native": 1.5767,
+  "val_wis_selected": 1.5767,
+  "native_wis_test": 2.2427,
+  "headprobe_wis_test_seedavg": 2.2404,
+  "delta_pct": -0.11,
+  "picp95_seedavg": 0.826,
+  "dm_hln_p_seedavg": 0.0345,
+  "dm_boot_p_seedavg": 0.0056,
+  "per_seed_[wis,hln,boot]": [
+    [
+      2.2403,
+      0.031,
+      0.005
+    ],
+    [
+      2.2404,
+      0.0377,
+      0.0062
+    ],
+    [
+      2.2404,
+      0.037,
+      0.0063
+    ],
+    [
+      2.2404,
+      0.0349,
+      0.0058
+    ],
+    [
+      2.2403,
+      0.033,
+      0.0052
+    ]
+  ],
+  "beats_native_robust": true,
+  "elapsed_s": 40.0
+}

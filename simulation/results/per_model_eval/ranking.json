@@ -1,0 +1,88 @@
+{
+  "n_models_evaluated": 48,
+  "n_test_weeks": 68,
+  "test_window_idx": [
+    269,
+    337
+  ],
+  "top10_by_oof_wis": [
+    {
+      "model": "FusedEpi",
+      "oof_wis": 1.5122
+    },
+    {
+      "model": "GAM-Spline",
+      "oof_wis": 1.6124
+    },
+    {
+      "model": "TiRex",
+      "oof_wis": 1.6824
+    },
+    {
+      "model": "SVR-RBF",
+      "oof_wis": 1.6865
+    },
+    {
+      "model": "NegBinGLM",
+      "oof_wis": 1.6896
+    },
+    {
+      "model": "PoissonAutoreg",
+      "oof_wis": 1.7015
+    },
+    {
+      "model": "ElasticNet",
+      "oof_wis": 1.8655
+    },
+    {
+      "model": "KRR",
+      "oof_wis": 1.899
+    },
+    {
+      "model": "CQR-QuantReg",
+      "oof_wis": 1.9188
+    },
+    {
+      "model": "ARIMA",
+      "oof_wis": 1.9987
+    }
+  ],
+  "spa_test": {
+    "spa_p_value": 0.0325,
+    "test_statistic": 3.7699763001147115,
+    "benchmark": "FluSight-Baseline",
+    "n_models": 48,
+    "n_periods": 68,
+    "block_length": 4,
+    "n_bootstrap": 2000,
+    "interpretation": "H_0: FluSight-Baseline is best. p=0.0325 → REJECT H_0 (some competitor significantly better)"
+  },
+  "pairwise_relative_wis": {
+    "SVR-Linear": 1.6363380193462471,
+    "ElasticNet": 0.6782242340053695,
+    "KRR": 0.6645650353891348,
+    "RandomForest": 0.6237204003913671,
+    "XGBoost": 2.662280632136082,
+    "SVR-RBF": 0.5867723063068222,
+    "BayesianRidge": 0.9192246487691084,
+    "CQR-QuantReg": 1.2178510469240074,
+    "GAM-Spline": 0.569989908231837,
+    "LightGBM": 0.9682896920428775,
+    "CQR-LightGBM": 2.638971412494608,
+    "DNN": 2.004519658965776,
+    "BayesianMCMC": 0.7421076852509082,
+    "TCN": 1.5010351873179009,
+    "PatchTST": 2.719772869027808,
+    "iTransformer": 1.2415598101918808,
+    "DNN-Conformal": 0.9849552331501664,
+    "TabPFN": 0.608366279052096,
+    "GAT": 2.1083207096470202,
+    "Mamba": 0.7600716989209854,
+    "TimesNet": 0.9213945221119991,
+    "OverseasTransfer": 0.8078206073039821,
+    "SeirCount-TabPFN": 0.5083955716432885,
+    "GCN": 1.5334618748705775,
+    "FusedEpi": 0.44271550697731366
+  },
+  "note": "NegBinGLM / PoissonAutoreg re-evaluated 2026-07-15 as true log-link GLMs; their pairwise relative WIS is dropped rather than carried stale — the tournament needs every model's per-target WIS from the committed run, which is not recoverable."
+}

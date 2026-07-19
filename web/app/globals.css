@@ -1,0 +1,77 @@
+/* Frame D — global styles.
+ * Tailwind + Leaflet + Pretendard subset.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "leaflet/dist/leaflet.css";
+@import "leaflet-contextmenu/dist/leaflet.contextmenu.css";
+
+/* Pretendard subset — we only need Korean + Latin digits. The subset
+ * .woff2 is 90 KB and ships from the CDN Cloudflare mirrors it on. */
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/variable/woff2-subset/PretendardVariable.subset.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #0b0f14;
+  --fg: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --ok: #16a34a;
+  --warn: #d97706;
+  --fail: #dc2626;
+  --panel: #111827;
+  --panel-2: #1f2937;
+  --border: #334155;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  font-feature-settings: "tnum" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Leaflet needs a pixel height or it collapses to 0. The map panel sets
+ * `h-full` on its wrapper; this belt-and-braces rule keeps the map tile
+ * container from shrinking to nothing if the parent layout hiccups. */
+.leaflet-container {
+  background: #0f172a;
+  font-family: inherit;
+}
+
+/* Hide default Leaflet attribution chrome on mobile — kept in a tooltip. */
+@media (max-width: 640px) {
+  .leaflet-control-attribution { display: none; }
+}
+
+/* Drag handle between panels — make it obvious but thin. */
+[data-resize-handle] {
+  background: var(--border);
+  transition: background 120ms ease;
+}
+[data-resize-handle]:hover,
+[data-resize-handle][data-resize-handle-active] {
+  background: var(--accent);
+}
+
+/* Scrollbars — dark scheme. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--muted); }

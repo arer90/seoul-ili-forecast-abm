@@ -1,0 +1,7 @@
+{
+ "forward_r2": 0.7219759660930809,
+ "forward_r2_behavior_on": 0.5566482899518054,
+ "forward_r2_behavior_off": 0.04077955455033633,
+ "forward_rmse": 6.340399949744448,
+ "n_forward": 16
+}
